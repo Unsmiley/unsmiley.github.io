@@ -282,7 +282,7 @@ value = "-1";
 	for (i = 0; i < survey.q63.length; i++) if (survey.q63[i].checked) value = survey.q63[i].value;
 	switch (value) {
                 case "1": geth,rachni+=8; break;
-                case "2": salarian,batarian,asari,volus+=1; break;
+                case "2": batarian,asari,volus+=1; salarian+=4; break;
                 case "3": turian,human+=1; quarian,krogan+=2; }
 
 value = "-1";
@@ -307,13 +307,41 @@ value = "-1";
 
 	for (i = 0; i < survey.q66.length; i++) if (survey.q66[i].checked) value = survey.q66[i].value;
 	switch (value) {
-                case "1": geth,volus+=8; break;
-                case "2": turian,salarian+=4; break;
-                case "3": asari,human+=2; break;
-                case "4": quarian,batarian+=4; break;
-                case "5": krogan,rachni+=8; }
+                case "1": human,volus+=4; break;
+                case "2": turian,asari+=4; break;
+                case "3": rachni,batarian+=4; break;
+                case "4": salarian,quarian+=4; }
 
+value = "-1";
 
+	for (i = 0; i < survey.q67.length; i++) if (survey.q67[i].checked) value = survey.q67[i].value;
+	switch (value) {
+                case "1": infiltrator+=2; break;
+                case "2": engineer+=2; break;
+                case "3": adept+=2; break;
+                case "4": sentinel+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q68.length; i++) if (survey.q68[i].checked) value = survey.q68[i].value;
+	switch (value) {
+                case "1": infiltrator+=2; break;
+                case "2": adept+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q69.length; i++) if (survey.q69[i].checked) value = survey.q69[i].value;
+	switch (value) {
+                case "1": adept+=2; break;
+                case "2": engineer+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q70.length; i++) if (survey.q70[i].checked) value = survey.q70[i].value;
+	switch (value) {
+                case "1": adept+=2; break;
+                case "2": sentinel+=2; break;
+                case "3": vanguard+=2; }
 
 value = "-1";
 	for (ll = 0; ll < survey.q237.length; ll++) if (survey.q237[ll].checked) value = survey.q237[ll].value;
@@ -1251,7 +1279,7 @@ if (secclass !== "none") {
 
 </center>
 
-<div id="directions" title="Directions">
+
 <p>This quiz will help you determine what race and class from the sci-fi franchise Mass Effect you most resemble! Interested in a new multiplayer build? Running a campaign and you're looking for roleplaying inspiration? Then look no further!</p>
 <p>
 Please note that this quiz is constantly changing! Though its current incarnation may take no longer than five minutes, I plan to add additional races and questions at a later date!</p>
@@ -1264,8 +1292,7 @@ Lastly, this wouldn't have been possible without the creator of the D&D Characte
 <p>
 <b>Now, on to the survey!</b>
 </p>
-</div>
-</div>
+
 <table border="0" width="750" align="center" cellspacing="0" cellpadding="10">
 <tr>
 <td>
@@ -1472,12 +1499,38 @@ Lastly, this wouldn't have been possible without the creator of the D&D Characte
 </p><hr />
 
 <p>
-<a class="question">26. Intellectual intelligence is more important than emotional intelligence.</a> <br /><br />
-<input name="q66" value="1" type="radio" /> I agree completely.<br /><br />
-<input name="q66" value="2" type="radio" /> It tends to be more useful in my day to day, but emotional intelligence has its place.<br /><br />
-<input name="q66" value="3" type="radio" /> I value both equally.<br /><br />
-<input name="q66" value="4" type="radio" /> In my life, emotional intelligence is more useful, more often.<br /><br />
-<input name="q66" value="5" type="radio" /> I disagree completely.<br /><br />
+<a class="question">26. The rules...</a> <br /><br />
+<input name="q66" value="1" type="radio" /> Aren't stand-ins for morality or common sense.<br /><br />
+<input name="q66" value="2" type="radio" /> Are there to protect us.<br /><br />
+<input name="q66" value="3" type="radio" /> Are subjective based on culture and values.<br /><br />
+<input name="q66" value="4" type="radio" /> Should be followed when possible, and revised when necessary.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">27. As a child, what did talent did you value most?</a> <br /><br />
+<input name="q67" value="1" type="radio" /> My ability to know who was using the stairs by their footsteps.<br /><br />
+<input name="q67" value="2" type="radio" /> My ability to remember obscure facts.<br /><br />
+<input name="q67" value="3" type="radio" /> My ability to focus on anything for as long as I wanted.<br /><br />
+<input name="q67" value="4" type="radio" /> My ability to tell what others wanted or needed without being told.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">28. When it comes to handling assignments...</a> <br /><br />
+<input name="q68" value="1" type="radio" /> It's better to focus entirely on one task until it's done, and finish without being overwhelmed.<br /><br />
+<input name="q68" value="2" type="radio" /> It's better to work a little on everything, and finish without running behind.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">29. When it comes to every day routines...</a> <br /><br />
+<input name="q69" value="1" type="radio" /> Taking a fresh approach to everything is best. It helps you not take things for granted.<br /><br />
+<input name="q69" value="2" type="radio" /> Automating repetitive tasks is best. Having more time for what matters is invaluable.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">30. The most valuable tool when it comes to problem solving has to be...</a> <br /><br />
+<input name="q70" value="1" type="radio" /> Being able to entertain multiple solutions or perspectives.<br /><br />
+<input name="q70" value="2" type="radio" /> Preparing for as many eventualities as possible..<br /><br />
+<input name="q70" value="3" type="radio" /> Showing intiative by resolving the problem quickly and taking the most linear path.<br /><br />
 </p><hr />
 
 </div>
