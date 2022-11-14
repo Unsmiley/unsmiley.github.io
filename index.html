@@ -123,9 +123,9 @@ value = "-1";
 	for (i = 0; i < survey.q46.length; i++) if (survey.q46[i].checked) value = survey.q46[i].value;
 	switch (value) {
                 case "1": krogan,batarian+=2; break;
-                case "2": quarian,salarian+=2; break;
-                case "3": volus,asari+=2; break;
-                case "4": turian,human+=2; break;
+                case "2": quarian,volus,salarian+=2; break;
+                case "3": asari,human+=2; break;
+                case "4": turian+=2; break;
                 case "5": geth,rachni+=2; }
 
 value = "-1";
@@ -1323,7 +1323,7 @@ Lastly, this wouldn't have been possible without the creator of the D&D Characte
 <input name="q43" value="1" type="radio" /> My looks. I'm not ashamed to say that I'm physically above average.<br /><br />
 <input name="q43" value="2" type="radio" /> My brains. Being an expert on something you care about is sexy!.<br /><br />
 <input name="q43" value="3" type="radio" /> My resources. Money can't buy you love, but it can definitely buy you options.<br /><br />
-<input name="q43" value="4" type="radio" /> My devotion. Whether behind closed doors or in the trenches, I always give 100% of mysasari to others.<br /><br />
+<input name="q43" value="4" type="radio" /> My devotion. Whether behind closed doors or in the trenches, I always give 100% of myself to others.<br /><br />
 <input name="q43" value="5" type="radio" /> My mystique. The lack of the obvious is what draws others to want to know me.<br /><br />
 </p><hr /><p>
 
@@ -1344,7 +1344,7 @@ Lastly, this wouldn't have been possible without the creator of the D&D Characte
 <a class="question">6. What will be the last words you are likely to hear or say?</a> <br /><br />
 <input name="q46" value="1" type="radio" /> "You sold your soul to a path of blood."<br /><br />
 <input name="q46" value="2" type="radio" /> "This soup tastes funny..."<br /><br />
-<input name="q46" value="3" type="radio" /> "We cannot get out. They are coming."<br /><br />
+<input name="q46" value="3" type="radio" /> "There's gotta be <i>some</i> way to fuck it."<br /><br />
 <input name="q46" value="4" type="radio" /> "This is for my father!"<br /><br />
 <input name="q46" value="5" type="radio" /> "It is a far, far better rest that I go to than I have ever known."<br /><br />
 </p><hr /><p>
@@ -1530,14 +1530,14 @@ Lastly, this wouldn't have been possible without the creator of the D&D Characte
 <a class="question">30. The most valuable tool when it comes to problem solving has to be...</a> <br /><br />
 <input name="q70" value="1" type="radio" /> Being able to entertain multiple solutions or perspectives.<br /><br />
 <input name="q70" value="2" type="radio" /> Preparing for as many eventualities as possible..<br /><br />
-<input name="q70" value="3" type="radio" /> Showing intiative by resolving the problem quickly and taking the most linear path.<br /><br />
+<input name="q70" value="3" type="radio" /> Showing intiative by resolving the problem quickly and taking the most direct path.<br /><br />
 </p><hr />
 
 </div>
 
 
 
-<div id="playerlevel">
+
 <p>
 <a class="question">139.  Where are you in life?</a><br /><br />
 <input name="q237" value="1" type="radio" /> I'm just starting out. <span class="age"> (15 or less)</span><br /><br />
@@ -1557,7 +1557,7 @@ Lastly, this wouldn't have been possible without the creator of the D&D Characte
 <input name="q238" value="2" type="radio" /> ...a moderate amount of life experience. I've done about as much as everyone else.<br /><br />
 <input name="q238" value="3" type="radio" /> ...a lot of life experience.  I've done significantly more than every one else.<br /><br />
 </p><hr />
-</div>
+
 
 
 <center>
@@ -1567,11 +1567,7 @@ Lastly, this wouldn't have been possible without the creator of the D&D Characte
 <br><br>
 <i>Before clicking, make sure JavaScript is enabled, and that all pop-up window-managers are disabled!</i>
 <br><br>
-<!--
-<a href="http://us.1.p9.webhosting.yahoo.com/gb/view?member=easydamus">View Waiting Room for Hall of Heroes</a>
-<br />
-<a href="http://www.easydamus.com/hallofheroes.html">View Hall of Heroes</a>
--->
+
 
 
 </div><!--end of 'totalsurvey' division -->
