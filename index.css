@@ -1,0 +1,274 @@
+@font-face {
+    font-family: massEffect;
+    src: url('me123.woff');
+}
+
+body {
+	background-image: url("images/webb.png");
+	font-family: "massEffect";
+	text-shadow: 4px 4px #000080;
+	background-size: cover;
+	margin: 0 auto;
+	max-width: 700px;
+	color: white;
+	font-size: 18px;
+}
+
+p {
+	background: rgba( 0, 0, 0, .4);
+	border: groove;
+	padding: 15px;
+	line-height: 1.5;
+}
+
+.age {
+	color: red;
+}
+
+.race {
+	font-family: "massEffect";
+	text-shadow: 4px 4px #000080;
+}
+
+h1 {
+	color: white;
+	font-family: 'massEffect';
+}
+
+h3 {
+	color: white;
+	font-family: 'massEffect';
+	text-shadow: 2px 2px #000000;
+}
+
+
+.darkhilight {
+	background-color: rgb(0,8,108);
+	border: groove;
+	padding: 15px;
+}
+
+input[name=submit] {
+	background: rgb(0,8,108);
+	padding: 20px;
+	border: solid;
+	border-color: #B1E4FC;
+	text-align: center;
+
+}
+
+
+*html .alignsidebar {
+										position:absolute;
+										}							
+
+a:link, a:visited {
+									color:#000080;
+									text-decoration:none;
+									}
+
+a:hover, a:focus {
+								 color:#4444FF;
+								 text-decoration:none;
+								 font-size: 30px;
+								 }
+
+.alignsidebarsub ul {
+								 margin:0; padding:0;
+								 /*list-style:none;*/
+								 }
+
+
+
+
+				 														 
+.alignsociety {
+							margin-left:15%;
+							margin-right:10%;
+							}
+							
+.alignmentchart {
+		font-family: "Palatino Linotype", Trebuchet MS, Verdana, sans-serif;
+		font-size:small;
+		/*font-weight: bold;*/
+		}
+		
+.alignmentchartexp {
+		font-family: "Arial", Verdana, sans-serif;
+		font-size:10px;
+		/*font-weight: bold;*/
+		}
+		
+.expandedalign {
+							 width:50px;
+							 height:50px;
+							 }
+							 
+.expandedaligne {
+							 width:50px;
+							 height:50px;
+							 color:#FFFFFF;
+							 }
+
+.expandedalignn {
+							 width:50px;
+							 height:50px;
+							 color:#808080;
+							 }
+						 
+.majoralign {
+						width:90px;
+						height:90px;
+						}
+
+.minorextremealign {
+						width:60px;
+						height:60px;
+						}
+						
+.minormoralalign {
+						width:60px;
+						height:90px;
+						}
+
+.minorethicalalign {
+						width:90px;
+						height:60px;
+						}				
+						
+.charalign {
+					 width:175px;
+					 height:175px;
+					 }
+
+#chartlg {
+				 background-color:#D5DCEF;
+				 color:black;
+				 }
+				 
+#chartngl {
+				 	background-color:#D4CAE2;
+				 	color:black;
+				 	}
+
+#chartng {
+				 background-color:#E9D2E4;
+				 color:black;
+				 }
+
+#chartngc {
+				 	background-color:#FCDBE4;
+				 	color:black;
+				 	}
+				 
+#chartcg {
+				 background-color:#FCDAD5;
+				 color:black;
+				 }
+
+#chartlng {
+				 background-color:#7C9BCF;
+				 color:black;
+				 }
+
+#chartnlg {
+				 background-color:#826BA9;
+				 color:black;
+				 }
+
+#chartgn {
+				 background-color:#BC7AAC;
+				 color:black;
+				 }
+
+#chartncg {
+				 background-color:#F289AE;
+				 color:black;
+				 }
+
+#chartcng {
+				 background-color:#F0888A;
+				 color:black;
+				 }
+
+#chartln {
+				 background-color:#0469B3;
+				 color:yellow;
+				 }
+				 
+#chartnl {
+				 background-color:#3D107B;
+				 color:yellow;
+				 }
+
+#charttn {
+				 background-color:#92007B;
+				 color:yellow;
+				 }
+
+#chartnc {
+				 background-color:#E3007B;
+				 color:yellow;
+				 }
+
+#chartcn {
+				 background-color:#E10052;
+				 color:yellow;
+				 }
+
+
+#chartlne {
+				 background-color:#044476;
+				 color:white;
+				 }
+
+
+#chartnle {
+				 background-color:#260751;
+				 color:white;
+				 }
+
+#charten {
+				 background-color:#600051;
+				 color:white;
+				 }
+
+#chartnce {
+				 background-color:#990050;
+				 color:white;
+				 }
+
+#chartcne {
+				 background-color:#980034;
+				 color:white;
+				 }
+
+#chartle {
+				 background-color:#01172E;
+				 color:white;
+				 }
+
+#chartnel {
+				 	background-color:#0A011D;
+				 	color:white;
+				 	}
+					
+#chartne {
+				 background-color:#24001D;
+				 color:white;
+				 }
+				 
+#chartnec {
+				 	background-color:#3D001C;
+				 	color:white;
+				 	}
+				 
+#chartce {
+				 background-color:#3D0011;
+				 color:white;
+				 }
+
+#button {
+				background-image: url("images/masseffectt.png");
+
+}

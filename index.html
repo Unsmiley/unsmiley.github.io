@@ -1,0 +1,1540 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<!--meta http-equiv="content-type" content="text/html; charset=utf-8" /-->
+			<link rel="stylesheet" type="text/css" href="index.css" />
+			<meta name="keywords" content="d20, character, what, am, I, mass, effect, N7, ME, Andromeda, custom, characters" />
+			<meta name="description" content="A survey to determine what type of Mass EFfect character you would be." />
+						
+<title>What Mass Effect Character Am I?</title>
+
+<script language="JavaScript" type="text/javascript">
+
+function process()
+{
+	var survey = document.survey;
+	var i = 0;
+	var j = 0;
+    var ll = 0;
+	var value = "-1";
+	var race = "";
+	var align = "";
+	var primclass = "";
+	var secclass = "";
+	var level=0;
+
+	var strength = 0;
+	var dexterity = 0;
+	var vigor = 0;
+	var intelligence = 0;
+	var wisdom = 0;
+	var charisma = 0;
+
+	var krogan = 0;
+	var asari = 0;
+	var salarian = 0;
+	var volus = 0;
+	var human = 1;
+	var turian = 0;
+	var batarian = 0;
+	var geth = 0;
+	var rachni = 0;
+	var quarian = 0;
+
+	var lg = 0;
+	var ln = 0;
+	var le = 0;
+	var ng = 0;
+	var nn = 0;
+	var ne = 0;
+	var cg = 0;
+	var cn = 0;
+	var ce = 0;
+	var tie = -1;
+
+	var lx = 0;
+	var nx = 0;
+	var cx = 0;
+	var xg = 0;
+	var xn = 0;
+	var xe = 0;
+
+	var soldier = 0;
+	var infiltrator = 0;
+	var engineer = 0;
+	var adept = 0;
+	var sentinel = 0;
+	var vanguard = 0;
+
+	var deitychk = 0;
+
+	var deity = "";
+
+	for (i = 0; i < survey.q41.length; i++) if (survey.q41[i].checked) value = survey.q41[i].value;
+	switch (value) {
+                case "1": turian+=2; break;
+                case "2": geth+=2; break;
+                case "3": salarian+=2; break;
+                case "4": quarian+=2; break;
+                case "5": human+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q42.length; i++) if (survey.q42[i].checked) value = survey.q42[i].value;
+	switch (value) {
+                case "1": human+=2; break;
+                case "2": krogan+=2; break;
+                case "3": asari+=2; break;
+                case "4": batarian+=2; break;
+                case "5": rachni+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q43.length; i++) if (survey.q43[i].checked) value = survey.q43[i].value;
+	switch (value) {
+                case "1": asari+=2; break;
+                case "2": salarian+=2; break;
+                case "3": volus+=2; break;
+                case "4": turian+=2; break;
+                case "5": human+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q44.length; i++) if (survey.q44[i].checked) value = survey.q44[i].value;
+	switch (value) {
+                case "1": turian+=2; break;
+                case "2": quarian+=2; break;
+                case "3": salarian+=2; break;
+                case "4": asari+=2; break;
+                case "5": geth+=2; }
+ 
+value = "-1";
+
+	for (i = 0; i < survey.q45.length; i++) if (survey.q45[i].checked) value = survey.q45[i].value;
+	switch (value) {
+                case "1": asari,quarian+=2; break;
+                case "2": human,turian,batarian,krogan+=2; break;
+                case "3": geth,rachni,salarian,volus+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q46.length; i++) if (survey.q46[i].checked) value = survey.q46[i].value;
+	switch (value) {
+                case "1": krogan,batarian+=2; break;
+                case "2": quarian,salarian+=2; break;
+                case "3": volus,asari+=2; break;
+                case "4": turian,human+=2; break;
+                case "5": geth,rachni+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q47.length; i++) if (survey.q47[i].checked) value = survey.q47[i].value;
+	switch (value) {
+                case "1": salarian,geth+=2; break;
+                case "2": asari,human+=2; break;
+                case "3": krogan,rachni+=2; break;
+                case "4": quarian,turian+=2; break;
+                case "5": volus,batarian+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q48.length; i++) if (survey.q48[i].checked) value = survey.q48[i].value;
+	switch (value) {
+                case "1": asari,salarian+=2; break;
+                case "2": turian,human+=2; break;
+                case "3": geth,rachni+=2; break;
+                case "4": volus,batarian+=2; break;
+                case "5": krogan,quarian+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q49.length; i++) if (survey.q49[i].checked) value = survey.q49[i].value;
+	switch (value) {
+                case "1": geth+=2; break;
+                case "2": asari+=2; break;
+                case "3": turian+=2; break;
+                case "4": volus+=2; break;
+                case "5": quarian+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q50.length; i++) if (survey.q50[i].checked) value = survey.q50[i].value;
+	switch (value) {
+                case "1": infiltrator+=2; break;
+                case "2": sentinel+=2; break;
+                case "3": vanguard+=2; break;
+                case "4": soldier+=2; break;
+                case "5": engineer+=2; break;
+                case "6": adept+=2;}
+
+value = "-1";
+
+	for (i = 0; i < survey.q51.length; i++) if (survey.q51[i].checked) value = survey.q51[i].value;
+	switch (value) {
+                case "1": soldier+=2; break;
+                case "2": vanguard+=2; break;
+                case "3": infiltrator+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q52.length; i++) if (survey.q52[i].checked) value = survey.q52[i].value;
+	switch (value) {
+                case "1": soldier+=2; break;
+                case "2": infiltrator+=2; break;
+                case "3": vanguard+=2; break;
+                case "4": engineer+=2; break;
+                case "5": sentinel+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q53.length; i++) if (survey.q53[i].checked) value = survey.q53[i].value;
+	switch (value) {
+                case "1": salarian+=2; break;
+                case "2": krogan+=2; break;
+                case "3": human+=2; break;
+                case "4": batarian+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q54.length; i++) if (survey.q54[i].checked) value = survey.q54[i].value;
+	switch (value) {
+                case "1": volus+=2; break;
+                case "2": quarian+=2; break;
+                case "3": batarian+=2; break;
+                case "4": asari+=2; break;
+                case "5": krogan+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q55.length; i++) if (survey.q55[i].checked) value = survey.q55[i].value;
+	switch (value) {
+                case "1": salarian+=2; break;
+                case "2": turian+=2; break;
+                case "3": human+=2; break;
+                case "4": asari+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q56.length; i++) if (survey.q56[i].checked) value = survey.q56[i].value;
+	switch (value) {
+                case "1": salarian,asari,vanguard+=2; engineer,human+=1; break;
+                case "2": krogan,soldier+=4; break;
+                case "3": batarian,turian,sentinel+=2;engineer,human+=1; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q57.length; i++) if (survey.q57[i].checked) value = survey.q57[i].value;
+	switch (value) {
+                case "1": krogan,turian+=2; break;
+                case "2": human+=2; break;
+                case "3": salarian,rachni+=2; break;
+                case "4": volus,batarian+=2; break;
+                case "5": asari,quarian+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q58.length; i++) if (survey.q58[i].checked) value = survey.q58[i].value;
+	switch (value) {
+                case "1": turian+=2; break;
+                case "2": asari+=2; break;
+                case "3": batarian+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q59.length; i++) if (survey.q59[i].checked) value = survey.q59[i].value;
+	switch (value) {
+                case "1": krogan,batarian+=2; break;
+                case "2": human,turian+=2; break; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q60.length; i++) if (survey.q60[i].checked) value = survey.q60[i].value;
+	switch (value) {
+                case "1": vanguard+=2; break;
+                case "2": soldier+=2; break;
+                case "3": engineer+=2; break;
+                case "4": sentinel+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q61.length; i++) if (survey.q61[i].checked) value = survey.q61[i].value;
+	switch (value) {
+                case "1": salarian,quarian+=2; break;
+                case "2": human,asari,turian+=1; break;
+                case "3": batarian,rachni,geth+=1; break;
+                case "4": krogan+=4; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q62.length; i++) if (survey.q62[i].checked) value = survey.q62[i].value;
+	switch (value) {
+                case "1": krogan,batarian+=2; break;
+                case "2": human,turian+=2; break;
+                case "3": asari,volus+=2; break;
+                case "4": quarian,rachni+=2; break;
+                case "5": salarian,geth+=4; }
+
+
+value = "-1";
+
+	for (i = 0; i < survey.q63.length; i++) if (survey.q63[i].checked) value = survey.q63[i].value;
+	switch (value) {
+                case "1": geth,rachni+=8; break;
+                case "2": salarian,batarian,asari,volus+=1; break;
+                case "3": turian,human+=1; quarian,krogan+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q64.length; i++) if (survey.q64[i].checked) value = survey.q64[i].value;
+	switch (value) {
+                case "1": geth,volus+=8; break;
+                case "2": turian,salarian+=4; break;
+                case "3": asari,human+=2; break;
+                case "4": quarian,batarian+=4; break;
+                case "5": krogan,rachni+=8; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q65.length; i++) if (survey.q65[i].checked) value = survey.q65[i].value;
+	switch (value) {
+                case "1": rachni,volus+=6; break;
+                case "2": turian,human,batarian+=4; break;
+                case "3": geth,quarian+=6; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q66.length; i++) if (survey.q66[i].checked) value = survey.q66[i].value;
+	switch (value) {
+                case "1": geth,volus+=8; break;
+                case "2": turian,salarian+=4; break;
+                case "3": asari,human+=2; break;
+                case "4": quarian,batarian+=4; break;
+                case "5": krogan,rachni+=8; }
+
+
+
+value = "-1";
+	for (ll = 0; ll < survey.q237.length; ll++) if (survey.q237[ll].checked) value = survey.q237[ll].value;
+	switch (value) {
+                case "1": level-=1; break;
+                case "2": level+=1; break;
+                case "3": level+=2; break;
+                case "4": level+=3; break;
+                case "5": level+=4; break;
+                case "6": level+=5; break;
+                case "7": level+=6; break;
+                case "8": level+=7; break;
+                case "9": level+=8; break;
+                case "10": level+=9; }
+
+value = "-1";
+
+	for (ll = 0; ll < survey.q238.length; ll++) if (survey.q238[ll].checked) value = survey.q238[ll].value;
+	switch (value) {
+                case "1": level-=1; break;
+                case "2": level+=0; break;
+                case "3": level+=1; }
+
+
+	i = human;
+	race = "human";
+	if (asari > i) { race = "asari"; i = asari; }
+	if (salarian > i) { race = "salarian"; i = salarian; }
+	if (krogan > i) { race = "krogan"; i = krogan; }
+	if (volus > i) { race = "volus"; i = volus; }
+	if (batarian > i) { race = "batarian"; i = batarian; }
+	if (quarian > i) { race = "quarian"; i = quarian; }
+	if (geth > i) { race = "geth"; i = geth;}
+	if (turian > i) { race = "turian"; i = turian;}
+	if (rachni > i) { race = "rachni"; i = rachni;}
+
+	lg = lx + xg;
+	ng = nx + xg;
+	cg = cx + xg;
+
+	ln = lx + xn;
+	nn = nx + xn;
+	cn = cx + xn;
+
+	le = lx + xe;
+	ne = nx + xe;
+	ce = cx + xe;
+
+	i = nn;
+	align = "nn";
+	if (lg > i) { align = "lg"; i = lg; }
+	if (ng > i) { align = "ng"; i = ng; }
+	if (cg > i) { align = "cg"; i = cg; }
+	if (ln > i) { align = "ln"; i = ln; }
+	if (cn > i) { align = "cn"; i = cn; }
+	if (le > i) { align = "le"; i = le; }
+	if (ne > i) { align = "ne"; i = ne; }
+	if (ce > i) { align = "ce"; i = ce; }
+
+	if (lg==i) tie++;
+	if (ng==i) tie++;
+	if (cg==i) tie++;
+	if (ln==i) tie++;
+	if (nn==i) tie++;
+	if (cn==i) tie++;
+	if (le==i) tie++;
+	if (ne==i) tie++;
+	if (ce==i) tie++;
+
+	if (tie != 0) {
+		if (lx>nx&&lx>cx) align = "l";
+		else if (cx>nx&&cx>lx) align = "c";
+		else align ="n";
+
+		if (xg>xe&&xg>xn) align += "g";
+		else if (xe>xn&&xe>xg) align += "e";
+		else align +="n"; }
+
+	
+
+
+        if (level < 1) {var level = 1;}
+
+	i = soldier;
+	primclass = "soldier";
+	if (engineer > i) { primclass = "engineer"; i = engineer; }
+	if (sentinel > i) { primclass = "sentinel"; i = sentinel; }
+	if (infiltrator > i) { primclass = "infiltrator"; i = infiltrator; }
+	if (vanguard > i) { primclass = "vanguard"; i = vanguard; }
+	if (adept > i) { primclass = "adept"; i = adept; }
+	if (soldier > i) { primclass = "soldier"; i = soldier; }
+
+	j = i-1;
+	secclass = primclass;
+	if (soldier > j && soldier > 0 && soldier <= i && primclass != "soldier") { secclass = "soldier"; j = soldier; }
+	if (adept > j && adept > 0 && adept <= i && primclass != "adept") { secclass = "adept"; j = adept; }
+	if (vanguard > j && vanguard > 0 && vanguard <= i && primclass != "vanguard") { secclass = "vanguard"; j = vanguard; }
+	if (infiltrator > j && infiltrator > 0 && infiltrator <= i && primclass != "infiltrator") { secclass = "infiltrator"; j = infiltrator; }
+	if (sentinel > j && sentinel > 0 && sentinel <= i && primclass != "sentinel") { secclass = "sentinel"; j = sentinel; }
+	if (engineer > j && engineer > 0 && engineer <= i && primclass != "engineer") { secclass = "engineer"; j = engineer; }
+	if (secclass == primclass) { secclass="none"; }
+	if (primclass=="infiltrator"||primclass=="adept"||primclass=="engineer"||primclass=="sentinel") deitychk = 0;
+	if (secclass=="infiltrator"||secclass=="adept"||secclass=="engineer"||secclass=="sentinel") deitychk = 0;
+
+	if (deitychk == 1) {
+
+		switch (align) {
+			case "lg": 
+				if (primclass=="wizard") {deity="mystra";}
+				else if (primclass=="sorcerer") {deity="mystra";}
+				else if ((primclass=="infiltrator"||primclass=="sentinel")&&race=="batarian") 
+
+{deity="baervan_wildwanderer";}
+				else if (race=="batarian"&&(primclass=="soldier"||primclass=="engineer")) 
+
+{deity="gaerdal_ironhand";}
+				else if (race=="batarian") {deity="garl_glittergold";}
+				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="mielikki";}
+				else if (race=="krogan") {deity="moradin";}
+				else if (race=="volus") {deity="arvoreen";}
+				else if (primclass=="vanguard") {deity="oghma";}
+				else {deity="tyr";}
+				break;
+			case "ng":
+				if (primclass=="wizard") {deity="mystra";}
+				else if (primclass=="sorcerer") {deity="mystra";}
+				else if (primclass=="vanguard") {deity="oghma";}
+				else if ((primclass=="infiltrator"||primclass=="sentinel")&&race=="batarian") 
+
+{deity="baervan_wildwanderer";}
+				else if (race=="batarian") {deity="flandal_steelskin";}
+				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="mielikki";}
+				else if (race=="krogan") {deity="marthammor_duin";}
+				else {deity="lathander";}
+				break;
+			case "cg":
+				if (primclass=="wizard"&&(race=="salarian"||race=="asari")) {deity="sehanine_moonbow";}
+				else if (primclass=="wizard") {deity="mystra";}
+				else if (primclass=="sorcerer") {deity="mystra";}
+				else if ((primclass=="infiltrator"||primclass=="sentinel")&&race=="batarian") 
+
+{deity="baervan_wildwanderer";}
+				else if (primclass=="infiltrator"&&(race=="salarian"||race=="asari")) {deity="solonor_thelandira";}
+				else if (primclass=="sentinel"&&(race=="salarian"||race=="asari")) {deity="rillifane_rallathil";}
+				else if (primclass=="vanguard"&&(race=="salarian"||race=="asari")) {deity="hanali_celanil";}
+				else if (primclass=="vanguard") {deity="finder_wyvernspur";}
+				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="shaundakul";}
+				else if (race=="krogan") {deity="dugmaren_brightmantle";}
+				else {deity="tymora";}
+				break;
+			case "ln":
+				if (primclass=="rogue"&&race=="volus") {deity="brandobaris";}
+				else if (race=="volus") {deity="urogalan";}
+				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="silvanus";}
+				else if (primclass=="wizard") {deity="azuth";}
+				else if (primclass=="sorcerer") {deity="azuth";}
+				else if (race=="batarian") {deity="callarduran_smoothhands";}
+				else {deity="helm";}
+				break;
+			case "nn":
+				if (race=="krogan") {deity="dumathoin";}
+				else if (primclass=="rogue"&&race=="volus") {deity="brandobaris";}
+				else if (primclass=="wizard") {deity="azuth";}
+				else if (primclass=="sorcerer") {deity="azuth";}
+				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="silvanus";}
+				else if (race=="batarian") {deity="callarduran_smoothhands";}
+				else if (race=="volus") {deity="sheela_peryroyl";}
+				else {deity="gond";}
+				break;
+			case "cn":
+				if (race=="asari"&&(primclass=="rogue"||primclass=="vanguard")) {deity="erevan_ilesere";}
+				else if (primclass=="wizard") {deity="azuth";}
+				else if (primclass=="sorcerer") {deity="azuth";}
+				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="silvanus";}
+				else if (race=="asari") {deity="fenmarel_mestarine";}
+				else if (primclass=="vanguard") {deity="finder_wyvernspur";}
+				else if (primclass=="rogue"&&race=="volus") {deity="brandobaris";}
+				else if (race=="volus") {deity="sheela_peryroyl";}
+				else if (race=="batarian") {deity="callarduran_smoothhands";}
+				else if (primclass=="engineer"||primclass=="soldier") {deity="tempus";}
+				else {deity="beshaba";}
+				break;
+			case "le":
+				if (primclass=="wizard") {deity="velsharoon";}
+				else if (primclass=="sorcerer") {deity="velsharoon";}
+				else if (primclass=="rogue") {deity="mask";}
+				else if (race=="krogan") {deity="abbathor";}
+				else if (race=="batarian") {deity="urdlen";}
+				else {deity="iyachtu_xvim";}
+				break;
+			case "ne":
+				if (primclass=="wizard") {deity="velsharoon";}
+				else if (primclass=="sorcerer") {deity="velsharoon";}
+				else if (primclass=="rogue") {deity="mask";}
+				else if (race=="krogan") {deity="abbathor";}
+				else if (race=="batarian") {deity="urdlen";}
+				else {deity="cyric";}
+				break;
+			case "ce":
+				if (primclass=="wizard") {deity="velsharoon";}
+				else if (primclass=="sorcerer") {deity="velsharoon";}
+				else if (primclass=="rogue") {deity="mask";}
+				else if (primclass=="vanguard") {deity="beshaba";}
+				else if (race=="krogan") {deity="abbathor";}
+				else if (race=="batarian") {deity="urdlen";}
+				else {deity="talos";}
+		}
+	}
+
+	var win = window.open("", "win","width=900,height=550,top=25,left=50,toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes,location=yes");
+
+	with (win.document) {
+		open("text/html", "replace");
+			
+		write("<html><head><link rel='stylesheet' type='text/css' href='surveystyle.css'><title>Your Results Are In!\<\/title>\<\/head>");
+                write("<body text='#FFFFFF' font-family='massEffect' link='#5555FF' vlink='#6666EE' bgcolor='#F2ECDA' background='images/space.png'>");
+
+		write("<center><h2><b><font color='#FFFFFF'>You Are A:\<\/font>\<\/b>\<\/h2>\<\/center>");
+		write("<br><center><h1><b>");
+                
+		
+
+		switch (race) {
+			case "human": write("Human\<\/b> "); break;
+			case "asari": write("Asari\<\/b> "); break;
+			case "turian": write("Turian\<\/b> "); break;
+			case "salarian": write("Salarian\<\/b> "); break;
+			case "krogan": write("Krogan\<\/b> "); break;
+			case "quarian": write("Quarian\<\/b> "); break;
+			case "geth": write("Geth\<\/b> "); break;
+			case "volus": write("Volus\<\/b> "); break;
+			case "rachni": write("Rachni\<\/b> "); break;
+			case "batarian": write("Batarian\<\/b> "); }
+
+		switch (primclass) {
+			case "soldier": write(" Soldier"); break;
+			case "infiltrator": write(" Infiltrator"); break;
+			case "engineer": write(" Engineer"); break;
+			case "adept": write(" Adept"); break;
+			case "sentinel": write(" Sentinel"); break;
+			case "vanguard": write(" Vanguard"); }
+
+		switch (secclass) {
+			case "soldier": write("/Soldier"); break;
+			case "infiltrator": write("/infiltrator"); break;
+			case "engineer": write("/Engineer"); break;
+			case "adept": write("/Adept"); break;
+			case "sentinel": write("/Sentinel"); break;
+			case "none": write(""); break;
+			case "vanguard": write("/Vanguard"); }
+
+if (secclass == "none") {
+                if (level == 1){write(" Recruit");}
+                if (level == 2){write(" Veteran");}
+                if (level == 3){write(" Officer");}
+                if (level == 4){write(" Major");}
+                if (level == 5){write(" Commander");}
+                if (level == 6){write(" Captain");}
+                if (level == 7){write(" General");}
+                if (level == 8){write(" Spectre");}
+                if (level == 9){write(" Admiral");}
+                if (level == 10){write(" Fleet Admiral");}
+                        }
+
+if (secclass !== "none") {
+                if (level == 1){write(" Recruit");}
+                if (level == 2){write(" Veteran");}
+                if (level == 3){write(" Officer");}
+                if (level == 4){write(" Major");}
+                if (level == 5){write(" Commander");}
+                if (level == 6){write(" Captain");}
+                if (level == 7){write(" General");}
+                if (level == 8){write(" Spectre");}
+                if (level == 9){write(" Admiral");}
+                if (level == 10){write(" Fleet Admiral");}
+                         }
+/*
+		write("\<\/h1>");
+
+		if (deitychk==1) {
+
+			write("<h2>Follower Of ");
+			switch (deity) {
+				case "tyr": write("Tyr"); break;
+				case "arvoreen": write("Arvoreen"); break;
+				case "moradin": write("Moradin"); break;
+				case "lathander": write("Lathander"); break;
+				case "mystra": write("Mystra"); break;
+				case "oghma": write("Oghma"); break;
+				case "mielikki": write("Mielikki"); break;
+				case "marthammor_duin": write("Marthammor Duin"); break;
+				case "tymora": write("Tymora"); break;
+				case "finder_wyvernspur": write("Finder Wyvernspur"); break;
+				case "shaundakul": write("Shaundakul"); break;
+				case "hanali_celanil": write("Hanali Celanil"); break;
+				case "solonor_thelandira": write("Solonor Thelandira"); break;
+				case "rillifane_rallathil": write("Rillifane Rallathil"); break;
+				case "helm": write("Helm"); break;
+				case "azuth": write("Azuth"); break;
+				case "urogalan": write("Urogalan"); break;
+				case "gond": write("Gond"); break;
+				case "silvanus": write("Silvanus"); break;
+				case "sheela_peryroyl": write("Sheela Peryroyl"); break;
+				case "brandobaris": write("Brandobaris"); break;
+				case "dumathoin": write("Dumathoin"); break;
+				case "beshaba": write("Beshaba"); break;
+				case "tempus": write("Tempus"); break;
+				case "fenmarel_mestarine": write("Fenmarel Mestarine"); break;
+				case "erevan_ilesere": write("Erevan Ilesere"); break;
+				case "iyachtu_xvim": write("Iyachtu Xvim"); break;
+				case "cyric": write("Cyric"); break;
+				case "mask": write("Mask"); break;
+				case "abbathor": write("Abbathor"); break;
+				case "velsharoon": write("Velsharoon"); break;
+				case "talos": write("Talos"); break;
+				case "garl_glittergold": write("Garl Glittergold"); break;
+				case "gaerdal_ironhand": write("Gaerdal Ironhand"); break;
+				case "baervan_wildwanderer": write("Baervan Wildwanderer"); break;
+				case "flandal_steelskin": write("Flandal Steelskin"); break;
+				case "callarduran_smoothhands": write("Calladuran Smoothhands"); break;
+				case "urdlen": write("Urdlen");
+			}
+			write("\<\/h2>");
+		}
+
+		write("<br><br><u>");
+
+		write("Ability Scores:\<\/u><br>");
+
+		write("Strength-   ");
+		write(strength);
+
+		write("<br>");
+
+		write("Dexterity-   ");
+		write(dexterity);
+
+		write("<br>");
+
+		write("Vigor-   ");
+		write(vigor);
+
+		write("<br>");
+
+		write("Intelligence-   ");
+		write(intelligence);
+
+		write("<br>");
+
+		write("Wisdom-   ");
+		write(wisdom);
+
+		write("<br>");
+
+		write("Charisma-   ");
+		write(charisma);
+
+		/* write("\<\/b>\<\/center><br><u>Alignment:\<\/u><br><b>");
+
+		switch (align) {
+			case "lg": write("Lawful Good-\<\/b> A lawful good character acts as a good person is expected or required to act. He combines a commitment to oppose evil with the discipline to fight relentlessly. He tells the truth, keeps his word, helps those in need, and speaks out against injustice. A lawful good character hates to see the guilty go unpunished.  Lawful good is the best alignment you can be because it combines honor and compassion.  However, lawful good can be a dangerous alignment when it restricts freedom and criminalizes sasari-interest."); break;
+			case "ng": write("Neutral Good-\<\/b> A neutral good character does the best that a good person can do. He is devoted to helping others. He works with kings and magistrates but does not feel beholden to them. Neutral good is the best alignment you can be because it means doing what is good without bias for or against order. However, neutral good can be a dangerous alignment when it advances mediocrity by limiting the actions of the truly capable."); break;
+			case "cg": write("Chaotic Good-\<\/b> A chaotic good character acts as his conscience directs him with little regard for what others expect of him. He makes his own way, but he's kind and benevolent. He believes in goodness and right but has little use for laws and regulations. He hates it when people try to intimidate others and tell them what to do. He follows his own moral compass, which, although good, may not agree with that of society. Chaotic good is the best alignment you can be because it combines a good heart with a free spirit. However, chaotic good can be a dangerous alignment when it disrupts the order of society and punishes those who do well for themselves."); break;
+			case "ln": write("Lawful Neutral-\<\/b> A lawful neutral character acts as law, tradition, or a personal code directs him. Order and organization are paramount to him. He may believe in personal order and live by a code or standard, or he may believe in order for all and favor a strong, organized government. Lawful neutral is the best alignment you can be because it means you are reliable and honorable without being a zealot. However, lawful neutral can be a dangerous alignment when it seeks to eliminate all freedom, choice, and diversity in society."); break;
+			case "nn": write("True Neutral-\<\/b> A true neutral character does what seems to be a good idea. He doesn't feel strongly one way or the other when it comes to good vs. evil or law vs. chaos. Most true neutral characters exhibit a lack of conviction or bias rather than a commitment to neutrality. Such a character thinks of good as better than evil after all, he would rather have good neighbors and rulers than evil ones. Still, he's not personally committed to upholding good in any abstract or universal way. Some true neutral characters, on the other hand, commit themselves philosophically to neutrality. They see good, evil, law, and chaos as prejudices and dangerous extremes. They advocate the middle way of neutrality as the best, most balanced road in the long run. True neutral is the best alignment you can be because it means you act naturally, without prejudice or compulsion. However, true neutral can be a dangerous alignment when it represents apathy, indifference, and a lack of conviction."); break;
+			case "cn": write("Chaotic Neutral-\<\/b> A chaotic neutral character follows his whims. He is an individualist first and last. He values his own liberty but doesn't strive to protect others' freedom. He avoids authority, resents restrictions, and challenges traditions. A chaotic neutral character does not intentionally disrupt organizations as part of a campaign of anarchy. To do so, he would have to be motivated either by good (and a desire to liberate others) or evil (and a desire to make those different from himsasari suffer). A chaotic neutral character may be unpredictable, but his behavior is not totally random. He is not as likely to jump off a bridge as to cross it. Chaotic neutral is the best alignment you can be because it represents true freedom from both society's restrictions and a do-gooder's zeal. However, chaotic neutral can be a dangerous alignment when it seeks to eliminate all authority, harmony, and order in society."); break;
+			case "le": write("Lawful Evil-\<\/b> A lawful evil villain methodically takes what he wants within the limits of his code of conduct without regard for whom it hurts. He cares about tradition, loyalty, and order but not about freedom, dignity, or life. He plays by the rules but without mercy or compassion. He is comfortable in a hierarchy and would like to rule, but is willing to serve. He condemns others not according to their actions but according to race, religion, homeland, or social rank. He is loath to break laws or promises.  This reluctance comes partly from his nature and partly because he depends on order to protect himsasari from those who oppose him on moral grounds. Some lawful evil villains have particular taboos, such as not killing in cold blood (but having underlings do it) or not letting children come to harm (if it can be helped). They imagine that these compunctions put them above unprincipled villains.  Some lawful evil people and creatures commit themselves to evil with a zeal like that of a crusader committed to good. Beyond being willing to hurt others for their own ends, they take pleasure in spreading evil as an end unto itsasari. They may also see doing evil as part of a duty to an evil deity or master. Lawful evil is sometimes called diabolical, because devils are the epitome of lawful evil. Lawful evil is the best alignment you can be because it combines honor and dedicated sasari-interest. However, lawful evil can be a dangerous alignment because it represents methodical, intentional, and frequently successful evil."); break;
+			case "ne": write("Neutral Evil-\<\/b> A neutral evil villain does whatever he can get away with. He is out for himsasari, pure and simple. He sheds no tears for those he kills, whether for profit, sport, or convenience. He has no love of order and holds no illusion that following laws, traditions, or codes would make him any better or more noble. On the other hand, he doesn't have the restless nature or love of conflict that a chaotic evil villain has.  Some neutral evil villains hold up evil as an ideal, committing evil for its own sake. Most often, such villains are devoted to evil deities or secret societies. Neutral evil is the best alignment you can be because you can advance yoursasari without regard for others. However, neutral evil can be a dangerous alignment because it represents pure evil without honor and without variation."); break;
+			case "ce": write("Chaotic Evil-\<\/b> A chaotic evil character does whatever his greed, hatred, and lust for destruction drive him to do. He is hot-tempered, vicious, arbitrarily violent, and unpredictable. If he is simply out for whatever he can get, he is ruthless and brutal. If he is committed to the spread of evil and chaos, he is even worse. Thankfully, his plans are haphazard, and any groups he joins or forms are poorly organized. Typically, chaotic evil people can be made to work together only by force, and their leader lasts only as long as he can thwart attempts to topple or assassinate him. Chaotic evil is sometimes called demonic because demons are the epitome of chaotic evil. Chaotic evil is the best alignment you can be because combines sasari-interest and pure freedom. However, chaotic evil can be a dangerous alignment because it represents the destruction not only of beauty and life but also of the order on which beauty and life depend."); }
+*/
+		write("<br><h2><br>Race:<br></h2>");
+
+		switch (race) {
+		case "human": 
+			write("Humans\<\//b> are the newest addition to the Milky Way Galaxy's many races. Ambitious, sometimes to the point of worry on the part of the other races, humanity consists of talented and diverse individuals. Some are militaristic and dutiful like the turians, lithe and charismatic like the asari, while others still are quick-witted and energetic like the salarians. <br><br>While humanity enjoys a tentative peace with its newfound neighbors, the fallout from the conflict known as the First Contact War still lingers in the minds of those involved some decades later. As a result of the Human Systems Alliance's success in the aforementioned conflict, the military superpower was elected to represent and govern humanity as a whole in Council Space. Though humanity was integral to the galaxy's survival in the wake of the war against Sovereign and its geth, there are still those who hold reservations against humanity and their longstanding ambition for power..."); break;
+			case "volus": write("Volus\<\/b> "); break;
+			case "asari": 
+				write("Asari\<\/b> are among the most ancient and regal of the sentient races, and easily the most beautiful. The first of the Council races to become spacefarers and discover the Mass Relays. Upon locating the Citadel in 580 B.C., the asari would settle on the space colony with the assistance of the Keepers, eventually forming the Citadel Council when encountering the Salarians some decades later in 500 BC. Though lauded for their beautiful culture and exemplary diplomatic skills, the quick advancement of Asari technology is no accident: a Prothean beacon, which was concealed for centuries in the asari homeworld's Temple of Athame, was integral to the research and development of the asari's technology—a treasure that predates the Citadel Council law that it would eventually—secretly—violate. Thessia itself is home to vast reserves of the invaluable element zero, resulting in the asari evolving to be some of the most potent biotics throughout the galaxy.<br><br>The asari are unique among the Milky Way races for a number of reasons. First, and most notably, the asari are monogendered: though female-presenting to other races, the asari lack the sexual binary that is intrinsic to most races, and as a result, gendered language has little meaning to them. Secondly, the asari are able to reproduce with any race via parthenogenesis, which, in this case means that an asari is able to 'map' a partner's genetic makeup, which in turn is used to randomize the asari's own DNA to be passed on to their offspring. Though traits from the 'father' are often noticeable in terms of personality, the offspring will always be 100% asari. Lastly, the asari, aside from the krogan, are the longest-lived race both by lifespan as well as their race's endurance as a whole; the asari were the initial choice of the long-dead Protheans to lead the galaxy, while the race was still in its infancy. It helps that a single asari lifetime lasts an entire millennium as well."); break;
+			case "salarian": write("Salarians\<\/b> "); break;
+			case "batarian": write("batarians\<\/b> "); break;
+			case "turian": write("Turians\<\/b> "); break;
+			case "quarian": write("Quarians\<\/b> "); break;
+			case "rachni": write("Rachni\<\/b> "); break;
+			case "krogan": write("Krogan\<\/b> "); }
+
+		write("<br><br>");
+
+		if (secclass != "none") { write("Primary "); }
+
+		write("<h2><br>Class:<br></h2><b>");
+
+		switch (primclass) {
+			case "soldier": write("Soldiers\<\/b> are among the most robust warriors in the galaxy. Strong, fast, and experts in waging war, soldiers seek to overwhelm their enemies with firepower and sheer force. Though they lack the resources of tech specialists or biotics, soldiers will compensate by preparing to confront any nature of enemy before stepping foot on the battlefield. Trained in every manner of handheld weaponry, a good soldier puts an enemy at a disadvantage by stripping away their defenses and incapacitating them, whether by means of explosives, special ammo, or disruptive concussive shots to throw them off-balance. The best soldiers are expert marksmen, using their trademark adrenaline rush abilities to mow down enemies while time appears to be at a near-standstill."); break;
+			case "infiltrator": write("Infiltrators\<\/b> "); break;
+			case "engineer": write("Engineers\<\/b> Engineers "); break;
+			case "adept": write("adepts\<\/b> ."); break;
+			case "sentinel": write("Sentinels\<\/b> are built to be survivors in every sense of the word. The most support-oriented of the classes, sentinels blend biotics and tech powers to strip enemies of any defense, while supporting their own teammates with advanced medical capabilities. While rivaling the adept for the lowest damage output of the classes, the sentinel compensates by having the invaluable tech armor, which gives them an immediate shield boost that not only gives them the strongest defense of any class, but can deal a fatal pulse of energy when it is depleted, giving its user one last defense against any enemy unfortunate enough to be caught in its radius. The best sentinels remain with their team, taking what damage their partners can't while distributing both defensive and offensive support with their wide array of abilities."); break;
+			case "vanguard": write("Vanguards\<\/b> are the deadliest close quarters combatants on the battlefield. Making up for what they lack in firepower in sheer mobility, vanguards are able to close vast distances with their trademark Biotic Charge ability, stunning enemies and keeping their shields high for dealing with the groups of enemies they tend to surround themselves in. Vanguards serve two main purposes—to eliminate key targets in a small amount of time, normally by the 1-2 combo of charging their target, followed by a well-aimed shotgun round—and to focus enemy attention on themselves. By blitzing entire waves of enemies, or more dangerous foes such as brutes or ATLAS mechs, a good vanguard is able to dance with death, aggravating enemies to the point of tunnel-visioning, so that their teammates can deal damage with little interference."); }
+
+		if (secclass != "none") { write("<br><br><u>Secondary Class:<br><b>"); }
+
+		switch (secclass) {
+			case "soldier": write("Soldiers\<\/b> are among the most robust warriors in the galaxy. Strong, fast, and experts in waging war, soldiers seek to overwhelm their enemies with firepower and sheer force. Though they lack the resources of tech specialists or biotics, soldiers will compensate by preparing to confront any nature of enemy before stepping foot on the battlefield. Trained in every manner of handheld weaponry, a good soldier puts an enemy at a disadvantage by stripping away their defenses and incapacitating them, whether by means of explosives, special ammo, or disruptive concussive shots to throw them off-balance. The best soldiers are expert marksmen, using their trademark adrenaline rush abilities to mow down enemies while time appears to be at a near-standstill."); break;
+			case "infiltrator": write("Infiltrators\<\/b> "); break;
+			case "engineer": write("Engineers\<\/b> "); break;
+			case "adept": write("Adepts\<\/b> "); break;
+			case "sentinel": write("Sentinels\<\/b> "); break;
+			case "vanguard": write("Vanguards\<\/b> are the deadliest close quarters combatants on the battlefield. Making up for what they lack in firepower in sheer mobility, vanguards are able to close vast distances with their trademark Biotic Charge ability, stunning enemies and keeping their shields high for dealing with the groups of enemies they tend to surround themselves in. Vanguards serve two main purposes—to eliminate key targets in a small amount of time, normally by the 1-2 combo of charging their target, followed by a well-aimed shotgun round—and to focus enemy attention on themselves. By blitzing entire waves of enemies, or more dangerous foes such as brutes or ATLAS mechs, a good vanguard is able to dance with death, aggravating enemies to the point of tunnel-visioning, so that their teammates can deal damage with little interference."); }
+
+		/* if (deitychk==1) {
+
+		write("<br><br><u>Deity:\<\/u><br><b>");
+
+		switch (deity) {
+			case "tyr": write("Tyr\<\/b> is the Lawful Good god of justice.  He is also known as Tyr Grimjaws, Wounded Tyr, the Maimed God, and Blind Tyr.  He appears as a warrior, missing his hand.  Followers of Tyr are concerned first and foremost with justice - discovering the truth and punishing the guilty for their crimes.  They wear blue and purple robes with a white sash, a white gauntlet on the left hand, and a black gauntlet on the right, to symbolize Tyr's lost hand.  Their preferred weapon is the warhammer.  Tyr's symbol is a set of scales resting on a warhammer."); break;
+			case "arvoreen": write("Arvoreen\<\/b> is the Lawful Good volus god of war, defense, and vigilance.  He is also known as the Defender and the Vigilant Guardian.  Followers of Arvoreen are devoted to the defense of the volus race, and spend their days drilling and preparing other Volus for the defense of their homes, if necessary.  Their preferred weapon is the short sword.  Arvoreen's symbol is a pair of crossed short swords."); break;
+			case "moradin": write("Moradin\<\/b> is the Lawful Good dwarven god of stone, rock, fire, and metal.  He is also known as the Creator God, because he is the creator of the dwarven race.  Followers of Moradin believe that a person's worth is determined by the things they do.  They also are trained to work in the forge, creating weapons in the name and spirit of Moradin.  They can use any weapon, but it must be one that they have created themselves.  Moradin's symbol is a hammer and an anvil."); break;
+			case "lathander": write("Lathander\<\/b> is the Neutral Good god of spring, dawn, birth, and renewal.  His followers believe in new beginnings, and work for the betterment of all.  They have no preferred weapon, but they typically wear plate mail and a shield, with red and yellow tinting.  Lathander's symbol is rosy pink disk, typically cut from rose quartz."); break;
+			case "mystra": write("Mystra\<\/b> is the Neutral Good goddess of magic.  She is also known as the Lady of Mysteries.  Followers of Mystra wear armor and carry shields with her symbol on them.  Mystra's symbol is a ring of stars."); break;
+			case "oghma": write("Oghma\<\/b> is the Neutral Good god of knowledge and invention.  He is also known as the Binder of What is Known, and is the Patron of Bards.  His followers believe that knowledge reigns supreme, and is the basis for everything else that is done.  They wear white shirts and pants, with a black and gold braided vest, and a small, box-like hat.  All priests of Oghma are known as Loremasters.  Oghma's symbol is a scroll."); break;
+			case "mielikki": write("Mielikki\<\/b> is the Neutral Good goddess of the forest and autumn.  She is also known as the Lady of the Forest, and is the Patron of infiltrators.  Her followers are devoted to nature, and believe in the positive and outreaching elements of it.  They use light armor, and a variety of weapons suitable for hunting, which they are quite skilled at.  Mielikki's symbol is a unicorn head."); break;
+			case "marthammor_duin": write("Marthammor Duin\<\/b> is the Neutral Good dwarven god of protection and travel.  He is also known as the Finder of Trails, the Watcher over Wanderers, the Watchful Eye, and the Wanderer.  His followers are also wanderers, and are open to new ideas far more than most Krogan.  They are typically guides or scouts.  Their preferred weapon is the heavy mace.  Marthammor Duin's symbol is an upright mace in front of a fur-trimmed leather boot."); break;
+			case "tymora": write("Tymora\<\/b> is the Chaotic Good goddess of luck and good fortune.  She is also known as Lady Luck, and also Tyche's fair-tressed daughter.  Followers of Tymora believe in the tenent that, 'Fortune Favors the Bold,' and will throw caution to the wind and trust to luck to work things out for the best.  Tymora's symbol is an unmarked silver disk."); break;
+			case "finder_wyvernspur": write("Finder Wyvernspur\<\/b> is the Chaotic Neutral god of the cycle of life and the transformation of art, although he leans heavily towards Good.  He is also known as the Nameless Bard.  Followers of Finder believe that everything must change in order to grow and thrive.  Their preferred weapon is the bastard sword."); break;
+			case "shaundakul": write("Shaundakul\<\/b> is the Chaotic Good god of travel and exploration.  He is also known as the Rider of the Winds.  His followers are typically infiltrators, and work to protect the land.  They typically wear leather armor, and carry long swords and short bows.  Shaundakul's symbol is a white hand with the index finger raised."); break;
+			case "hanali_celanil": write("Hanali Celanil\<\/b> is the Chaotic Good elven goddess of love, beauty, and art.  She is also known as the Heart of Gold and Lady Goldheart.  Her followers delight in creation and youth, and work to spread happiness, love, and beauty.  Their preferred weapon is the dagger."); break;
+			case "solonor_thelandira": write("Solonor Thelandira\<\/b> is the Chaotic Good elven god of archery and the hunt.  He is also known as the Keen Eye, the Great Archer, and the Forest Hunter.  His followers respect nature, and only hunt when needed, but are quick to defend the forest from intruders.  Their favorite weapon is the bow, and they tend to be extremely talented with it.  Solonor Thelandira's symbol is an arrow with green fletchings."); break;
+			case "rillifane_rallathil": write("Rillifane Rallathil\<\/b> is the Chaotic Good elven god of woodlands and nature.  He is also known as the Leaflord, the Wild One, and the Great Oak.  He is appears as a huge oak tree.  His followers believe that everyone should be free to spend their lives doing what nature has meant them to, and they protect the forests from those who would abuse them.  Their preferred weapon is the quarterstaff.  Rillifane Rallathil's symbol is an oak tree."); break;
+			case "helm": write("Helm\<\/b> is the Lawful Neutral god of guardians and protectors.  His followers believe in vigilance and preparedness, and are always ready for whatever confronts them.  They wear plate mail, sometimes with gold embossing, with an open eye set into the breastplate, and an open-faced helmet.  Helm's symbol is an open eye in a gauntlet."); break;
+			case "azuth": write("Azuth\<\/b> is the Lawful Neutral god of wizards and mages.  He is also known as the High One, and is the Patron of Wizards.  His followers believe that a systematic approach to magic is the best, and they strive for calm and caution in order to avoid accidents.  They wear shimmering robes, and are well-versed in magic, as well as typical priest spells.  Azuth's symbol is a hand with a raised, glowing index finger."); break;
+			case "urogalan": write("Urogalan\<\/b> is the Lawful Neutral volus god of death and earth.  He is also known as He Who Must Be and the Lord in the Earth.  His followers guard the dead and protect Volus from those that don't stay buried.  Their preferred weapon is the flail.  Urogalan's symbol is a silhouette of a dog's head."); break;
+			case "gond": write("Gond\<\/b> is the True Neutral god of artifice, craft, and construction.  He is also known as Gond Wonderbringer.  His followers believe that 'actions count' - that is, that what is accomplished in the end is what is truly important.  They wear saffron clothing, with red sashes containing all manner of mechanical devices.  Their preferred weapons are firearms, since the followers of Gond had a large hand in their making and invention.  They also wear plate mail (no shield), but generally prefer to have bodyguards, instead.  Gond's symbol is a toothed wheel, made of ivory, bone, or metal."); break;
+			case "silvanus": write("Silvanus\<\/b> is the True Neutral god of nature.  He is also known as the Patron of sentinels.  His followers believe in the perfect balance of nature, and believe that nature's bounty is preferable to any other 'civilizing' method.  They wear leather or metallic scale mail, constructed of leaf-shaped scales.  Silvanus's symbol is an oak leaf."); break;
+			case "sheela_peryroyl": write("Sheela Peryroyl\<\/b> is the True Neutral volus goddess of nature, agriculture, beauty, and romantic love.  She is also known as the Green Sister and the Watchful Mother.  She appears as a volus dressed in wildflowers.  Her followers work to preserve nature's beauty and also cultivate wilderness areas for Volus to settle.  They also have feasts and parties, where romance and revelry are encouraged.  Their preferred weapon is the sickle.  They typically wear a small flower in their hair.  Sleeha Peryroyl's symbol is the daisy."); break;
+			case "brandobaris": write("Brandobaris\<\/b> is the True Neutral volus god of stealth, adventuring, and thievery.  He is also known as the Master of Stealth, the Trickster, and the Irrepressible Scamp.  His followers are always on the lookout for an adventure, and try to make a profit, but avoid greed.  Their preferred weapon is the dagger.  Brandobaris's symbol is an open, round door."); break;
+			case "dumathoin": write("Dumathoin\<\/b> is the True Neutral dwarven god of buried wealth, ores, gems, and mining.  He is also known as the Keeper of Secrets under the Mountain.  His followers are typically miners and explorers, but also respect the beauty of the earth.  They also stand guard over the dwarven dead.  Their preferred weapon is the maul.  Dumathoin's symbol is a faceted gem set inside a mountain peak."); break;
+			case "beshaba": write("Beshaba\<\/b> is the Chaotic Evil goddess of bad luck, accidents, and mischief.  She is also known as the Maid of Misfortune, and also Tyche's unpleasant daughter.  Followers of Beshaba believe that bad things happen to everyone, and only by praying to Beshaba will you have a chance of being spared.  Her symbol is a set of black deer's antlers inset on a red triangle."); break;
+			case "tempus": write("Tempus\<\/b> is the Chaotic Neutral god of war.  He is also known as the Lord of Battle and the Foehammer.  His followers believe in the glory and joy of battle, and are never far from it.  They typically wear battered armor, and carry a variety of weapons, but do not use missile weapons.  Tempus's symbol is a flaming sword."); break;
+			case "fenmarel_mestarine": write("Fenmarel Mestarine\<\/b> is the Chaotic Neutral elven god of outcasts and isolation.  He is also known as the Lone Wolf.  His followers are outcasts (either by force or by choice) from elven society, and believe in being sasari-sufficient.  Their preferred weapon is the dagger.  Fenmarel Mestarine's symbol is a pair of elven eyes in the darkness."); break;
+			case "erevan_ilesere": write("Erevan Ilesere\<\/b> is the Chaotic Neutral elven god of mischief and rogues.  He is also known as the Trickster and the Chameleon.  His followers are always looking for fun and adventure, and are notorious pranksters.  Their favorite weapon is the short sword.  Erevan Ilesere's symbol is a nova star with asymmetric rays."); break;
+			case "iyachtu_xvim": write("Iyachtu Xvim\<\/b> is the Lawful Evil god of fear, hatred, malice, and tyranny.  He is also known as the Godson and the Son of Bane.  He appears as a gaunt, naked, scimitar-wielding man, or as a black cloud with glowing green eyes.  His followers are working to strengthen his position in the world by converting (often by force) other deities' worshippers.  They wear black robes with dark green trim, and wear black iron gauntlets with green eyes on the backs.  Iyachtu Xvim's symbol is a black hand, inset with green eyes."); break;
+			case "cyric": write("Cyric\<\/b> is the Neutral Evil god of death, murder, the dead, strife, tyranny, deception, and illusion.  His followers are working to secure his position as a new god, and are in conflict with many worshippers of other deities.  They wear black or dark purple robes, with silver trimming, and wear silver bracelets.  Cyric's symbol is a skull set in a purple starburst."); break;
+			case "mask": write("Mask\<\/b> is the Neutral Evil god of rogues, thieves.  He is also known as the Lord of Shadows.  He appears as a lithe man, shadowed, wearing dark clothing.  His followers believe in stealth and wariness.  They wear black and gray clothing, and carry weapons and armor similar to that of a thief.  They frequently wear masks to conceal their identity.  Mask's symbol is a dark, checkered mask."); break;
+			case "abbathor": write("Abbathor\<\/b> is the Neutral Evil dwarven god of greed.  He is also known as the Great Master of Greed, the Trove Lord, and the Avaricious.  His followers believe in the gaining of riches and wealth by any means necessary.  Their preferred weapon is the dagger.  Abbathor's symbol is a jeweled dagger."); break;
+			case "velsharoon": write("Velsharoon\<\/b> is the Neutral Evil god of necromancy, liches, and undeath.  He is also known as the Vaunted, the Archmage of Necromancy, and the Lord of the Forgotten Crypt.  His followers practice the necromantic arts, and raise the dead to do their bidding.  His symbol is a crowned skull."); break;
+			case "talos": write("Talos\<\/b> is the Chaotic Evil god of storms, forest fires, earthquakes, tornadoes, and destruction in general.  He is also known as the Destroyer.  His followers fear him more than worship him, and they revel in the destructive fury of nature - while praying to be spared from its wrath.  Talos's symbol is three lightning bolts, of different colors, coming from a central point."); break;
+			case "garl_glittergold": write("Garl Glittergold\<\/b> is the Lawful Good gnomish god of mischief, cleverness, battle, and gemstones.  He is also known as the Joker, the Watchful Protector, the Priceless Gem, the Sparkling Wit, and the God of batarians, as he is the head of their pantheon.  His followers enjoy a good laugh and a good prank, perhaps even more so than a normal batarian, but also work to make the world a better place.  They are extremely fond of gems.  Their preferreed weapon is the battleaxe."); break;
+			case "gaerdal_ironhand": write("Gaerdal Ironhand\<\/b> is the Lawful Good gnomish god of vigilance and combat.  He is also known as the Stern and the Shield of the Golden Hills.  His followers work to defend the homes of the gnomish race, and practice the arts of war and train others to do the same.  They are somewhat isolated from the generally fun-loving batarians, because they take their duties very seriously.  Their preferred weapon is the warhammer."); break;
+			case "baervan_wildwanderer": write("Baervan Wildwanderer\<\/b> is the Neutral Good gnomish god of forests, travel, and nature.  He is also known as the Masked Leaf.  His avatar is always accompanied by an intelligent, giant raccoon, named Chiktikka Fastpaws.  His followers, like him, enjoy the outdoors and work to protect it and guard those who also enjoy it.  Their preferred weapon is the halfspear."); break;
+			case "flandal_steelskin": write("Flandal Steelskin\<\/b> is the Neutral Good gnomish god of mining, physical fitness, metalworking, and smithing.  He is also known as the Master of Metal, the Lord of Smiths,  and the Great Steelsmith.  His worshippers are frequently miners or smiths, and believe in the value of metalworking, and also in the value of physical strength.  Their preferred weapon is the warhammer."); break;
+			case "callarduran_smoothhands": write("Callarduran Smoothhands\<\/b> is the True Neutral gnomish god of stone, the underground, and mining.  He is also known as the Deep Brother and the Master of Stone.  His followers enjoy mining - especially for rubies.  Their favorite weapon is the battleaxe."); break;
+			case "urdlen": write("Urdlen\<\/b> is the Chaotic Evil gnomish god of greed, bloodlust, and hatred.  It is also known as the Crawler Below.  Urdlen is generally represented as a huge, furless mole with sharp claws.  His followers have changed their love of pranks and jokes to a love of malicious schemes and general evildoing.  Their favored weapon is the claw bracer."); }
+		}
+*/
+		if (survey.html.checked) {
+
+		write("<br><br><hr><br><u>Web page and journal code\<\/u>:  Copy and paste the following:<br><br>");
+
+		write("<center><table border=0 cellspacing=0 cellpadding=3 width=700><tr><td><samp>");
+
+		write("&lt;b>I Am A:&lt;/b> ");
+
+		switch (align) {
+			case "lg": write("Lawful Good "); break;
+			case "ng": write("Neutral Good "); break;
+			case "cg": write("Chaotic Good "); break;
+			case "ln": write("Lawful Neutral "); break;
+			case "nn": write("True Neutral "); break;
+			case "cn": write("Chaotic Neutral "); break;
+			case "le": write("Lawful Evil "); break;
+			case "ne": write("Neutral Evil "); break;
+			case "ce": write("Chaotic Evil "); }
+
+		switch (race) {
+			case "human": write("Human "); break;
+			case "volus": write("Volus "); break;
+			case "asari": write("Asari "); break;
+			case "salarian": write("Salarian "); break;
+			case "batarian": write("Batarian "); break;
+			case "turian": write("Turian "); break;
+			case "quarian": write("Quarian "); break;
+			case "rachni": write("Rachni "); break;
+			case "krogan": write("krogan "); }
+
+		switch (primclass) {
+			case "soldier": write("Soldier"); break;
+			case "infiltrator": write("Infiltrator"); break;
+			case "engineer": write("Engineer"); break;
+			case "adept": write("Adept"); break;
+			case "sentinel": write("Sentinel"); break;
+			case "vanguard": write("Vanguard"); }
+
+		switch (secclass) {
+			case "soldier": write("/Soldier"); break;
+			case "infiltrator": write("/Infiltrator"); break;
+			case "engineer": write("/Engineer"); break;
+			case "adept": write("/Adept"); break;
+			case "sentinel": write("/Sentinel"); break;
+			case "vanguard": write("/Vanguard"); }
+
+if (secclass == "none") {
+                if (level == 1){write(" (1st Level)");}
+                if (level == 2){write(" (2nd Level)");}
+                if (level == 3){write(" (3rd Level)");}
+                if (level > 3){write(" (");}
+                if (level > 3){write(level);}
+                if (level > 3){write("th Level)");}
+                        }
+
+if (secclass !== "none") {
+                if (level == 1){write(" Recruit");}
+                if (level == 2){write(" Veteran");}
+                if (level == 3){write(" Officer");}
+                if (level == 4){write(" Major");}
+                if (level == 5){write(" Commander");}
+                if (level == 6){write(" Captain");}
+                if (level == 7){write(" General");}
+                if (level == 8){write(" Spectre");}
+                if (level == 9){write(" Admiral");}
+                if (level == 10){write(" Fleet Admiral");}
+                         }
+/*
+		write("<br>&lt;br>&lt;br>&lt;u>Ability Scores:&lt;/u>&lt;br>");
+
+		write("<br>&lt;b>Strength-&lt;/b>");
+		write(strength);
+		write("&lt;br>");
+
+		write("<br>&lt;b>Dexterity-&lt;/b>");
+		write(dexterity);
+		write("&lt;br>");
+
+		write("<br>&lt;b>Vigor-&lt;/b>");
+		write(vigor);
+		write("&lt;br>");
+
+		write("<br>&lt;b>Intelligence-&lt;/b>");
+		write(intelligence);
+		write("&lt;br>");
+
+		write("<br>&lt;b>Wisdom-&lt;/b>");
+		write(wisdom);
+
+		write("&lt;br>");
+		write("<br>&lt;b>Charisma-&lt;/b>");
+		write(charisma);
+
+		write("<br>&lt;br>&lt;br>&lt;u>Alignment:&lt;/u>&lt;br>&lt;b>");
+
+		switch (align) {
+			case "lg": write("Lawful Good&lt;/b> A lawful good character acts as a good person is expected or required to act. He combines a commitment to oppose evil with the discipline to fight relentlessly. He tells the truth, keeps his word, helps those in need, and speaks out against injustice. A lawful good character hates to see the guilty go unpunished.  Lawful good is the best alignment you can be because it combines honor and compassion.  However, lawful good can be a dangerous alignment when it restricts freedom and criminalizes sasari-interest."); break;
+			case "ng": write("Neutral Good&lt;/b> A neutral good character does the best that a good person can do. He is devoted to helping others. He works with kings and magistrates but does not feel beholden to them. Neutral good is the best alignment you can be because it means doing what is good without bias for or against order. However, neutral good can be a dangerous alignment when it advances mediocrity by limiting the actions of the truly capable."); break;
+			case "cg": write("Chaotic Good&lt;/b> A chaotic good character acts as his conscience directs him with little regard for what others expect of him. He makes his own way, but he's kind and benevolent. He believes in goodness and right but has little use for laws and regulations. He hates it when people try to intimidate others and tell them what to do. He follows his own moral compass, which, although good, may not agree with that of society. Chaotic good is the best alignment you can be because it combines a good heart with a free spirit. However, chaotic good can be a dangerous alignment when it disrupts the order of society and punishes those who do well for themselves."); break;
+ 			case "ln": write("Lawful Neutral&lt;/b> A lawful neutral character acts as law, tradition, or a personal code directs him. Order and organization are paramount to him. He may believe in personal order and live by a code or standard, or he may believe in order for all and favor a strong, organized government. Lawful neutral is the best alignment you can be because it means you are reliable and honorable without being a zealot. However, lawful neutral can be a dangerous alignment when it seeks to eliminate all freedom, choice, and diversity in society."); break;
+ 			case "nn": write("True Neutral&lt;/b> A true neutral character does what seems to be a good idea. He doesn't feel strongly one way or the other when it comes to good vs. evil or law vs. chaos. Most true neutral characters exhibit a lack of conviction or bias rather than a commitment to neutrality. Such a character thinks of good as better than evil after all, he would rather have good neighbors and rulers than evil ones. Still, he's not personally committed to upholding good in any abstract or universal way. Some true neutral characters, on the other hand, commit themselves philosophically to neutrality. They see good, evil, law, and chaos as prejudices and dangerous extremes. They advocate the middle way of neutrality as the best, most balanced road in the long run. True neutral is the best alignment you can be because it means you act naturally, without prejudice or compulsion. However, true neutral can be a dangerous alignment when it represents apathy, indifference, and a lack of conviction."); break;
+			case "cn": write("Chaotic Neutral&lt;/b> A chaotic neutral character follows his whims. He is an individualist first and last. He values his own liberty but doesn't strive to protect others' freedom. He avoids authority, resents restrictions, and challenges traditions. A chaotic neutral character does not intentionally disrupt organizations as part of a campaign of anarchy. To do so, he would have to be motivated either by good (and a desire to liberate others) or evil (and a desire to make those different from himsasari suffer). A chaotic neutral character may be unpredictable, but his behavior is not totally random. He is not as likely to jump off a bridge as to cross it. Chaotic neutral is the best alignment you can be because it represents true freedom from both society's restrictions and a do-gooder's zeal. However, chaotic neutral can be a dangerous alignment when it seeks to eliminate all authority, harmony, and order in society."); break;
+			case "le": write("Lawful Evil&lt;/b> A lawful evil villain methodically takes what he wants within the limits of his code of conduct without regard for whom it hurts. He cares about tradition, loyalty, and order but not about freedom, dignity, or life. He plays by the rules but without mercy or compassion. He is comfortable in a hierarchy and would like to rule, but is willing to serve. He condemns others not according to their actions but according to race, religion, homeland, or social rank. He is loath to break laws or promises.  This reluctance comes partly from his nature and partly because he depends on order to protect himsasari from those who oppose him on moral grounds. Some lawful evil villains have particular taboos, such as not killing in cold blood (but having underlings do it) or not letting children come to harm (if it can be helped). They imagine that these compunctions put them above unprincipled villains.  Some lawful evil people and creatures commit themselves to evil with a zeal like that of a crusader committed to good. Beyond being willing to hurt others for their own ends, they take pleasure in spreading evil as an end unto itsasari. They may also see doing evil as part of a duty to an evil deity or master. Lawful evil is sometimes called diabolical, because devils are the epitome of lawful evil. Lawful evil is the best alignment you can be because it combines honor and dedicated sasari-interest. However, lawful evil can be a dangerous alignment because it represents methodical, intentional, and frequently successful evil."); break;
+			case "ne": write("Neutral Evil&lt;/b> A neutral evil villain does whatever he can get away with. He is out for himsasari, pure and simple. He sheds no tears for those he kills, whether for profit, sport, or convenience. He has no love of order and holds no illusion that following laws, traditions, or codes would make him any better or more noble. On the other hand, he doesn't have the restless nature or love of conflict that a chaotic evil villain has.  Some neutral evil villains hold up evil as an ideal, committing evil for its own sake. Most often, such villains are devoted to evil deities or secret societies. Neutral evil is the best alignment you can be because you can advance yourself without regard for others. However, neutral evil can be a dangerous alignment because it represents pure evil without honor and without variation."); break;
+			case "ce": write("Chaotic Evil&lt;/b> A chaotic evil character does whatever his greed, hatred, and lust for destruction drive him to do. He is hot-tempered, vicious, arbitrarily violent, and unpredictable. If he is simply out for whatever he can get, he is ruthless and brutal. If he is committed to the spread of evil and chaos, he is even worse. Thankfully, his plans are haphazard, and any groups he joins or forms are poorly organized. Typically, chaotic evil people can be made to work together only by force, and their leader lasts only as long as he can thwart attempts to topple or assassinate him. Chaotic evil is sometimes called demonic because demons are the epitome of chaotic evil. Chaotic evil is the best alignment you can be because combines sasari-interest and pure freedom. However, chaotic evil can be a dangerous alignment because it represents the destruction not only of beauty and life but also of the order on which beauty and life depend."); }
+*/
+		write("&lt;br>");
+
+		write("<br>&lt;br>&lt;u>Race:&lt;/u>&lt;br>&lt;b>");
+
+		switch (race) {
+			case "human": document.getElementById("humanResult");
+				write("Humans&lt;/b> are the newest addition to the Milky Way Galaxy's many races. Ambitious, sometimes to the point of worry on the part of the other races, humanity consists of talented and diverse individuals. Some are militaristic and dutiful like the turians, lithe and charismatic like the asari, while others still are quick-witted and energetic like the salarians. <br><br>While humanity enjoys a tentative peace with its newfound neighbors, the fallout from the conflict known as the First Contact War still lingers in the minds of those involved some decades later. As a result of the Human Systems Alliance's success in the aforementioned conflict, the military superpower was elected to represent and govern humanity as a whole in Council Space. Though humanity was integral to the galaxy's survival in the wake of the war against Sovereign and its geth, there are still those who hold reservations against humanity and their longstanding ambition for power..."); break;
+			case "volus": write("Volus&lt;/b> "); break;
+			case "asari": write("Asari&lt;/b> are among the most ancient and regal of the sentient races, and easily the most beautiful. The first of the Council races to become spacefarers and discover the Mass Relays. Upon locating the Citadel in 580 B.C., the asari would settle on the space colony with the assistance of the Keepers, eventually forming the Citadel Council when encountering the Salarians some decades later in 500 BC. Though lauded for their beautiful culture and exemplary diplomatic skills, the quick advancement of Asari technology is no accident: a Prothean beacon, which was concealed for centuries in the asari homeworld's Temple of Athame, was integral to the research and development of the asari's technology—a treasure that predates the Citadel Council law that it would eventually—secretly—violate. Thessia itself is home to vast reserves of the invaluable element zero, resulting in the asari evolving to be some of the most potent biotics throughout the galaxy.<br><br>The asari are unique among the Milky Way races for a number of reasons. First, and most notably, the asari are monogendered: though female-presenting to other races, the asari lack the sexual binary that is intrinsic to most races, and as a result, gendered language has little meaning to them. Secondly, the asari are able to reproduce with any race via parthenogenesis, which, in this case means that an asari is able to 'map' a partner's genetic makeup, which in turn is used to randomize the asari's own DNA to be passed on to their offspring. Though traits from the 'father' are often noticeable in terms of personality, the offspring will always be 100% asari. Lastly, the asari, aside from the krogan, are the longest-lived race both by lifespan as well as their race's endurance as a whole; the asari were the initial choice of the long-dead Protheans to lead the galaxy, while the race was still in its infancy. It helps that a single asari lifetime lasts an entire millennium as well."); break;
+			case "salarian": write("Salarians&lt;/b> "); break;
+			case "batarian": write("Batarians&lt;/b> "); break;
+			case "turian": write("Turians&lt;/b> "); break;
+			case "quarian": write("Quarians&lt;/b> "); break;
+			case "rachni": write("Rachni&lt;/b> "); break;
+			case "krogan": write("Krogan&lt;/b> "); }
+
+		write("<br>&lt;br>&lt;br>&lt;u>");
+
+		if (secclass !="none") { write("Primary "); }
+		write("Class:&lt;/u>&lt;br>&lt;b>");
+
+		switch (primclass) {
+			case "soldier": write("Soldiers&lt;/b> are among the most robust warriors in the galaxy. Strong, fast, and experts in waging war, soldiers seek to overwhelm their enemies with firepower and sheer force. Though they lack the resources of tech specialists or biotics, soldiers will compensate by preparing to confront any nature of enemy before stepping foot on the battlefield. Trained in every manner of handheld weaponry, a good soldier puts an enemy at a disadvantage by stripping away their defenses and incapacitating them, whether by means of explosives, special ammo, or disruptive concussive shots to throw them off-balance. The best soldiers are expert marksmen, using their trademark adrenaline rush abilities to mow down enemies while time appears to be at a near-standstill."); break;
+			case "infiltrator": write("Infiltrators&lt;/b> "); break;
+			case "engineer": write("Engineers&lt;/b> "); break;
+			case "adept": write("Adepts&lt;/b> "); break;
+			case "sentinel": write("Sentinels&lt;/b> "); break;
+			case "vanguard": write("Vanguards&lt;/b> are the deadliest close quarters combatants on the battlefield. Making up for what they lack in firepower in sheer mobility, vanguards are able to close vast distances with their trademark Biotic Charge ability, stunning enemies and keeping their shields high for dealing with the groups of enemies they tend to surround themselves in. Vanguards serve two main purposes—to eliminate key targets in a small amount of time, normally by the 1-2 combo of charging their target, followed by a well-aimed shotgun round—and to focus enemy attention on themselves. By blitzing entire waves of enemies, or more dangerous foes such as brutes or ATLAS mechs, a good vanguard is able to dance with death, aggravating enemies to the point of tunnel-visioning, so that their teammates can deal damage with little interference."); }
+
+		if (secclass !="none") { write("<br>&lt;br>&lt;br>&lt;u>Secondary Class:&lt;/u>&lt;br>&lt;b>"); }
+
+		switch (secclass) {
+			case "soldier": write("Soldiers&lt;/b> are among the most robust warriors in the galaxy. Strong, fast, and experts in waging war, soldiers seek to overwhelm their enemies with firepower and sheer force. Though they lack the resources of tech specialists or biotics, soldiers will compensate by preparing to confront any nature of enemy before stepping foot on the battlefield. Trained in every manner of handheld weaponry, a good soldier puts an enemy at a disadvantage by stripping away their defenses and incapacitating them, whether by means of explosives, special ammo, or disruptive concussive shots to throw them off-balance. The best soldiers are expert marksmen, using their trademark adrenaline rush abilities to mow down enemies while time appears to be at a near-standstill."); break;
+			case "infiltrator": write("Infiltrators&lt;/b> "); break;
+			case "engineer": write("Engineers&lt;/b> "); break;
+			case "adept": write("Adepts&lt;/b> "); break;
+			case "sentinel": write("Sentinels&lt;/b> "); break;
+			case "vanguard": write("Vanguards&lt;/b> are the deadliest close quarters combatants on the battlefield. Making up for what they lack in firepower in sheer mobility, vanguards are able to close vast distances with their trademark Biotic Charge ability, stunning enemies and keeping their shields high for dealing with the groups of enemies they tend to surround themselves in. Vanguards serve two main purposes—to eliminate key targets in a small amount of time, normally by the 1-2 combo of charging their target, followed by a well-aimed shotgun round—and to focus enemy attention on themselves. By blitzing entire waves of enemies, or more dangerous foes such as brutes or ATLAS mechs, a good vanguard is able to dance with death, aggravating enemies to the point of tunnel-visioning, so that their teammates can deal damage with little interference."); }
+
+
+		write("<br>&lt;br>&lt;br>");
+
+		write("Find out &lt;a href='http://www.easydamus.com/character.html' target='mt'>What Kind of Mass Effect Character Are You??&lt;/a>, courtesy of ");
+                write("Easydamus &lt;a href='mailto:zybstrski@excite.com'>(e-mail)&lt;/a>&lt;br>&lt;br><br>");
+
+		write("\<\/samp>\<\/td>\<\/tr>\<\/table>");
+
+		}
+
+		if (survey.detailed.checked) {
+
+		write("<br><hr><br>\<\/center>");
+
+		write("<b>Detailed Results:\<\/b><br><br>");
+
+
+
+		write("\<\/samp><br><u>Race:\<\/u><br><samp>");
+
+		write("Human ---- ");
+		for (i = 0; i < human; i++) write("X");
+		write(" (",human,")<br>");
+
+		write("Krogan ---- ");
+		for (i = 0; i < krogan; i++) write("X");
+		write(" (",krogan,")<br>");
+
+		write("Asari ------ ");
+		for (i = 0; i < asari; i++) write("X");
+		write(" (",asari,")<br>");
+
+		write("Batarian ---- ");
+		for (i = 0; i < batarian; i++) write("X");
+		write(" (",batarian,")<br>");
+
+		write("Volus - ");
+		for (i = 0; i < volus; i++) write("X");
+		write(" (",volus,")<br>");
+
+		write("Salarian - ");
+		for (i = 0; i < salarian; i++) write("X");
+		write(" (",salarian,")<br>");
+
+		write("Turian - ");
+		for (i = 0; i < turian; i++) write("X");
+		write(" (",turian,")<br>");
+
+		write("Quarian - ");
+		for (i = 0; i < quarian; i++) write("X");
+		write(" (",quarian,")<br>");
+
+		write("Rachni - ");
+		for (i = 0; i < rachni; i++) write("X");
+		write(" (",rachni,")<br>");
+
+		write("\<\/samp><br><u>Class:\<\/u><br><samp>");
+
+		write("Vanguard ------ ");
+		for (i = 0; i < vanguard; i++) write("X");
+		write(" (",vanguard,")<br>");
+
+		write("Adept ---- ");
+		for (i = 0; i < adept; i++) write("X");
+		write(" (",adept,")<br>");
+
+		write("Sentinel ----- ");
+		for (i = 0; i < sentinel; i++) write("X");
+		write(" (",sentinel,")<br>");
+
+		write("Soldier --- ");
+		for (i = 0; i < soldier; i++) write("X");
+		write(" (",soldier,")<br>");
+
+		write("Engineer --- ");
+		for (i = 0; i < engineer; i++) write("X");
+		write(" (",engineer,")<br>");
+
+		write("Infiltrator ---- ");
+		for (i = 0; i < infiltrator; i++) write("X");
+		write(" (",infiltrator,")<br>");
+
+
+		write("\<\/samp>");
+
+		}
+
+		write("<br><hr><br><center>");
+
+ write("<!--");
+ write("<form action=http://us.1.p9.webhosting.yahoo.com/gb/sign method=post>");
+ write("<input type=hidden name=\".state\" value=1>");
+ write("<input type=hidden name=\"member\" value=\"easydamus\">");
+ write("<b>Your Character's Name:  </b>");
+ write("<input type=text name=1 value=\"\"");
+ write("<br><br><br>");
+
+ write("\">");
+ write("<input type=hidden name=3 value=\"");
+
+
+		switch (race) {
+			case "human": write("Human "); break;
+			case "volus": write("Volus "); break;
+			case "asari": write("Asari "); break;
+			case "salarian": write("Salarian "); break;
+			case "batarian": write("Batarian "); break;
+			case "turian": write("Turian "); break;
+			case "quarian": write("Quarian "); break;
+			case "rachni": write("Rachni "); break;
+			case "krogan": write("Krogan "); }
+
+ write("\">");
+ write("<input type=hidden name=4 value=\"");
+
+		switch (primclass) {
+			case "soldier": write("Soldier"); break;
+			case "infiltrator": write("Infiltrator"); break;
+			case "engineer": write("Engineer"); break;
+			case "adept": write("Adept"); break;
+			case "sentinel": write("Sentinel"); break;
+			case "vanguard": write("Vanguard"); }
+
+		switch (secclass) {
+			case "soldier": write("/Soldier"); break;
+			case "infiltrator": write("/Infiltrator"); break;
+			case "engineer": write("/Engineer"); break;
+			case "adept": write("/Adept"); break;
+			case "sentinel": write("/Sentinel"); break;
+			case "vanguard": write("/Vanguard"); }
+
+if (secclass == "none") {
+                if (level == 1){write(" (1st Level)");}
+                if (level == 2){write(" (2nd Level)");}
+                if (level == 3){write(" (3rd Level)");}
+                if (level > 3){write(" (");}
+                if (level > 3){write(level);}
+                if (level > 3){write("th Level)");}
+                        }
+
+if (secclass !== "none") {
+                if (level == 1){write(" Recruit");}
+                if (level == 2){write(" Veteran");}
+                if (level == 3){write(" Officer");}
+                if (level == 4){write(" Major");}
+                if (level == 5){write(" Commander");}
+                if (level == 6){write(" Captain");}
+                if (level == 7){write(" General");}
+                if (level == 8){write(" Spectre");}
+                if (level == 9){write(" Admiral");}
+                if (level == 10){write(" Fleet Admiral");}
+                         }
+
+ write("\">");
+/*
+ write("<input type=hidden name=5 value=\"");
+
+		if (deitychk==1) {
+
+			switch (deity) {
+				case "tyr": write("Tyr"); break;
+				case "arvoreen": write("Arvoreen"); break;
+				case "moradin": write("Moradin"); break;
+				case "lathander": write("Lathander"); break;
+				case "mystra": write("Mystra"); break;
+				case "oghma": write("Oghma"); break;
+				case "mielikki": write("Mielikki"); break;
+				case "marthammor_duin": write("Marthammor Duin"); break;
+				case "tymora": write("Tymora"); break;
+				case "finder_wyvernspur": write("Finder Wyvernspur"); break;
+				case "shaundakul": write("Shaundakul"); break;
+				case "hanali_celanil": write("Hanali Celanil"); break;
+				case "solonor_thelandira": write("Solonor Thelandira"); break;
+				case "rillifane_rallathil": write("Rillifane Rallathil"); break;
+				case "helm": write("Helm"); break;
+				case "azuth": write("Azuth"); break;
+				case "urogalan": write("Urogalan"); break;
+				case "gond": write("Gond"); break;
+				case "silvanus": write("Silvanus"); break;
+				case "sheela_peryroyl": write("Sheela Peryroyl"); break;
+				case "brandobaris": write("Brandobaris"); break;
+				case "dumathoin": write("Dumathoin"); break;
+				case "beshaba": write("Beshaba"); break;
+				case "tempus": write("Tempus"); break;
+				case "fenmarel_mestarine": write("Fenmarel Mestarine"); break;
+				case "erevan_ilesere": write("Erevan Ilesere"); break;
+				case "iyachtu_xvim": write("Iyachtu Xvim"); break;
+				case "cyric": write("Cyric"); break;
+				case "mask": write("Mask"); break;
+				case "abbathor": write("Abbathor"); break;
+				case "velsharoon": write("Velsharoon"); break;
+				case "talos": write("Talos"); break;
+				case "garl_glittergold": write("Garl Glittergold"); break;
+				case "gaerdal_ironhand": write("Gaerdal Ironhand"); break;
+				case "baervan_wildwanderer": write("Baervan Wildwanderer"); break;
+				case "flandal_steelskin": write("Flandal Steelskin"); break;
+				case "callarduran_smoothhands": write("Calladuran Smoothhands"); break;
+				case "urdlen": write("Urdlen");
+			}
+               }
+*/
+ write("\">");
+ write("<br>");
+ write("<input type=hidden name=6 value=\"STR ");
+ write(strength);
+ write(", DEX ");
+ write(dexterity);
+ write(", CON ");
+ write(vigor);
+ write(", INT ");
+ write(intelligence);
+ write(", WIS ");
+ write(wisdom);
+ write(", CHA ");
+ write(charisma);
+ write("\">");
+ write("<br><br>");
+ write("<b>Comments: </b><br>");
+ write("<textarea cols=\"40\" rows=\"10\" name=7 value=\"\">");
+ write("</textarea>");
+ write("<input type=hidden name=8 value=\"");
+ write(align);
+ write(",");
+ write(race);
+ write(",");
+ write(primclass);
+ write(",");
+ write(secclass);
+ write(",");
+ write(level);
+ write(",");
+ write(deity);
+ write(",");
+ write(strength);
+ write(",");
+ write(dexterity);
+ write(",");
+ write(vigor);
+ write(",");
+ write(intelligence);
+ write(",");
+ write(wisdom);
+ write(",");
+ write(charisma);
+ write(",");
+
+/*
+ write(lx);
+ write(",");
+ write(nx);
+ write(",");
+ write(cx);
+ write(",");
+ write(xg);
+ write(",");
+ write(xn);
+ write(",");
+ write(xe);
+ write(",");
+*/
+
+ write(human);
+ write(",");
+ write(krogan);
+ write(",");
+ write(asari);
+ write(",");
+ write(batarian);
+ write(",");
+ write(salarian);
+ write(",");
+ write(turian);
+ write(",");
+ write(volus);
+ write(",");
+ write(quarian);
+ write(",");
+ write(rachni);
+ write(",");
+
+ write(vanguard);
+ write(",");
+ write(adept);
+ write(",");
+ write(sentinel);
+ write(",");
+ write(soldier);
+ write(",");
+ write(engineer);
+ write(",");
+ write(infiltrator);
+ write(",");
+ write("\">");
+
+ write("<br><br>");
+ write("<input type=hidden name=\".referer\"value=\"http://www.easydamus.com/character.html\" >");
+ write("<input type=submit value=\"Enter Results into the Hall of Heroes!\">");
+ write("<br><br>");
+ write("</form>");
+ write("-->");
+
+ write("<!--");
+ write("<a href=\"http://us.1.p9.webhosting.yahoo.com/gb/view?member=easydamus\">View Waiting Room for Hall of Heroes</a>");
+ write("<br><br>");
+ write("<a href=\"http://www.easydamus.com/hallofheroes.html\">View Hall of Heroes</a>");
+ write("<br><br>");
+ write("-->");
+
+		write("Neppyman said, 'Like this survey?  Copy, paste, and edit the code to make your own!  Please give me credit if you do so, of course,' so I'm giving him his due.  ^_^<br><br>");
+ 
+                write("Questions?  Comments?  Suggestions? <a href='mailto:zybstrski@excite.com'>E-mail Me!\<\/a><br><br>");
+		write("<a href='javascript: sasari.close()'>(close this window)\<\/a>");
+		write("\<\/body>\<\/html>");
+            close();
+      }
+   }
+
+
+</script>
+
+
+
+</head>
+<!--
+<img src="images/asari.png" id="asariResult" style="visibility:hidden"/>
+<img src="images/human.png" id="humanResult" style="visibility:hidden"/>
+<img src="images/turian.png" id="turianResult" style="visibility:hidden"/>
+<img src="images/salarian.png" id="salarianResult" style="visibility:hidden"/>
+<img src="images/krogan.png" id="kroganResult" style="visibility:hidden"/>
+<img src="images/quarian.png" id="quarianResult" style="visibility:hidden"/>
+<img src="images/geth.png" id="gethResult" style="visibility:hidden"/>
+<img src="images/batarian.png" id="batarianResult" style="visibility:hidden"/>
+<img src="images/rachni.png" id="rachniResult" style="visibility:hidden"/>
+-->
+
+<body>
+
+
+<div class="alignprose">
+<div id="toppage">
+<center>
+<h1 id="maintitle" title="Page Title">What Kind of Mass Effect Character Are You?</h1>
+
+</center>
+
+<div id="directions" title="Directions">
+<p>FILL LATER</p>
+<p>
+FILL LATER</p>
+
+<p><b>PLEASE NOTE:</b> This test requires support for both JavaScript and pop-up windows.  If your browser doesn't support both of them, you're out of luck.  If you are not sure if your browser will work, scroll to the bottom and click on the "What Mass Effect Character Am I?" button to test before filling out all of the questions.</p>
+<p>
+<b>Now, on to the survey!</b>
+</p>
+</div>
+</div>
+<table border="0" width="750" align="center" cellspacing="0" cellpadding="10">
+<tr>
+<td>
+
+<form name="survey" action="">
+
+<div id="alignprose">
+
+<div id="abilityscores">
+<hr /><p>
+<a class="question">1. What statement would hurt you the most?</a> <br /><br />
+<input name="q41" value="1" type="radio" /> That I am a dishonorable person.<br /><br />
+<input name="q41" value="2" type="radio" /> That I do not deserve to exist.<br /><br />
+<input name="q41" value="3" type="radio" /> That I am an idiot.<br /><br />
+<input name="q41" value="4" type="radio" /> That my body is more important than my mind or soul.<br /><br />
+<input name="q41" value="5" type="radio" /> That I am not afraid to hurt other people to get what I want.<br /><br />
+</p><hr /><p>
+
+<a class="question">2. What is your most admirable quality?</a> <br /><br /><br />
+<input name="q42" value="1" type="radio" /> I'm very resourceful when it comes to problem solving..<br /><br />
+<input name="q42" value="2" type="radio" /> I never back down from a challenge.<br /><br />
+<input name="q42" value="3" type="radio" /> There's very little I can't persuade other people to do.<br /><br />
+<input name="q42" value="4" type="radio" /> I may not be very talented, but I'm a hard worker.<br /><br />
+<input name="q42" value="5" type="radio" /> I'm the ultimate team player.<br /><br />
+</p><hr /><p>
+
+<a class="question">3. What would a potential partner likely value most about you at first glance?</a> <br /><br />
+<input name="q43" value="1" type="radio" /> My looks. I'm not ashamed to say that I'm physically above average.<br /><br />
+<input name="q43" value="2" type="radio" /> My brains. Being an expert on something you care about is sexy!.<br /><br />
+<input name="q43" value="3" type="radio" /> My resources. Money can't buy you love, but it can definitely buy you options.<br /><br />
+<input name="q43" value="4" type="radio" /> My devotion. Whether behind closed doors or in the trenches, I always give 100% of mysasari to others.<br /><br />
+<input name="q43" value="5" type="radio" /> My mystique. The lack of the obvious is what draws others to want to know me.<br /><br />
+</p><hr /><p>
+
+<a class="question">4. What will be your most important legacy once you pass on?</a> <br /><br />
+<input name="q44" value="1" type="radio" /> My reputation. Above all else, I want people to remember me as I deserve.<br /><br />
+<input name="q44" value="2" type="radio" /> My family. As long as the people I love don't forget me, I'll never really die.<br /><br />
+<input name="q44" value="3" type="radio" /> My work. I don't want to leave the world the same as I found it.<br /><br />
+<input name="q44" value="4" type="radio" /> My love. Everything else pales in comparison to the life I lived with my closest friend.<br /><br />
+<input name="q44" value="5" type="radio" /> My growth. I'm far from perfect, but I've come a long way from where I was.<br /><br />
+</p><hr /><p>
+
+<a class="question">5. How would you define your romantic leaning?</a> <br /><br />
+<input name="q45" value="1" type="radio" /> Passive. I prefer or am used to being the recipient of affection.<br /><br />
+<input name="q45" value="2" type="radio" /> Aggressive. I prefer or am used to initiating romance towards my prospects.<br /><br />
+<input name="q45" value="3" type="radio" /> Inapplicable. I actively avoid romance.<br /><br />
+</p><hr /><p>
+
+<a class="question">6. What will be the last words you are likely to hear or say?</a> <br /><br />
+<input name="q46" value="1" type="radio" /> "You sold your soul to a path of blood."<br /><br />
+<input name="q46" value="2" type="radio" /> "This soup tastes funny..."<br /><br />
+<input name="q46" value="3" type="radio" /> "We cannot get out. They are coming."<br /><br />
+<input name="q46" value="4" type="radio" /> "This is for my father!"<br /><br />
+<input name="q46" value="5" type="radio" /> "It is a far, far better rest that I go to than I have ever known."<br /><br />
+</p><hr /><p>
+
+<a class="question">7. You find yourself the only pilot of a doomed space station. The station's failing mass effect core has been damaged in a recent raid, and if left unattended the structure will soon collide with a nearby moon, killing thousands of colonists. There are no functioning escape pods, and impact will occur in a matter of minutes. What will you do?</a> <br /><br />
+<input name="q47" value="1" type="radio" /> It all boils down to basic math. By detonating the core prior to impact, I will save thousands of lives. The only people who will die are those who would have been killed in the crash anyway.<br /><br />
+<input name="q47" value="2" type="radio" /> I refuse to take any of the courses given to me and leave it to someone else. It isn't up to me to decide who lives or dies.<br /><br />
+<input name="q47" value="3" type="radio" /> I let a coin flip decide my fate. I'm dead either way, and I have no reason to care for the lives of others whom I've never met.<br /><br />
+<input name="q47" value="4" type="radio" /> We've only just entered the moon's atmosphere! If we work quickly, I can try to slow our descent while someone else contacts the local colony in hopes of evacuating as many people as possible. It's a risk, but I'd rather chance an all or nothing bet to save everyone than save no one.<br /><br />
+<input name="q47" value="5" type="radio" /> Wait, isn't there a private luxury shuttle secured next to the captain's cabin? If I'm quick, I can make it out of here and no one will be the wiser...<br /><br />
+</p><hr /><p>
+
+<a class="question">8. Some time after rising through the ranks of your homeworld's most elite military unit, you find yourself nominated to join the Office of Special Tactics and Reconnaissance. Several weeks into your tenure as Spectre, you discover that a high-ranking official in your race's military hierarchy is engaging in highly illegal activities. It isn't possible that your superiors on the homeworld didn't know about this exchange, yet they've done little or nothing to stop this official. How do you proceed?</a> <br /><br />
+<input name="q48" value="1" type="radio" /> I appeal to my homeworld's leadership about the issue. I don't have all the facts and I owe my people's government the benefit of the doubt before taking this to the Council.<br /><br />
+<input name="q48" value="2" type="radio" /> I take the issue before the Council. No matter what my shared history is with my people's military, my duty dictates that I answer to the highest authority.<br /><br />
+<input name="q48" value="3" type="radio" /> I side with my people. My appointment as Spectre doesn't undo the years of mistreatment my race endured at the hands of the council.<br /><br />
+<input name="q48" value="4" type="radio" /> I hold the intel as an ace up my sleeve. This information could jeopardize my people's place in galactic politics, which is exactly the kind of leverage I can use to gain even more influence.<br /><br />
+<input name="q48" value="5" type="radio" /> I turn a blind eye. My people will always come first, and if the Council hasn't noticed after all this time, it obviously isn't hurting them.<br /><br />
+</p><hr /><p>
+
+<a class="question">9. What is your greatest fear?</a> <br /><br />
+<input name="q49" value="1" type="radio" /> Being alone for the rest of my life.<br /><br />
+<input name="q49" value="2" type="radio" /> The world finding out my secrets.<br /><br />
+<input name="q49" value="3" type="radio" /> Dying a painful, shameful death.<br /><br />
+<input name="q49" value="4" type="radio" /> Everything that I've accomplished coming undone.<br /><br />
+<input name="q49" value="5" type="radio" /> Losing the people I love.<br /><br />
+</p><hr /><p>
+
+<a class="question">10. If a fight were to break out, where would you be? </a> <br /><br />
+<input name="q50" value="1" type="radio" /> Hauling ass in the opposite direction! <br /><br />
+<input name="q50" value="2" type="radio" /> Providing support behind some of my beefier friends.<br /><br />
+<input name="q50" value="3" type="radio" /> Charging into the fray, giving others an opportunity to take shelter.<br /><br />
+<input name="q50" value="4" type="radio" /> Wherever the action is, laying down as much hurt as physically possible.<br /><br />
+<input name="q50" value="5" type="radio" /> Trying to deescalate the situation, ideally from the sidelines.<br /><br />
+<input name="q50" value="6" type="radio" /> In the midst of the crowd, sweeping people off their feet and causing mayhem.<br /><br />
+
+</p><hr /><p>
+
+<a class="question">11. What was the first weapon you ever selected when exploring the Collector Ship?</a> <br /><br />
+<input name="q51" value="1" type="radio" /> The Revenant. There's nothing like mowing down hordes of enemies with impunity.<br /><br />
+<input name="q51" value="2" type="radio" /> The Claymore. There are shotguns, and then there are machines of war that turn your foes into mist and bone.<br /><br />
+<input name="q51" value="3" type="radio" /> The Widow. One shot, one overkill.<br /><br />
+</p><hr /><p>
+
+<a class="question">12. A horde of enemies is coming. Which battlefield do you choose to engage them on?</a> <br /><br />
+<input name="q52" value="1" type="radio" /> Open ground, with hastily-made barricades for shelter. We can annihilate them quickly by pointing and shooting down range.<br /><br />
+<input name="q52" value="2" type="radio" /> An ambush! I'll place my soldiers at strategic sections around the battlefield, and massacre them once they step into our killbox.<br /><br />
+<input name="q52" value="3" type="radio" /> We rush them! A few well-placed flash grenades, and my berserkers will tear them apart while they're lost in the confusion.<br /><br />
+<input name="q52" value="4" type="radio" /> Dig in and kill 'em with bug bites. It may take longer, but by fortifying our positions and using specialized tools, we'll succeed without losing a single person.<br /><br />
+<input name="q52" value="5" type="radio" /> Break them psychologically. I'll put the majority of our resources into one unkillable unit, and force the horde into an unwinnable situation.<br /><br />
+</p><hr /><p>
+
+<a class="question">13. It's been a rough day at work, and you just ordered takeout. What's on the menu?</a> <br /><br />
+<input name="q53" value="1" type="radio" /> Ramen! I hear it's a delicacy on Earth...<br /><br />
+<input name="q53" value="2" type="radio" /> Varren steak. I like my meat with extra murder baked into it.<br /><br />
+<input name="q53" value="3" type="radio" /> Asari calamari gumbo. Seems a little cannibalistic, but it goes great over rice.<br /><br />
+<input name="q53" value="4" type="radio" /> Haggis. Even if most of it tastes like ass, I know a place that makes it taste like mighty <i>fine</i> ass.<br /><br />
+</p><hr /><p>
+
+<a class="question">14. The couple next door won't stop being obnoxiously loud during their nighttime activities. What do you put on to get them to quiet down?</a> <br /><br />
+<input name="q54" value="1" type="radio" /> "Barely Legal Elcor Heifer Bares All! 18 Hour Edition"<br /><br />
+<input name="q54" value="2" type="radio" /> "Two Girls, One Emergency Induction Port"<br /><br />
+<input name="q54" value="3" type="radio" /> "Skyllian Backroom Blitz: First Contact with these Rough Batarian Daddies"<br /><br />
+<input name="q54" value="4" type="radio" />"DVDIS 06: This Voluptuous Volus Gets Stuck Halfway Through an Elevator—With Vorcha Construction Workers on Either Side!!" <br /><br />
+<input name="q54" value="5" type="radio" /> "Tuchanka Twink 4: Shy Beefy Krogan Gets Bullied by Harem of Savage Salarians!"<br /><br />
+</p><hr /><p>
+
+<a class="question">15. What's one thing you've got to accomplish on your bucket list? </a> <br /><br />
+<input name="q55" value="1" type="radio" /> I know they keep telling me it's a bad idea...but I've just GOT to lick a drell before I go. I don't care how bad the trip is.<br /><br />
+<input name="q55" value="2" type="radio" /> By God, I'm either going to see what's under those asari tentacle-scalp things, or I'll die trying.<br /><br />
+<input name="q55" value="3" type="radio" /> I don't know if I'd be the first to sleep with every sentient alien species, but I'm going to give it the old college try anyway.<br /><br />
+<input name="q55" value="4" type="radio" /> Enough with all this war! I'm going on a tour of every homeworld I can find. Art, food, movies, music, culture—I want to see and know it all!<br /><br />
+
+</p><hr />
+
+<p>
+<a class="question">16. A three-way gang war is taking place not too far from where you live. As a philanthropist with a vested interest in keeping casualities and damage at a minimum, an anonymous donation could tip the scales of the conflict. Who do you back?</a> <br /><br />
+<input name="q56" value="1" type="radio" /> The Eclipse. My money will assist their best operatives in assassinating the leaders of the other two groups, while their biotic troops and mechs will wreak havoc on their uncoordinated subordinates.<br /><br />
+<input name="q56" value="2" type="radio" /> The Blood Pack. By pumping their soldiers full of steroids and experimental regenerative drugs, they'll be able to sweep over their enemies with sheer numbers and raw muscle.<br /><br />
+<input name="q56" value="3" type="radio" /> The Blue Suns. They've a reputation for smuggling high-end weapons throughout the galaxy—my influence will help move things along for them, and end this conflict with unequaled firepower.<br /><br />
+
+</p><hr />
+
+<p>
+<a class="question">17. When it comes to having a fatal flaw, yours is:</a> <br /><br />
+<input name="q57" value="1" type="radio" /> Holding on to grudges.<br /><br />
+<input name="q57" value="2" type="radio" /> Believing I can do things better than anyone else, without anyone else.<br /><br />
+<input name="q57" value="3" type="radio" /> I don't know—or care—when to stop. <br /><br />
+<input name="q57" value="4" type="radio" /> I'll step over people if it means getting ahead.<br /><br />
+<input name="q57" value="5" type="radio" /> I can be passive to the point of harm—for myself as well as others.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">18. When dealing with enemies, it's better to:</a> <br /><br />
+<input name="q58" value="1" type="radio" /> Remove any possibility of retaliation in the future.<br /><br />
+<input name="q58" value="2" type="radio" /> Hold them to solemn oaths for the sake of peace.<br /><br />
+<input name="q58" value="3" type="radio" /> Grind them into subservience; make victory work for you.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">19. You would rather be:</a> <br /><br />
+<input name="q59" value="1" type="radio" /> Feared.<br /><br />
+<input name="q59" value="2" type="radio" /> Respected.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">20. In combat, the most important trait is:</a> <br /><br />
+<input name="q60" value="1" type="radio" /> To be faster.<br /><br />
+<input name="q60" value="2" type="radio" /> To be stronger.<br /><br />
+<input name="q60" value="3" type="radio" /> To be more resourceful.<br /><br />
+<input name="q60" value="4" type="radio" /> To be adaptive in your thinking.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">21. For my height, I am considered:</a> <br /><br />
+<input name="q61" value="1" type="radio" /> Thin.<br /><br />
+<input name="q61" value="2" type="radio" /> Pretty average.<br /><br />
+<input name="q61" value="3" type="radio" /> Solidly built.<br /><br />
+<input name="q61" value="4" type="radio" /> Thick.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">22. As far as careers go, your ideal would be:</a> <br /><br />
+<input name="q62" value="1" type="radio" /> To travel the galaxy and face dangerous foes as a mercenary.<br /><br />
+<input name="q62" value="2" type="radio" /> To enlist in my homeworld's military and defend my people.<br /><br />
+<input name="q62" value="3" type="radio" /> To be a diplomat, and meet with representatives from every race and enjoy their culture.<br /><br />
+<input name="q62" value="4" type="radio" /> I'd like to do something creative, maybe with music, literature, or art, and see what the other races have to offer as well.<br /><br />
+<input name="q62" value="5" type="radio" /> To be a scientist. Technology has advanced so much in the past few decades alone: I'd give anything to see how far we can keep going.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">23. The Citadel Council has made some extreme military choices in the past, including near-genocide. Do you think these actions were justified?</a> <br /><br />
+<input name="q63" value="1" type="radio" /> Genocide is never forgiveable, much less acceptable.<br /><br />
+<input name="q63" value="2" type="radio" /> Their choices were harsh, but they were for the best at the time.<br /><br />
+<input name="q63" value="3" type="radio" /> They didn't go far enough; some threats can't be allowed to exist.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">24. Intellectual intelligence is more important than emotional intelligence.</a> <br /><br />
+<input name="q64" value="1" type="radio" /> I agree completely.<br /><br />
+<input name="q64" value="2" type="radio" /> It tends to be more useful in my day to day, but emotional intelligence has its place.<br /><br />
+<input name="q64" value="3" type="radio" /> I value both equally.<br /><br />
+<input name="q64" value="4" type="radio" /> In my life, emotional intelligence is more useful, more often.<br /><br />
+<input name="q64" value="5" type="radio" /> I disagree completely.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">25. The best defensive environment is:</a> <br /><br />
+<input name="q65" value="1" type="radio" /> One that is completely hostile to enemies, even at the expense of natural beauty.<br /><br />
+<input name="q65" value="2" type="radio" /> One with planned infrastructure to support its defenders in any convential attack.<br /><br />
+<input name="q65" value="3" type="radio" /> One completely impervious to any manner of harm, and barren of resources.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">26. Intellectual intelligence is more important than emotional intelligence.</a> <br /><br />
+<input name="q66" value="1" type="radio" /> I agree completely.<br /><br />
+<input name="q66" value="2" type="radio" /> It tends to be more useful in my day to day, but emotional intelligence has its place.<br /><br />
+<input name="q66" value="3" type="radio" /> I value both equally.<br /><br />
+<input name="q66" value="4" type="radio" /> In my life, emotional intelligence is more useful, more often.<br /><br />
+<input name="q66" value="5" type="radio" /> I disagree completely.<br /><br />
+</p><hr />
+
+</div>
+
+
+
+<div id="playerlevel">
+<p>
+<a class="question">139.  Where are you in life?</a><br /><br />
+<input name="q237" value="1" type="radio" /> I'm just starting out. <span class="age"> (15 or less)</span><br /><br />
+<input name="q237" value="2" type="radio" /> I'm on the cusp of adulthood. <span class="age"> (16 to 17)</span><br /><br />
+<input name="q237" value="3" type="radio" /> I'm learning to rely on myself. <span class="age"> (18 to 21)</span><br /><br />
+<input name="q237" value="4" type="radio" /> Independence is an old friend. <span class="age"> (22 to 27)</span><br /><br />
+<input name="q237" value="5" type="radio" /> People are beginning to rely on me. <span class="age"> (28 to 35)</span><br /><br />
+<input name="q237" value="6" type="radio" /> I'm in the prime of my adult life. <span class="age"> (36 to 45)</span><br /><br />
+<input name="q237" value="7" type="radio" /> Still going strong, but I'm ready to wind down. <span class="age"> (46 to 57)</span><br /><br />
+<input name="q237" value="8" type="radio" /> I've been around the block a few times. <span class="age"> (58 to 71)</span><br /><br />
+<input name="q237" value="9" type="radio" /> I can look on what I've accomplished with satisfaction. <span class="age"> (72 to 87)</span><br /><br />
+<input name="q237" value="10" type="radio" /> Music just isn't what it used to be... <span class="age"> (88 or more)</span><br /><br />
+<hr>
+<p>
+<a class="question">140.  For my age, I have...:</a><br /><br />
+<input name="q238" value="1" type="radio" /> ...limited life experience. I've done significantly less than every one else.<br /><br />
+<input name="q238" value="2" type="radio" /> ...a moderate amount of life experience. I've done about as much as everyone else.<br /><br />
+<input name="q238" value="3" type="radio" /> ...a lot of life experience.  I've done significantly more than every one else.<br /><br />
+</p><hr />
+</div>
+
+
+<center>
+<a class="button">
+<input value="What Mass Effect Character Am I?" onclick="process();" type="button">
+</a>
+<br><br>
+<i>Before clicking, make sure JavaScript is enabled, and that all pop-up window-managers are disabled!</i>
+<br><br>
+<!--
+<a href="http://us.1.p9.webhosting.yahoo.com/gb/view?member=easydamus">View Waiting Room for Hall of Heroes</a>
+<br />
+<a href="http://www.easydamus.com/hallofheroes.html">View Hall of Heroes</a>
+-->
+
+
+</div><!--end of 'totalsurvey' division -->
+
+
+
+
+</form>
+
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>
