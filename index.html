@@ -5,7 +5,7 @@
 			<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 			<!--meta http-equiv="content-type" content="text/html; charset=utf-8" /-->
 			<link rel="stylesheet" type="text/css" href="index.css" />
-			<meta name="keywords" content="character, what, am, I, mass, effect, N7, ME, Andromeda, custom, characters" />
+			<meta name="keywords" content="d20, character, what, am, I, mass, effect, N7, ME, Andromeda, custom, characters" />
 			<meta name="description" content="A survey to determine what type of Mass EFfect character you would be." />
 						
 <title>What Mass Effect Character Am I?</title>
@@ -123,9 +123,9 @@ value = "-1";
 	for (i = 0; i < survey.q46.length; i++) if (survey.q46[i].checked) value = survey.q46[i].value;
 	switch (value) {
                 case "1": krogan,batarian+=2; break;
-                case "2": quarian,volus,salarian+=2; break;
-                case "3": asari,human+=2; break;
-                case "4": turian+=2; break;
+                case "2": quarian,salarian+=2; break;
+                case "3": volus,asari+=2; break;
+                case "4": turian,human+=2; break;
                 case "5": geth,rachni+=2; }
 
 value = "-1";
@@ -282,7 +282,7 @@ value = "-1";
 	for (i = 0; i < survey.q63.length; i++) if (survey.q63[i].checked) value = survey.q63[i].value;
 	switch (value) {
                 case "1": geth,rachni+=8; break;
-                case "2": batarian,asari,volus+=1; salarian+=4; break;
+                case "2": salarian,batarian,asari,volus+=1; break;
                 case "3": turian,human+=1; quarian,krogan+=2; }
 
 value = "-1";
@@ -307,41 +307,13 @@ value = "-1";
 
 	for (i = 0; i < survey.q66.length; i++) if (survey.q66[i].checked) value = survey.q66[i].value;
 	switch (value) {
-                case "1": human,volus+=4; break;
-                case "2": turian,asari+=4; break;
-                case "3": rachni,batarian+=4; break;
-                case "4": salarian,quarian+=4; }
+                case "1": geth,volus+=8; break;
+                case "2": turian,salarian+=4; break;
+                case "3": asari,human+=2; break;
+                case "4": quarian,batarian+=4; break;
+                case "5": krogan,rachni+=8; }
 
-value = "-1";
 
-	for (i = 0; i < survey.q67.length; i++) if (survey.q67[i].checked) value = survey.q67[i].value;
-	switch (value) {
-                case "1": infiltrator+=2; break;
-                case "2": engineer+=2; break;
-                case "3": adept+=2; break;
-                case "4": sentinel+=2; }
-
-value = "-1";
-
-	for (i = 0; i < survey.q68.length; i++) if (survey.q68[i].checked) value = survey.q68[i].value;
-	switch (value) {
-                case "1": infiltrator+=2; break;
-                case "2": adept+=2; }
-
-value = "-1";
-
-	for (i = 0; i < survey.q69.length; i++) if (survey.q69[i].checked) value = survey.q69[i].value;
-	switch (value) {
-                case "1": adept+=2; break;
-                case "2": engineer+=2; }
-
-value = "-1";
-
-	for (i = 0; i < survey.q70.length; i++) if (survey.q70[i].checked) value = survey.q70[i].value;
-	switch (value) {
-                case "1": adept+=2; break;
-                case "2": sentinel+=2; break;
-                case "3": vanguard+=2; }
 
 value = "-1";
 	for (ll = 0; ll < survey.q237.length; ll++) if (survey.q237[ll].checked) value = survey.q237[ll].value;
@@ -556,14 +528,13 @@ value = "-1";
 	with (win.document) {
 		open("text/html", "replace");
 			
-		write("<html><head><link rel='stylesheet' type='text/css' href='surveystyle.css'><title>Your Results Are In!\<\/title>\<\/head>");
+		write("<html><head><link rel='stylesheet' type='text/css' href='index.css'><title>Your Results Are In!\<\/title>\<\/head>");
                 write("<body text='#FFFFFF' font-family='massEffect' link='#5555FF' vlink='#6666EE' bgcolor='#F2ECDA' background='images/space.png'>");
 
 		write("<center><h2><b><font color='#FFFFFF'>You Are A:\<\/font>\<\/b>\<\/h2>\<\/center>");
 		write("<br><center><h1><b>");
                 
 		
-
 		switch (race) {
 			case "human": write("Human\<\/b> "); break;
 			case "asari": write("Asari\<\/b> "); break;
@@ -719,7 +690,7 @@ if (secclass !== "none") {
 			write("Humans\<\//b> are the newest addition to the Milky Way Galaxy's many races. Ambitious, sometimes to the point of worry on the part of the other races, humanity consists of talented and diverse individuals. Some are militaristic and dutiful like the turians, lithe and charismatic like the asari, while others still are quick-witted and energetic like the salarians. <br><br>While humanity enjoys a tentative peace with its newfound neighbors, the fallout from the conflict known as the First Contact War still lingers in the minds of those involved some decades later. As a result of the Human Systems Alliance's success in the aforementioned conflict, the military superpower was elected to represent and govern humanity as a whole in Council Space. Though humanity was integral to the galaxy's survival in the wake of the war against Sovereign and its geth, there are still those who hold reservations against humanity and their longstanding ambition for power..."); break;
 			case "volus": write("Volus\<\/b> "); break;
 			case "asari": 
-				write("Asari\<\/b> are among the most ancient and regal of the sentient races, and easily the most beautiful. The first of the Council races to become spacefarers and discover the Citadel in 580 B.C., the asari would settle on the space colony with the assistance of the Keepers, eventually forming the Citadel Council when encountering the Salarians some decades later in 500 BC. Though lauded for their beautiful culture and exemplary diplomatic skills, the quick advancement of Asari technology is no accident: a Prothean beacon, which was concealed for centuries in the asari homeworld's Temple of Athame, was integral to the research and development of the asari's technology—a treasure that predates the Citadel Council law that it would eventually—secretly—violate. Thessia itself is home to vast reserves of the invaluable element zero, resulting in the asari evolving to be some of the most potent biotics throughout the galaxy.<br><br>The asari are unique among the Milky Way races for a number of reasons. First, and most notably, the asari are monogendered: though female-presenting to other races, the asari lack the sexual binary that is intrinsic to most races, and as a result, gendered language has little meaning to them. Secondly, the asari are able to reproduce with any race via parthenogenesis, which, in this case means that an asari is able to 'map' a partner's genetic makeup, which in turn is used to randomize the asari's own DNA to be passed on to their offspring. Though traits from the 'father' are often noticeable in terms of personality, the offspring will always be 100% asari. Lastly, the asari, aside from the krogan, are the longest-lived race both by lifespan as well as their race's endurance as a whole; the asari were the initial choice of the long-dead Protheans to lead the galaxy, while the race was still in its infancy. It helps that a single asari lifetime lasts an entire millennium as well."); break;
+				write("Asari\<\/b> are among the most ancient and regal of the sentient races, and easily the most beautiful. The first of the Council races to become spacefarers and discover the Mass Relays. Upon locating the Citadel in 580 B.C., the asari would settle on the space colony with the assistance of the Keepers, eventually forming the Citadel Council when encountering the Salarians some decades later in 500 BC. Though lauded for their beautiful culture and exemplary diplomatic skills, the quick advancement of Asari technology is no accident: a Prothean beacon, which was concealed for centuries in the asari homeworld's Temple of Athame, was integral to the research and development of the asari's technology—a treasure that predates the Citadel Council law that it would eventually—secretly—violate. Thessia itself is home to vast reserves of the invaluable element zero, resulting in the asari evolving to be some of the most potent biotics throughout the galaxy.<br><br>The asari are unique among the Milky Way races for a number of reasons. First, and most notably, the asari are monogendered: though female-presenting to other races, the asari lack the sexual binary that is intrinsic to most races, and as a result, gendered language has little meaning to them. Secondly, the asari are able to reproduce with any race via parthenogenesis, which, in this case means that an asari is able to 'map' a partner's genetic makeup, which in turn is used to randomize the asari's own DNA to be passed on to their offspring. Though traits from the 'father' are often noticeable in terms of personality, the offspring will always be 100% asari. Lastly, the asari, aside from the krogan, are the longest-lived race both by lifespan as well as their race's endurance as a whole; the asari were the initial choice of the long-dead Protheans to lead the galaxy, while the race was still in its infancy. It helps that a single asari lifetime lasts an entire millennium as well."); break;
 			case "salarian": write("Salarians\<\/b> "); break;
 			case "batarian": write("batarians\<\/b> "); break;
 			case "turian": write("Turians\<\/b> "); break;
@@ -734,22 +705,22 @@ if (secclass !== "none") {
 		write("<h2><br>Class:<br></h2><b>");
 
 		switch (primclass) {
-			case "soldier": write("Soldiers\<\/b> are among the most robust warriors in the galaxy. Strong, fast, and experts in waging war, soldiers seek to overwhelm their enemies with firepower and sheer force. Though they lack the resources of tech specialists or biotics, soldiers will compensate by preparing to confront any nature of enemy before stepping foot on the battlefield. Trained in every manner of handheld weaponry, a good soldier puts an enemy at a disadvantage by stripping away their defenses and incapacitating them, whether by means of explosives, special ammo, or disruptive concussive shots to throw them off-balance. The best soldiers are expert marksmen, using their trademark adrenaline rush abilities to mow down enemies while time appears to be at a near-standstill."); break;
-			case "infiltrator": write("Infiltrators\<\/b> are the most talented assassins in the galaxy, blending their tech powers with high burst damage to dismantle even the most powerful opponents as quickly as possible. In most cases, infiltrators weaponize a potent tactical cloak, sacrificing shield regeneration for the ability to move unseen in and out of danger. This cloak, partnered with the element of surprise, give infiltrators the greatest damage output of the classes while affording them temporary safety as well. While most infiltrators are glass cannons, they will compensate by combining high movement speed and awareness of their surroundings to avoid being caught out by their foes. The best infiltrators focus their attention on only the most dangerous enemy units, leaving the rabble at the mercy of their companions."); break;
-			case "engineer": write("Engineers\<\/b> are the undisputed masters of area denial, exceeding all other classes when it comes to holding a defensive position against an onslaught of enemies. While typically favoring either shotguns or machine pistols, engineers use tech powers to overwhelm their opponents both physically and mentally; this can come in the form of harassment with the ever-present combat drone, hacking enemies mechs to cause disruption, or incapacitating unshielded opponents with chemical fire and ice. The best engineers shape the ebb and flow of the battlefield itself, defending key positions while also using their abilities to safely force their way into heavily defended chokepoints for their teammates. "); break;
-			case "adept": write("Adepts\<\/b> make up in crowd control what they lack in sheer firepower. Masters of biotic warfare, adepts channel dark energy in all its deadly forms, staggering even the most heavily defended foes and ripping apart the unprepared. An unchecked adept can singlehandedly turn the tide of any given battle, using their biotic powers to bombard their enemies with warp fields, throw and pull objects and enemies hard enough to shatter bones, or immobilize entire groups with singularities. The best adepts stay with their teams, often serving as the rear guard, and focus attention on immobilizing unshielded enemies to take them out of the fight, or securing the backlines against flanking enemies such as husks or varren."); break;
-			case "sentinel": write("Sentinels\<\/b> are built to be survivors in every sense of the word. The most support-oriented of the classes, sentinels blend biotics and tech powers to strip enemies of any defense, while supporting their own teammates with advanced medical capabilities. While rivaling the adept for the lowest damage output of the classes, the sentinel compensates by having the invaluable tech armor, which gives them an immediate shield boost that not only affords them the strongest defense of any class, but can deal a fatal pulse of energy when it is depleted, giving its user one last defense against any enemy unfortunate enough to be caught in its radius. The best sentinels remain with their team, taking what damage their partners can't while distributing both defensive and offensive support with their wide array of abilities."); break;
-			case "vanguard": write("Vanguards\<\/b> are the deadliest close quarters combatants on the battlefield. Making up for what they lack in firepower in sheer mobility, vanguards are able to close vast distances with their trademark Biotic Charge ability, stunning enemies and keeping their shields high for dealing with the groups of enemies they tend to surround themselves in. Vanguards serve two main purposes—to eliminate key targets in a small amount of time, normally by the 1-2 combo of charging their target, followed by a well-aimed shotgun round—and to focus enemy attention on themselves. By blitzing entire waves of enemies, or more dangerous foes such as brutes or ATLAS mechs, a good vanguard is able to dance with death, aggravating enemies to the point of tunnel-visioning, so that their teammates can deal damage with little interference."); }
+			case "soldier": write("<p>Soldiers\<\/b> are among the most robust warriors in the galaxy. Strong, fast, and experts in waging war, soldiers seek to overwhelm their enemies with firepower and sheer force. Though they lack the resources of tech specialists or biotics, soldiers will compensate by preparing to confront any nature of enemy before stepping foot on the battlefield. <br><br>Trained in every manner of handheld weaponry, a good soldier puts an enemy at a disadvantage by stripping away their defenses and incapacitating them, whether by means of explosives, special ammo, or disruptive concussive shots to throw them off-balance. The best soldiers are expert marksmen, using their trademark adrenaline rush abilities to mow down enemies while time appears to crawl to a near-standstill.</p>"); break;
+			case "infiltrator": write("<p>Infiltrators\<\/b> are the most talented assassins in the galaxy, blending their tech powers with high burst damage to dismantle even the most powerful opponents as quickly as possible. In most cases, infiltrators weaponize a potent tactical cloak, sacrificing shield regeneration for the ability to move unseen in and out of danger. This cloak, partnered with the element of surprise, give infiltrators the greatest damage output of the classes while affording them temporary safety as well. While most infiltrators are glass cannons, they will compensate by combining high movement speed and awareness of their surroundings to avoid being caught out by their foes. The best infiltrators focus their attention on only the most dangerous enemy units, leaving the rabble at the mercy of their companions.</p>"); break;
+			case "engineer": write("<p>Engineers\<\/b> are the undisputed masters of area denial, exceeding all other classes when it comes to holding a defensive position against an onslaught of enemies. While typically favoring either shotguns or machine pistols, engineers use tech powers to overwhelm their opponents both physically and mentally; this can come in the form of harassment with the ever-present combat drone, hacking enemies mechs to cause disruption, or incapacitating unshielded opponents with chemical fire and ice. The best engineers shape the ebb and flow of the battlefield itself, defending key positions while also using their abilities to safely force their way into heavily defended chokepoints for their teammates. </p> "); break;
+			case "adept": write("<p>Adepts\<\/b> make up in crowd control what they lack in sheer firepower. Masters of biotic warfare, adepts channel dark energy in all its deadly forms, staggering even the most heavily defended foes and ripping apart the unprepared. An unchecked adept can singlehandedly turn the tide of any given battle, using their biotic powers to bombard their enemies with warp fields, throw and pull objects and enemies hard enough to shatter bones, or immobilize entire groups with singularities. The best adepts stay with their teams, often serving as the rear guard, and focus attention on immobilizing unshielded enemies to take them out of the fight, or securing the backlines against flanking enemies such as husks, FENRIS mechs, or varren.</p>"); break;
+			case "sentinel": write("<p>Sentinels\<\/b> are built to be survivors in every sense of the word. The most support-oriented of the classes, sentinels blend biotics and tech powers to strip enemies of any defense, while supporting their own teammates with advanced medical capabilities. While rivaling the adept for the lowest damage output of the classes, the sentinel compensates by having the invaluable tech armor, which gives them an immediate shield boost that not only gives them the strongest defense of any class, but can deal a fatal pulse of energy when it is depleted, giving its user one last defense against any enemy unfortunate enough to be caught in its radius. The best sentinels remain with their team, taking what damage their partners can't while distributing both defensive and offensive support with their wide array of abilities.</p>"); break;
+			case "vanguard": write("<p>Vanguards\<\/b> are the deadliest close quarters combatants on the battlefield. Making up for what they lack in firepower in sheer mobility, vanguards are able to close vast distances with their trademark Biotic Charge ability, stunning enemies and keeping their shields high for dealing with the groups of enemies they tend to surround themselves in. Vanguards serve two main purposes—to eliminate key targets in a small amount of time, normally by the 1-2 combo of charging their target, followed by a well-aimed shotgun round—and to focus enemy attention on themselves. By blitzing entire waves of enemies, or more dangerous foes such as brutes or ATLAS mechs, a good vanguard is able to dance with death, aggravating enemies to the point of tunnel-visioning, so that their teammates can deal damage with little interference.</p>"); }
 
-		if (secclass != "none") { write("<br><br><u>Secondary Class:<br><b></u>"); }
+		if (secclass != "none") { write("<br><br><b>Secondary Class:<br><b>"); }
 
 		switch (secclass) {
-			case "soldier": write("Soldiers\<\/b> are among the most robust warriors in the galaxy. Strong, fast, and experts in waging war, soldiers seek to overwhelm their enemies with firepower and sheer force. Though they lack the resources of tech specialists or biotics, soldiers will compensate by preparing to confront any nature of enemy before stepping foot on the battlefield. Trained in every manner of handheld weaponry, a good soldier puts an enemy at a disadvantage by stripping away their defenses and incapacitating them, whether by means of explosives, special ammo, or disruptive concussive shots to throw them off-balance. The best soldiers are expert marksmen, using their trademark adrenaline rush abilities to mow down enemies while time appears to be at a near-standstill."); break;
-			case "infiltrator": write("Infiltrators\<\/b> are the most talented assassins in the galaxy, blending their tech powers with high burst damage to dismantle even the most powerful opponents as quickly as possible. In most cases, infiltrators weaponize a potent tactical cloak, sacrificing shield regeneration for the ability to move unseen in and out of danger. This cloak, partnered with the element of surprise, give infiltrators the greatest damage output of the classes while affording them temporary safety as well. While most infiltrators are glass cannons, they will compensate by combining high movement speed and awareness of their surroundings to avoid being caught out by their foes. The best infiltrators focus their attention on only the most dangerous enemy units, leaving the rabble at the mercy of their companions."); break;
-			case "engineer": write("Engineers\<\/b> are the undisputed masters of area denial, exceeding all other classes when it comes to holding a defensive position against an onslaught of enemies. While typically favoring either shotguns or machine pistols, engineers use tech powers to overwhelm their opponents both physically and mentally; this can come in the form of harassment with the ever-present combat drone, hacking enemies mechs to cause disruption, or incapacitating unshielded opponents with chemical fire and ice. The best engineers shape the ebb and flow of the battlefield itself, defending key positions while also using their abilities to safely force their way into heavily defended chokepoints for their teammates."); break;
-			case "adept": write("Adepts\<\/b> make up in crowd control what they lack in sheer firepower. Masters of biotic warfare, adepts channel dark energy in all its deadly forms, staggering even the most heavily defended foes and ripping apart the unprepared. An unchecked adept can singlehandedly turn the tide of any given battle, using their biotic powers to bombard their enemies with warp fields, throw and pull objects and enemies hard enough to shatter bones, or immobilize entire groups with singularities. The best adepts stay with their teams, often serving as the rear guard, and focus attention on immobilizing unshielded enemies to take them out of the fight, or securing the backlines against flanking enemies such as husks or varren."); break;
-			case "sentinel": write("Sentinels\<\/b> are built to be survivors in every sense of the word. The most support-oriented of the classes, sentinels blend biotics and tech powers to strip enemies of any defense, while supporting their own teammates with advanced medical capabilities. While rivaling the adept for the lowest damage output of the classes, the sentinel compensates by having the invaluable tech armor, which gives them an immediate shield boost that not only affords them the strongest defense of any class, but can deal a fatal pulse of energy when it is depleted, giving its user one last defense against any enemy unfortunate enough to be caught in its radius. The best sentinels remain with their team, taking what damage their partners can't while distributing both defensive and offensive support with their wide array of abilities."); break;
-			case "vanguard": write("Vanguards\<\/b> are the deadliest close quarters combatants on the battlefield. Making up for what they lack in firepower in sheer mobility, vanguards are able to close vast distances with their trademark Biotic Charge ability, stunning enemies and keeping their shields high for dealing with the groups of enemies they tend to surround themselves in. Vanguards serve two main purposes—to eliminate key targets in a small amount of time, normally by the 1-2 combo of charging their target, followed by a well-aimed shotgun round—and to focus enemy attention on themselves. By blitzing entire waves of enemies, or more dangerous foes such as brutes or ATLAS mechs, a good vanguard is able to dance with death, aggravating enemies to the point of tunnel-visioning, so that their teammates can deal damage with little interference."); }
+			case "soldier": write("<p>Soldiers\<\/b> are among the most robust warriors in the galaxy. Strong, fast, and experts in waging war, soldiers seek to overwhelm their enemies with firepower and sheer force. Though they lack the resources of tech specialists or biotics, soldiers will compensate by preparing to confront any nature of enemy before stepping foot on the battlefield. <br><br>Trained in every manner of handheld weaponry, a good soldier puts an enemy at a disadvantage by stripping away their defenses and incapacitating them, whether by means of explosives, special ammo, or disruptive concussive shots to throw them off-balance. The best soldiers are expert marksmen, using their trademark adrenaline rush abilities to mow down enemies while time appears to crawl to a near-standstill.</p>"); break;
+			case "infiltrator": write("<p>Infiltrators\<\/b> are the most talented assassins in the galaxy, blending their tech powers with high burst damage to dismantle even the most powerful opponents as quickly as possible. In most cases, infiltrators weaponize a potent tactical cloak, sacrificing shield regeneration for the ability to move unseen in and out of danger. This cloak, partnered with the element of surprise, give infiltrators the greatest damage output of the classes while affording them temporary safety as well. While most infiltrators are glass cannons, they will compensate by combining high movement speed and awareness of their surroundings to avoid being caught out by their foes. The best infiltrators focus their attention on only the most dangerous enemy units, leaving the rabble at the mercy of their companions.</p>"); break;
+			case "engineer": write("<p>Engineers\<\/b> are the undisputed masters of area denial, exceeding all other classes when it comes to holding a defensive position against an onslaught of enemies. While typically favoring either shotguns or machine pistols, engineers use tech powers to overwhelm their opponents both physically and mentally; this can come in the form of harassment with the ever-present combat drone, hacking enemies mechs to cause disruption, or incapacitating unshielded opponents with chemical fire and ice. The best engineers shape the ebb and flow of the battlefield itself, defending key positions while also using their abilities to safely force their way into heavily defended chokepoints for their teammates. </p>"); break;
+			case "adept": write("<p>Adepts\<\/b> make up in crowd control what they lack in sheer firepower. Masters of biotic warfare, adepts channel dark energy in all its deadly forms, staggering even the most heavily defended foes and ripping apart the unprepared. An unchecked adept can singlehandedly turn the tide of any given battle, using their biotic powers to bombard their enemies with warp fields, throw and pull objects and enemies hard enough to shatter bones, or immobilize entire groups with singularities. The best adepts stay with their teams, often serving as the rear guard, and focus attention on immobilizing unshielded enemies to take them out of the fight, or securing the backlines against flanking enemies such as husks, FENRIS mechs, or varren.</p>"); break;
+			case "sentinel": write("<p>Sentinels\<\/b> are built to be survivors in every sense of the word. The most support-oriented of the classes, sentinels blend biotics and tech powers to strip enemies of any defense, while supporting their own teammates with advanced medical capabilities. While rivaling the adept for the lowest damage output of the classes, the sentinel compensates by having the invaluable tech armor, which gives them an immediate shield boost that not only affords them the strongest defense of any class, but can deal a fatal pulse of energy when it is depleted, giving its user one last defense against any enemy unfortunate enough to be caught in its radius. The best sentinels remain with their team, taking what damage their partners can't while distributing both defensive and offensive support with their wide array of abilities.</p>"); break;
+			case "vanguard": write("<p>Vanguards\<\/b> are the deadliest close quarters combatants on the battlefield. Making up for what they lack in firepower in sheer mobility, vanguards are able to close vast distances with their trademark Biotic Charge ability, stunning enemies and keeping their shields high for dealing with the groups of enemies they tend to surround themselves in. Vanguards serve two main purposes—to eliminate key targets in a small amount of time, normally by the 1-2 combo of charging their target, followed by a well-aimed shotgun round—and to focus enemy attention on themselves. By blitzing entire waves of enemies, or more dangerous foes such as brutes or ATLAS mechs, a good vanguard is able to dance with death, aggravating enemies to the point of tunnel-visioning, so that their teammates can deal damage with little interference.</p>"); }
 
 		/* if (deitychk==1) {
 
@@ -910,7 +881,7 @@ if (secclass !== "none") {
 			case "human": document.getElementById("humanResult");
 				write("Humans&lt;/b> are the newest addition to the Milky Way Galaxy's many races. Ambitious, sometimes to the point of worry on the part of the other races, humanity consists of talented and diverse individuals. Some are militaristic and dutiful like the turians, lithe and charismatic like the asari, while others still are quick-witted and energetic like the salarians. <br><br>While humanity enjoys a tentative peace with its newfound neighbors, the fallout from the conflict known as the First Contact War still lingers in the minds of those involved some decades later. As a result of the Human Systems Alliance's success in the aforementioned conflict, the military superpower was elected to represent and govern humanity as a whole in Council Space. Though humanity was integral to the galaxy's survival in the wake of the war against Sovereign and its geth, there are still those who hold reservations against humanity and their longstanding ambition for power..."); break;
 			case "volus": write("Volus&lt;/b> "); break;
-			case "asari": write("Asari&lt;/b> are among the most ancient and regal of the sentient races, and easily the most beautiful. The first of the Council races to become spacefarers and discover the Citadel in 580 B.C., the asari would settle on the space colony with the assistance of the Keepers, eventually forming the Citadel Council when encountering the Salarians some decades later in 500 BC. Though lauded for their beautiful culture and exemplary diplomatic skills, the quick advancement of Asari technology is no accident: a Prothean beacon, which was concealed for centuries in the asari homeworld's Temple of Athame, was integral to the research and development of the asari's technology—a treasure that predates the Citadel Council law that it would eventually—secretly—violate. Thessia itself is home to vast reserves of the invaluable element zero, resulting in the asari evolving to be some of the most potent biotics throughout the galaxy.<br><br>The asari are unique among the Milky Way races for a number of reasons. First, and most notably, the asari are monogendered: though female-presenting to other races, the asari lack the sexual binary that is intrinsic to most races, and as a result, gendered language has little meaning to them. Secondly, the asari are able to reproduce with any race via parthenogenesis, which, in this case means that an asari is able to 'map' a partner's genetic makeup, which in turn is used to randomize the asari's own DNA to be passed on to their offspring. Though traits from the 'father' are often noticeable in terms of personality, the offspring will always be 100% asari. Lastly, the asari, aside from the krogan, are the longest-lived race both by lifespan as well as their race's endurance as a whole; the asari were the initial choice of the long-dead Protheans to lead the galaxy, while the race was still in its infancy. It helps that a single asari lifetime lasts an entire millennium as well."); break;
+			case "asari": write("Asari&lt;/b> are among the most ancient and regal of the sentient races, and easily the most beautiful. The first of the Council races to become spacefarers and discover the Mass Relays. Upon locating the Citadel in 580 B.C., the asari would settle on the space colony with the assistance of the Keepers, eventually forming the Citadel Council when encountering the Salarians some decades later in 500 BC. Though lauded for their beautiful culture and exemplary diplomatic skills, the quick advancement of Asari technology is no accident: a Prothean beacon, which was concealed for centuries in the asari homeworld's Temple of Athame, was integral to the research and development of the asari's technology—a treasure that predates the Citadel Council law that it would eventually—secretly—violate. Thessia itself is home to vast reserves of the invaluable element zero, resulting in the asari evolving to be some of the most potent biotics throughout the galaxy.<br><br>The asari are unique among the Milky Way races for a number of reasons. First, and most notably, the asari are monogendered: though female-presenting to other races, the asari lack the sexual binary that is intrinsic to most races, and as a result, gendered language has little meaning to them. Secondly, the asari are able to reproduce with any race via parthenogenesis, which, in this case means that an asari is able to 'map' a partner's genetic makeup, which in turn is used to randomize the asari's own DNA to be passed on to their offspring. Though traits from the 'father' are often noticeable in terms of personality, the offspring will always be 100% asari. Lastly, the asari, aside from the krogan, are the longest-lived race both by lifespan as well as their race's endurance as a whole; the asari were the initial choice of the long-dead Protheans to lead the galaxy, while the race was still in its infancy. It helps that a single asari lifetime lasts an entire millennium as well."); break;
 			case "salarian": write("Salarians&lt;/b> "); break;
 			case "batarian": write("Batarians&lt;/b> "); break;
 			case "turian": write("Turians&lt;/b> "); break;
@@ -924,27 +895,29 @@ if (secclass !== "none") {
 		write("Class:&lt;/u>&lt;br>&lt;b>");
 
 		switch (primclass) {
-			case "soldier": write("Soldiers&lt;/b> are among the most robust warriors in the galaxy. Strong, fast, and experts in waging war, soldiers seek to overwhelm their enemies with firepower and sheer force. Though they lack the resources of tech specialists or biotics, soldiers will compensate by preparing to confront any nature of enemy before stepping foot on the battlefield. Trained in every manner of handheld weaponry, a good soldier puts an enemy at a disadvantage by stripping away their defenses and incapacitating them, whether by means of explosives, special ammo, or disruptive concussive shots to throw them off-balance. The best soldiers are expert marksmen, using their trademark adrenaline rush abilities to mow down enemies while time appears to be at a near-standstill."); break;
-			case "infiltrator": write("Infiltrators&lt;/b> are the most talented assassins in the galaxy, blending their tech powers with high burst damage to dismantle even the most powerful opponents as quickly as possible. In most cases, infiltrators weaponize a potent tactical cloak, sacrificing shield regeneration for the ability to move unseen in and out of danger. This cloak, partnered with the element of surprise, give infiltrators the greatest damage output of the classes while affording them temporary safety as well. While most infiltrators are glass cannons, they will compensate by combining high movement speed and awareness of their surroundings to avoid being caught out by their foes. The best infiltrators focus their attention on only the most dangerous enemy units, leaving the rabble at the mercy of their companions."); break;
-			case "engineer": write("Engineers&lt;/b> are the undisputed masters of area denial, exceeding all other classes when it comes to holding a defensive position against an onslaught of enemies. While typically favoring either shotguns or machine pistols, engineers use tech powers to overwhelm their opponents both physically and mentally; this can come in the form of harassment with the ever-present combat drone, hacking enemies mechs to cause disruption, or incapacitating unshielded opponents with chemical fire and ice. The best engineers shape the ebb and flow of the battlefield itself, defending key positions while also using their abilities to safely force their way into heavily defended chokepoints for their teammates."); break;
-			case "adept": write("Adepts&lt;/b> make up in crowd control what they lack in sheer firepower. Masters of biotic warfare, adepts channel dark energy in all its deadly forms, staggering even the most heavily defended foes and ripping apart the unprepared. An unchecked adept can singlehandedly turn the tide of any given battle, using their biotic powers to bombard their enemies with warp fields, throw and pull objects and enemies hard enough to shatter bones, or immobilize entire groups with singularities. The best adepts stay with their teams, often serving as the rear guard, and focus attention on immobilizing unshielded enemies to take them out of the fight, or securing the backlines against flanking enemies such as husks or varren."); break;
-			case "sentinel": write("Sentinels&lt;/b> are built to be survivors in every sense of the word. The most support-oriented of the classes, sentinels blend biotics and tech powers to strip enemies of any defense, while supporting their own teammates with advanced medical capabilities. While rivaling the adept for the lowest damage output of the classes, the sentinel compensates by having the invaluable tech armor, which gives them an immediate shield boost that not only affords them the strongest defense of any class, but can deal a fatal pulse of energy when it is depleted, giving its user one last defense against any enemy unfortunate enough to be caught in its radius. The best sentinels remain with their team, taking what damage their partners can't while distributing both defensive and offensive support with their wide array of abilities."); break;
-			case "vanguard": write("Vanguards&lt;/b> are the deadliest close quarters combatants on the battlefield. Making up for what they lack in firepower in sheer mobility, vanguards are able to close vast distances with their trademark Biotic Charge ability, stunning enemies and keeping their shields high for dealing with the groups of enemies they tend to surround themselves in. Vanguards serve two main purposes—to eliminate key targets in a small amount of time, normally by the 1-2 combo of charging their target, followed by a well-aimed shotgun round—and to focus enemy attention on themselves. By blitzing entire waves of enemies, or more dangerous foes such as brutes or ATLAS mechs, a good vanguard is able to dance with death, aggravating enemies to the point of tunnel-visioning, so that their teammates can deal damage with little interference."); }
+			case "soldier": write("<p>Soldiers&lt;/b> are among the most robust warriors in the galaxy. Strong, fast, and experts in waging war, soldiers seek to overwhelm their enemies with firepower and sheer force. Though they lack the resources of tech specialists or biotics, soldiers will compensate by preparing to confront any nature of enemy before stepping foot on the battlefield. <br><br>Trained in every manner of handheld weaponry, a good soldier puts an enemy at a disadvantage by stripping away their defenses and incapacitating them, whether by means of explosives, special ammo, or disruptive concussive shots to throw them off-balance. The best soldiers are expert marksmen, using their trademark adrenaline rush abilities to mow down enemies while time appears to crawl to a near-standstill.</p>"); break;
+			case "infiltrator": write("<p>Infiltrators&lt;/b> are the most talented assassins in the galaxy, blending their tech powers with high burst damage to dismantle even the most powerful opponents as quickly as possible. In most cases, infiltrators weaponize a potent tactical cloak, sacrificing shield regeneration for the ability to move unseen in and out of danger. This cloak, partnered with the element of surprise, give infiltrators the greatest damage output of the classes while affording them temporary safety as well. While most infiltrators are glass cannons, they will compensate by combining high movement speed and awareness of their surroundings to avoid being caught out by their foes. The best infiltrators focus their attention on only the most dangerous enemy units, leaving the rabble at the mercy of their companions.</p>"); break;
+			case "engineer": write("<p>Engineers&lt;/b> are the undisputed masters of area denial, exceeding all other classes when it comes to holding a defensive position against an onslaught of enemies. While typically favoring either shotguns or machine pistols, engineers use tech powers to overwhelm their opponents both physically and mentally; this can come in the form of harassment with the ever-present combat drone, hacking enemies mechs to cause disruption, or incapacitating unshielded opponents with chemical fire and ice. The best engineers shape the ebb and flow of the battlefield itself, defending key positions while also using their abilities to safely force their way into heavily defended chokepoints for their teammates. </p>"); break;
+			case "adept": write("<p>Adepts&lt;/b> make up in crowd control what they lack in sheer firepower. Masters of biotic warfare, adepts channel dark energy in all its deadly forms, staggering even the most heavily defended foes and ripping apart the unprepared. An unchecked adept can singlehandedly turn the tide of any given battle, using their biotic powers to bombard their enemies with warp fields, throw and pull objects and enemies hard enough to shatter bones, or immobilize entire groups with singularities. The best adepts stay with their teams, often serving as the rear guard, and focus attention on immobilizing unshielded enemies to take them out of the fight, or securing the backlines against flanking enemies such as husks, FENRIS mechs, or varren.</p>"); break;
+			case "sentinel": write("<p>Sentinels&lt;/b> are built to be survivors in every sense of the word. The most support-oriented of the classes, sentinels blend biotics and tech powers to strip enemies of any defense, while supporting their own teammates with advanced medical capabilities. While rivaling the adept for the lowest damage output of the classes, the sentinel compensates by having the invaluable tech armor, which gives them an immediate shield boost that not only affords them the strongest defense of any class, but can deal a fatal pulse of energy when it is depleted, giving its user one last defense against any enemy unfortunate enough to be caught in its radius. The best sentinels remain with their team, taking what damage their partners can't while distributing both defensive and offensive support with their wide array of abilities.</p>"); break;
+			case "vanguard": write("<p>Vanguards&lt;/b> are the deadliest close quarters combatants on the battlefield. Making up for what they lack in firepower in sheer mobility, vanguards are able to close vast distances with their trademark Biotic Charge ability, stunning enemies and keeping their shields high for dealing with the groups of enemies they tend to surround themselves in. Vanguards serve two main purposes—to eliminate key targets in a small amount of time, normally by the 1-2 combo of charging their target, followed by a well-aimed shotgun round—and to focus enemy attention on themselves. By blitzing entire waves of enemies, or more dangerous foes such as brutes or ATLAS mechs, a good vanguard is able to dance with death, aggravating enemies to the point of tunnel-visioning, so that their teammates can deal damage with little interference.</p>"); }
 
 		if (secclass !="none") { write("<br>&lt;br>&lt;br>&lt;u>Secondary Class:&lt;/u>&lt;br>&lt;b>"); }
 
 		switch (secclass) {
-			case "soldier": write("Soldiers&lt;/b> are among the most robust warriors in the galaxy. Strong, fast, and experts in waging war, soldiers seek to overwhelm their enemies with firepower and sheer force. Though they lack the resources of tech specialists or biotics, soldiers will compensate by preparing to confront any nature of enemy before stepping foot on the battlefield. Trained in every manner of handheld weaponry, a good soldier puts an enemy at a disadvantage by stripping away their defenses and incapacitating them, whether by means of explosives, special ammo, or disruptive concussive shots to throw them off-balance. The best soldiers are expert marksmen, using their trademark adrenaline rush abilities to mow down enemies while time appears to be at a near-standstill."); break;
-			case "infiltrator": write("Infiltrators&lt;/b> are the most talented assassins in the galaxy, blending their tech powers with high burst damage to dismantle even the most powerful opponents as quickly as possible. In most cases, infiltrators weaponize a potent tactical cloak, sacrificing shield regeneration for the ability to move unseen in and out of danger. This cloak, partnered with the element of surprise, give infiltrators the greatest damage output of the classes while affording them temporary safety as well. While most infiltrators are glass cannons, they will compensate by combining high movement speed and awareness of their surroundings to avoid being caught out by their foes. The best infiltrators focus their attention on only the most dangerous enemy units, leaving the rabble at the mercy of their companions."); break;
-			case "engineer": write("Engineers&lt;/b> are the undisputed masters of area denial, exceeding all other classes when it comes to holding a defensive position against an onslaught of enemies. While typically favoring either shotguns or machine pistols, engineers use tech powers to overwhelm their opponents both physically and mentally; this can come in the form of harassment with the ever-present combat drone, hacking enemies mechs to cause disruption, or incapacitating unshielded opponents with chemical fire and ice. The best engineers shape the ebb and flow of the battlefield itself, defending key positions while also using their abilities to safely force their way into heavily defended chokepoints for their teammates."); break;
-			case "adept": write("Adepts&lt;/b> make up in crowd control what they lack in sheer firepower. Masters of biotic warfare, adepts channel dark energy in all its deadly forms, staggering even the most heavily defended foes and ripping apart the unprepared. An unchecked adept can singlehandedly turn the tide of any given battle, using their biotic powers to bombard their enemies with warp fields, throw and pull objects and enemies hard enough to shatter bones, or immobilize entire groups with singularities. The best adepts stay with their teams, often serving as the rear guard, and focus attention on immobilizing unshielded enemies to take them out of the fight, or securing the backlines against flanking enemies such as husks or varren."); break;
-			case "sentinel": write("Sentinels&lt;/b> are built to be survivors in every sense of the word. The most support-oriented of the classes, sentinels blend biotics and tech powers to strip enemies of any defense, while supporting their own teammates with advanced medical capabilities. While rivaling the adept for the lowest damage output of the classes, the sentinel compensates by having the invaluable tech armor, which gives them an immediate shield boost that not only affords them the strongest defense of any class, but can deal a fatal pulse of energy when it is depleted, giving its user one last defense against any enemy unfortunate enough to be caught in its radius. The best sentinels remain with their team, taking what damage their partners can't while distributing both defensive and offensive support with their wide array of abilities."); break;
-			case "vanguard": write("Vanguards&lt;/b> are the deadliest close quarters combatants on the battlefield. Making up for what they lack in firepower in sheer mobility, vanguards are able to close vast distances with their trademark Biotic Charge ability, stunning enemies and keeping their shields high for dealing with the groups of enemies they tend to surround themselves in. Vanguards serve two main purposes—to eliminate key targets in a small amount of time, normally by the 1-2 combo of charging their target, followed by a well-aimed shotgun round—and to focus enemy attention on themselves. By blitzing entire waves of enemies, or more dangerous foes such as brutes or ATLAS mechs, a good vanguard is able to dance with death, aggravating enemies to the point of tunnel-visioning, so that their teammates can deal damage with little interference."); }
+			case "soldier": write("<p>Soldiers\<\/b> are among the most robust warriors in the galaxy. Strong, fast, and experts in waging war, soldiers seek to overwhelm their enemies with firepower and sheer force. Though they lack the resources of tech specialists or biotics, soldiers will compensate by preparing to confront any nature of enemy before stepping foot on the battlefield. <br><br>Trained in every manner of handheld weaponry, a good soldier puts an enemy at a disadvantage by stripping away their defenses and incapacitating them, whether by means of explosives, special ammo, or disruptive concussive shots to throw them off-balance. The best soldiers are expert marksmen, using their trademark adrenaline rush abilities to mow down enemies while time appears to crawl to a near-standstill.</p>"); break;
+			case "infiltrator": write("<p>Infiltrators\<\/b> are the most talented assassins in the galaxy, blending their tech powers with high burst damage to dismantle even the most powerful opponents as quickly as possible. In most cases, infiltrators weaponize a potent tactical cloak, sacrificing shield regeneration for the ability to move unseen in and out of danger. This cloak, partnered with the element of surprise, give infiltrators the greatest damage output of the classes while affording them temporary safety as well. While most infiltrators are glass cannons, they will compensate by combining high movement speed and awareness of their surroundings to avoid being caught out by their foes. The best infiltrators focus their attention on only the most dangerous enemy units, leaving the rabble at the mercy of their companions.</p>"); break;
+			case "engineer": write("<p>Engineers&lt;/b> are the undisputed masters of area denial, exceeding all other classes when it comes to holding a defensive position against an onslaught of enemies. While typically favoring either shotguns or machine pistols, engineers use tech powers to overwhelm their opponents both physically and mentally; this can come in the form of harassment with the ever-present combat drone, hacking enemies mechs to cause disruption, or incapacitating unshielded opponents with chemical fire and ice. The best engineers shape the ebb and flow of the battlefield itself, defending key positions while also using their abilities to safely force their way into heavily defended chokepoints for their teammates. </p>"); break;
+			case "adept": write("<p>Adepts&lt;/b> make up in crowd control what they lack in sheer firepower. Masters of biotic warfare, adepts channel dark energy in all its deadly forms, staggering even the most heavily defended foes and ripping apart the unprepared. An unchecked adept can singlehandedly turn the tide of any given battle, using their biotic powers to bombard their enemies with warp fields, throw and pull objects and enemies hard enough to shatter bones, or immobilize entire groups with singularities. The best adepts stay with their teams, often serving as the rear guard, and focus attention on immobilizing unshielded enemies to take them out of the fight, or securing the backlines against flanking enemies such as husks, FENRIS mechs, or varren.</p>"); break;
+			case "sentinel": write("<p>Sentinels&lt;/b> are built to be survivors in every sense of the word. The most support-oriented of the classes, sentinels blend biotics and tech powers to strip enemies of any defense, while supporting their own teammates with advanced medical capabilities. While rivaling the adept for the lowest damage output of the classes, the sentinel compensates by having the invaluable tech armor, which gives them an immediate shield boost that not only affords them the strongest defense of any class, but can deal a fatal pulse of energy when it is depleted, giving its user one last defense against any enemy unfortunate enough to be caught in its radius. The best sentinels remain with their team, taking what damage their partners can't while distributing both defensive and offensive support with their wide array of abilities.</p>"); break;
+			case "vanguard": write("<p>Vanguards&lt;/b> are the deadliest close quarters combatants on the battlefield. Making up for what they lack in firepower in sheer mobility, vanguards are able to close vast distances with their trademark Biotic Charge ability, stunning enemies and keeping their shields high for dealing with the groups of enemies they tend to surround themselves in. Vanguards serve two main purposes—to eliminate key targets in a small amount of time, normally by the 1-2 combo of charging their target, followed by a well-aimed shotgun round—and to focus enemy attention on themselves. By blitzing entire waves of enemies, or more dangerous foes such as brutes or ATLAS mechs, a good vanguard is able to dance with death, aggravating enemies to the point of tunnel-visioning, so that their teammates can deal damage with little interference.</p>"); }
 
 
 		write("<br>&lt;br>&lt;br>");
 
-		
+		write("Find out &lt;a href='http://www.easydamus.com/character.html' target='mt'>What Kind of Mass Effect Character Are You??&lt;/a>, courtesy of ");
+                write("Easydamus &lt;a href='mailto:zybstrski@excite.com'>(e-mail)&lt;/a>&lt;br>&lt;br><br>");
+
 		write("\<\/samp>\<\/td>\<\/tr>\<\/table>");
 
 		}
@@ -1028,7 +1001,12 @@ if (secclass !== "none") {
 
 		write("<br><hr><br><center>");
 
-
+ write("<!--");
+ write("<form action=http://us.1.p9.webhosting.yahoo.com/gb/sign method=post>");
+ write("<input type=hidden name=\".state\" value=1>");
+ write("<input type=hidden name=\"member\" value=\"easydamus\">");
+ write("<b>Your Character's Name:  </b>");
+ write("<input type=text name=1 value=\"\"");
  write("<br><br><br>");
 
  write("\">");
@@ -1279,20 +1257,17 @@ if (secclass !== "none") {
 
 </center>
 
-
-<p>This quiz will help you determine what race and class from the sci-fi franchise Mass Effect you most resemble! Interested in a new multiplayer build? Running a campaign and you're looking for roleplaying inspiration? Then look no further!</p>
+<div id="directions" title="Directions">
+<p>FILL LATER</p>
 <p>
-Please note that this quiz is constantly changing! Though its current incarnation may take no longer than five minutes, I plan to add additional races and questions at a later date!</p>
+FILL LATER</p>
 
-<p>
-Lastly, this wouldn't have been possible without the creator of the D&D Character Quiz, who gave me permission to adapt his code for this project. Please go show them some support over at EasyDamus.com if you have a chance!.
-	</p>
-	
-<p><b style="color:red">PLEASE NOTE:</b> This test requires support for both JavaScript and pop-up windows. If you are not sure if your browser will work, scroll to the bottom and click on the "What Mass Effect Character Am I?" button to test before filling out all of the questions.</p>
+<p><b>PLEASE NOTE:</b> This test requires support for both JavaScript and pop-up windows.  If your browser doesn't support both of them, you're out of luck.  If you are not sure if your browser will work, scroll to the bottom and click on the "What Mass Effect Character Am I?" button to test before filling out all of the questions.</p>
 <p>
 <b>Now, on to the survey!</b>
 </p>
-
+</div>
+</div>
 <table border="0" width="750" align="center" cellspacing="0" cellpadding="10">
 <tr>
 <td>
@@ -1312,7 +1287,7 @@ Lastly, this wouldn't have been possible without the creator of the D&D Characte
 </p><hr /><p>
 
 <a class="question">2. What is your most admirable quality?</a> <br /><br /><br />
-<input name="q42" value="1" type="radio" /> I'm very resourceful when it comes to problem solving..<br /><br />
+<input name="q42" value="1" type="radio" /> I'm very resourceful when it comes to problem solving.<br /><br />
 <input name="q42" value="2" type="radio" /> I never back down from a challenge.<br /><br />
 <input name="q42" value="3" type="radio" /> There's very little I can't persuade other people to do.<br /><br />
 <input name="q42" value="4" type="radio" /> I may not be very talented, but I'm a hard worker.<br /><br />
@@ -1323,7 +1298,7 @@ Lastly, this wouldn't have been possible without the creator of the D&D Characte
 <input name="q43" value="1" type="radio" /> My looks. I'm not ashamed to say that I'm physically above average.<br /><br />
 <input name="q43" value="2" type="radio" /> My brains. Being an expert on something you care about is sexy!.<br /><br />
 <input name="q43" value="3" type="radio" /> My resources. Money can't buy you love, but it can definitely buy you options.<br /><br />
-<input name="q43" value="4" type="radio" /> My devotion. Whether behind closed doors or in the trenches, I always give 100% of myself to others.<br /><br />
+<input name="q43" value="4" type="radio" /> My devotion. Whether behind closed doors or in the trenches, I always give 100% of mysasari to others.<br /><br />
 <input name="q43" value="5" type="radio" /> My mystique. The lack of the obvious is what draws others to want to know me.<br /><br />
 </p><hr /><p>
 
@@ -1344,7 +1319,7 @@ Lastly, this wouldn't have been possible without the creator of the D&D Characte
 <a class="question">6. What will be the last words you are likely to hear or say?</a> <br /><br />
 <input name="q46" value="1" type="radio" /> "You sold your soul to a path of blood."<br /><br />
 <input name="q46" value="2" type="radio" /> "This soup tastes funny..."<br /><br />
-<input name="q46" value="3" type="radio" /> "There's gotta be <i>some</i> way to fuck it."<br /><br />
+<input name="q46" value="3" type="radio" /> "We cannot get out. They are coming."<br /><br />
 <input name="q46" value="4" type="radio" /> "This is for my father!"<br /><br />
 <input name="q46" value="5" type="radio" /> "It is a far, far better rest that I go to than I have ever known."<br /><br />
 </p><hr /><p>
@@ -1499,38 +1474,12 @@ Lastly, this wouldn't have been possible without the creator of the D&D Characte
 </p><hr />
 
 <p>
-<a class="question">26. The rules...</a> <br /><br />
-<input name="q66" value="1" type="radio" /> Aren't stand-ins for morality or common sense.<br /><br />
-<input name="q66" value="2" type="radio" /> Are there to protect us.<br /><br />
-<input name="q66" value="3" type="radio" /> Are subjective based on culture and values.<br /><br />
-<input name="q66" value="4" type="radio" /> Should be followed when possible, and revised when necessary.<br /><br />
-</p><hr />
-
-<p>
-<a class="question">27. As a child, what did talent did you value most?</a> <br /><br />
-<input name="q67" value="1" type="radio" /> My ability to know who was using the stairs by their footsteps.<br /><br />
-<input name="q67" value="2" type="radio" /> My ability to remember obscure facts.<br /><br />
-<input name="q67" value="3" type="radio" /> My ability to focus on anything for as long as I wanted.<br /><br />
-<input name="q67" value="4" type="radio" /> My ability to tell what others wanted or needed without being told.<br /><br />
-</p><hr />
-
-<p>
-<a class="question">28. When it comes to handling assignments...</a> <br /><br />
-<input name="q68" value="1" type="radio" /> It's better to focus entirely on one task until it's done, and finish without being overwhelmed.<br /><br />
-<input name="q68" value="2" type="radio" /> It's better to work a little on everything, and finish without running behind.<br /><br />
-</p><hr />
-
-<p>
-<a class="question">29. When it comes to every day routines...</a> <br /><br />
-<input name="q69" value="1" type="radio" /> Taking a fresh approach to everything is best. It helps you not take things for granted.<br /><br />
-<input name="q69" value="2" type="radio" /> Automating repetitive tasks is best. Having more time for what matters is invaluable.<br /><br />
-</p><hr />
-
-<p>
-<a class="question">30. The most valuable tool when it comes to problem solving has to be...</a> <br /><br />
-<input name="q70" value="1" type="radio" /> Being able to entertain multiple solutions or perspectives.<br /><br />
-<input name="q70" value="2" type="radio" /> Preparing for as many eventualities as possible..<br /><br />
-<input name="q70" value="3" type="radio" /> Showing intiative by resolving the problem quickly and taking the most direct path.<br /><br />
+<a class="question">26. Intellectual intelligence is more important than emotional intelligence.</a> <br /><br />
+<input name="q66" value="1" type="radio" /> I agree completely.<br /><br />
+<input name="q66" value="2" type="radio" /> It tends to be more useful in my day to day, but emotional intelligence has its place.<br /><br />
+<input name="q66" value="3" type="radio" /> I value both equally.<br /><br />
+<input name="q66" value="4" type="radio" /> In my life, emotional intelligence is more useful, more often.<br /><br />
+<input name="q66" value="5" type="radio" /> I disagree completely.<br /><br />
 </p><hr />
 
 </div>
@@ -1567,6 +1516,14 @@ Lastly, this wouldn't have been possible without the creator of the D&D Characte
 <br><br>
 <i>Before clicking, make sure JavaScript is enabled, and that all pop-up window-managers are disabled!</i>
 <br><br>
+<!--
+<a href="http://us.1.p9.webhosting.yahoo.com/gb/view?member=easydamus">View Waiting Room for Hall of Heroes</a>
+<br />
+<a href="http://www.easydamus.com/hallofheroes.html">View Hall of Heroes</a>
+-->
+
+
+</div><!--end of 'totalsurvey' division -->
 
 
 
@@ -1577,7 +1534,6 @@ Lastly, this wouldn't have been possible without the creator of the D&D Characte
 </td>
 </tr>
 </table>
-</body>
 
-	
-	</html>
+</body>
+</html>
