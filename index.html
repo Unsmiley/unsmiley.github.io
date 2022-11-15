@@ -313,7 +313,45 @@ value = "-1";
                 case "4": quarian,batarian+=4; break;
                 case "5": krogan,rachni+=8; }
 
+value = "-1";
 
+	for (i = 0; i < survey.q66.length; i++) if (survey.q66[i].checked) value = survey.q66[i].value;
+	switch (value) {
+                case "1": human,volus+=4; break;
+                case "2": turian,asari+=4; break;
+                case "3": rachni,batarian+=4; break;
+                case "4": salarian,quarian+=4; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q67.length; i++) if (survey.q67[i].checked) value = survey.q67[i].value;
+	switch (value) {
+                case "1": infiltrator+=2; break;
+                case "2": engineer+=2; break;
+                case "3": adept+=2; break;
+                case "4": sentinel+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q68.length; i++) if (survey.q68[i].checked) value = survey.q68[i].value;
+	switch (value) {
+                case "1": infiltrator+=2; break;
+                case "2": adept+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q69.length; i++) if (survey.q69[i].checked) value = survey.q69[i].value;
+	switch (value) {
+                case "1": adept+=2; break;
+                case "2": engineer+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q70.length; i++) if (survey.q70[i].checked) value = survey.q70[i].value;
+	switch (value) {
+                case "1": adept+=2; break;
+                case "2": sentinel+=2; break;
+                case "3": vanguard+=2; }
 
 value = "-1";
 	for (ll = 0; ll < survey.q237.length; ll++) if (survey.q237[ll].checked) value = survey.q237[ll].value;
@@ -687,16 +725,16 @@ if (secclass !== "none") {
 
 		switch (race) {
 		case "human": 
-			write("Humans\<\//b> are the newest addition to the Milky Way Galaxy's many races. Ambitious, sometimes to the point of worry on the part of the other races, humanity consists of talented and diverse individuals. Some are militaristic and dutiful like the turians, lithe and charismatic like the asari, while others still are quick-witted and energetic like the salarians. <br><br>While humanity enjoys a tentative peace with its newfound neighbors, the fallout from the conflict known as the First Contact War still lingers in the minds of those involved some decades later. As a result of the Human Systems Alliance's success in the aforementioned conflict, the military superpower was elected to represent and govern humanity as a whole in Council Space. Though humanity was integral to the galaxy's survival in the wake of the war against Sovereign and its geth, there are still those who hold reservations against humanity and their longstanding ambition for power..."); break;
-			case "volus": write("Volus\<\/b> "); break;
+			write("<p>Humans\<\//b> are the newest addition to the Milky Way Galaxy's many races. Ambitious, sometimes to the point of worry on the part of the other races, humanity consists of talented and diverse individuals. Some are militaristic and dutiful like the turians, lithe and charismatic like the asari, while others still are quick-witted and energetic like the salarians. <br><br>While humanity enjoys a tentative peace with its newfound neighbors, the fallout from the conflict known as the First Contact War still lingers in the minds of those involved some decades later. As a result of the Human Systems Alliance's success in the aforementioned conflict, the military superpower was elected to represent and govern humanity as a whole in Council Space. Though humanity was integral to the galaxy's survival in the wake of the war against Sovereign and its geth, there are still those who hold reservations against humanity and their longstanding ambition for power...</p>"); break;
+			case "volus": write("<p>Volus\<\/b> </p>"); break;
 			case "asari": 
-				write("Asari\<\/b> are among the most ancient and regal of the sentient races, and easily the most beautiful. The first of the Council races to become spacefarers and discover the Mass Relays. Upon locating the Citadel in 580 B.C., the asari would settle on the space colony with the assistance of the Keepers, eventually forming the Citadel Council when encountering the Salarians some decades later in 500 BC. Though lauded for their beautiful culture and exemplary diplomatic skills, the quick advancement of Asari technology is no accident: a Prothean beacon, which was concealed for centuries in the asari homeworld's Temple of Athame, was integral to the research and development of the asari's technology—a treasure that predates the Citadel Council law that it would eventually—secretly—violate. Thessia itself is home to vast reserves of the invaluable element zero, resulting in the asari evolving to be some of the most potent biotics throughout the galaxy.<br><br>The asari are unique among the Milky Way races for a number of reasons. First, and most notably, the asari are monogendered: though female-presenting to other races, the asari lack the sexual binary that is intrinsic to most races, and as a result, gendered language has little meaning to them. Secondly, the asari are able to reproduce with any race via parthenogenesis, which, in this case means that an asari is able to 'map' a partner's genetic makeup, which in turn is used to randomize the asari's own DNA to be passed on to their offspring. Though traits from the 'father' are often noticeable in terms of personality, the offspring will always be 100% asari. Lastly, the asari, aside from the krogan, are the longest-lived race both by lifespan as well as their race's endurance as a whole; the asari were the initial choice of the long-dead Protheans to lead the galaxy, while the race was still in its infancy. It helps that a single asari lifetime lasts an entire millennium as well."); break;
-			case "salarian": write("Salarians\<\/b> "); break;
-			case "batarian": write("batarians\<\/b> "); break;
-			case "turian": write("Turians\<\/b> "); break;
-			case "quarian": write("Quarians\<\/b> "); break;
-			case "rachni": write("Rachni\<\/b> "); break;
-			case "krogan": write("Krogan\<\/b> "); }
+				write("<p>Asari\<\/b> are among the most ancient and regal of the sentient races, and easily the most beautiful. The first of the Council races to become spacefarers and discover the Mass Relays. Upon locating the Citadel in 580 B.C., the asari would settle on the space colony with the assistance of the Keepers, eventually forming the Citadel Council when encountering the Salarians some decades later in 500 BC. Though lauded for their beautiful culture and exemplary diplomatic skills, the quick advancement of Asari technology is no accident: a Prothean beacon, which was concealed for centuries in the asari homeworld's Temple of Athame, was integral to the research and development of the asari's technology—a treasure that predates the Citadel Council law that it would eventually—secretly—violate. Thessia itself is home to vast reserves of the invaluable element zero, resulting in the asari evolving to be some of the most potent biotics throughout the galaxy.<br><br>The asari are unique among the Milky Way races for a number of reasons. First, and most notably, the asari are monogendered: though female-presenting to other races, the asari lack the sexual binary that is intrinsic to most races, and as a result, gendered language has little meaning to them. Secondly, the asari are able to reproduce with any race via parthenogenesis, which, in this case means that an asari is able to 'map' a partner's genetic makeup, which in turn is used to randomize the asari's own DNA to be passed on to their offspring. Though traits from the 'father' are often noticeable in terms of personality, the offspring will always be 100% asari. Lastly, the asari, aside from the krogan, are the longest-lived race both by lifespan as well as their race's endurance as a whole; the asari were the initial choice of the long-dead Protheans to lead the galaxy, while the race was still in its infancy. It helps that a single asari lifetime lasts an entire millennium as well.</p>"); break;
+			case "salarian": write("<p>Salarians\<\/b> </p>"); break;
+			case "batarian": write("<p>Batarians\<\/b> </p>"); break;
+			case "turian": write("<p>Turians\<\/b> </p>"); break;
+			case "quarian": write("<p>Quarians\<\/b> </p>"); break;
+			case "rachni": write("<p>Rachni\<\/b> </p>"); break;
+			case "krogan": write("<p>Krogan\<\/b> </p>"); }
 
 		write("<br><br>");
 
@@ -878,16 +916,16 @@ if (secclass !== "none") {
 		write("<br>&lt;br>&lt;u>Race:&lt;/u>&lt;br>&lt;b>");
 
 		switch (race) {
-			case "human": document.getElementById("humanResult");
-				write("Humans&lt;/b> are the newest addition to the Milky Way Galaxy's many races. Ambitious, sometimes to the point of worry on the part of the other races, humanity consists of talented and diverse individuals. Some are militaristic and dutiful like the turians, lithe and charismatic like the asari, while others still are quick-witted and energetic like the salarians. <br><br>While humanity enjoys a tentative peace with its newfound neighbors, the fallout from the conflict known as the First Contact War still lingers in the minds of those involved some decades later. As a result of the Human Systems Alliance's success in the aforementioned conflict, the military superpower was elected to represent and govern humanity as a whole in Council Space. Though humanity was integral to the galaxy's survival in the wake of the war against Sovereign and its geth, there are still those who hold reservations against humanity and their longstanding ambition for power..."); break;
-			case "volus": write("Volus&lt;/b> "); break;
-			case "asari": write("Asari&lt;/b> are among the most ancient and regal of the sentient races, and easily the most beautiful. The first of the Council races to become spacefarers and discover the Mass Relays. Upon locating the Citadel in 580 B.C., the asari would settle on the space colony with the assistance of the Keepers, eventually forming the Citadel Council when encountering the Salarians some decades later in 500 BC. Though lauded for their beautiful culture and exemplary diplomatic skills, the quick advancement of Asari technology is no accident: a Prothean beacon, which was concealed for centuries in the asari homeworld's Temple of Athame, was integral to the research and development of the asari's technology—a treasure that predates the Citadel Council law that it would eventually—secretly—violate. Thessia itself is home to vast reserves of the invaluable element zero, resulting in the asari evolving to be some of the most potent biotics throughout the galaxy.<br><br>The asari are unique among the Milky Way races for a number of reasons. First, and most notably, the asari are monogendered: though female-presenting to other races, the asari lack the sexual binary that is intrinsic to most races, and as a result, gendered language has little meaning to them. Secondly, the asari are able to reproduce with any race via parthenogenesis, which, in this case means that an asari is able to 'map' a partner's genetic makeup, which in turn is used to randomize the asari's own DNA to be passed on to their offspring. Though traits from the 'father' are often noticeable in terms of personality, the offspring will always be 100% asari. Lastly, the asari, aside from the krogan, are the longest-lived race both by lifespan as well as their race's endurance as a whole; the asari were the initial choice of the long-dead Protheans to lead the galaxy, while the race was still in its infancy. It helps that a single asari lifetime lasts an entire millennium as well."); break;
-			case "salarian": write("Salarians&lt;/b> "); break;
-			case "batarian": write("Batarians&lt;/b> "); break;
-			case "turian": write("Turians&lt;/b> "); break;
-			case "quarian": write("Quarians&lt;/b> "); break;
-			case "rachni": write("Rachni&lt;/b> "); break;
-			case "krogan": write("Krogan&lt;/b> "); }
+			case "human": 
+				write("<p>Humans&lt;/b> are the newest addition to the Milky Way Galaxy's many races. Ambitious, sometimes to the point of worry on the part of the other races, humanity consists of talented and diverse individuals. Some are militaristic and dutiful like the turians, lithe and charismatic like the asari, while others still are quick-witted and energetic like the salarians. <br><br>While humanity enjoys a tentative peace with its newfound neighbors, the fallout from the conflict known as the First Contact War still lingers in the minds of those involved some decades later. As a result of the Human Systems Alliance's success in the aforementioned conflict, the military superpower was elected to represent and govern humanity as a whole in Council Space. Though humanity was integral to the galaxy's survival in the wake of the war against Sovereign and its geth, there are still those who hold reservations against humanity and their longstanding ambition for power...</p>"); break;
+			case "volus": write("<p>Volus&lt;/b> </p>"); break;
+			case "asari": write("<p>Asari&lt;/b> are among the most ancient and regal of the sentient races, and easily the most beautiful. The first of the Council races to become spacefarers and discover the Mass Relays. Upon locating the Citadel in 580 B.C., the asari would settle on the space colony with the assistance of the Keepers, eventually forming the Citadel Council when encountering the Salarians some decades later in 500 BC. Though lauded for their beautiful culture and exemplary diplomatic skills, the quick advancement of Asari technology is no accident: a Prothean beacon, which was concealed for centuries in the asari homeworld's Temple of Athame, was integral to the research and development of the asari's technology—a treasure that predates the Citadel Council law that it would eventually—secretly—violate. Thessia itself is home to vast reserves of the invaluable element zero, resulting in the asari evolving to be some of the most potent biotics throughout the galaxy.<br><br>The asari are unique among the Milky Way races for a number of reasons. First, and most notably, the asari are monogendered: though female-presenting to other races, the asari lack the sexual binary that is intrinsic to most races, and as a result, gendered language has little meaning to them. Secondly, the asari are able to reproduce with any race via parthenogenesis, which, in this case means that an asari is able to 'map' a partner's genetic makeup, which in turn is used to randomize the asari's own DNA to be passed on to their offspring. Though traits from the 'father' are often noticeable in terms of personality, the offspring will always be 100% asari. Lastly, the asari, aside from the krogan, are the longest-lived race both by lifespan as well as their race's endurance as a whole; the asari were the initial choice of the long-dead Protheans to lead the galaxy, while the race was still in its infancy. It helps that a single asari lifetime lasts an entire millennium as well.</p>"); break;
+			case "salarian": write("<p>Salarians&lt;/b> </p>"); break;
+			case "batarian": write("<p>Batarians&lt;/b> </p>"); break;
+			case "turian": write("<p>Turians&lt;/b> </p>"); break;
+			case "quarian": write("<p>Quarians&lt;/b> </p>"); break;
+			case "rachni": write("<p>Rachni&lt;/b> </p>"); break;
+			case "krogan": write("<p>Krogan&lt;/b> </p>"); }
 
 		write("<br>&lt;br>&lt;br>&lt;u>");
 
@@ -1258,11 +1296,13 @@ if (secclass !== "none") {
 </center>
 
 <div id="directions" title="Directions">
-<p>FILL LATER</p>
+<p>Interested in a new multiplayer build? Running a campaign and you're looking for roleplaying inspiration? Then look no further! This quiz will help you determine what race and class from the sci-fi franchise Mass Effect you most resemble! </p>
 <p>
-FILL LATER</p>
+ Please note that this quiz is constantly changing! Though its current incarnation may take no longer than five minutes, I plan to add additional races and questions at a later date!
+<br><br>
+ Lastly, this wouldn't have been possible without the creator of the D&D Character Quiz, who gave me permission to adapt his code for this project. Please go show them some support over at EasyDamus.com if you have a chance!. </p>
 
-<p><b>PLEASE NOTE:</b> This test requires support for both JavaScript and pop-up windows.  If your browser doesn't support both of them, you're out of luck.  If you are not sure if your browser will work, scroll to the bottom and click on the "What Mass Effect Character Am I?" button to test before filling out all of the questions.</p>
+<p><b style="color:red;">PLEASE NOTE:</b> This test requires support for both JavaScript and pop-up windows.  If your browser doesn't support both of them, you're out of luck.  If you are not sure if your browser will work, scroll to the bottom and click on the "What Mass Effect Character Am I?" button to test before filling out all of the questions.</p>
 <p>
 <b>Now, on to the survey!</b>
 </p>
@@ -1273,8 +1313,7 @@ FILL LATER</p>
 <td>
 
 <form name="survey" action="">
-
-<div id="alignprose">
+ <div id="alignprose">
 
 <div id="abilityscores">
 <hr /><p>
@@ -1474,13 +1513,40 @@ FILL LATER</p>
 </p><hr />
 
 <p>
-<a class="question">26. Intellectual intelligence is more important than emotional intelligence.</a> <br /><br />
-<input name="q66" value="1" type="radio" /> I agree completely.<br /><br />
-<input name="q66" value="2" type="radio" /> It tends to be more useful in my day to day, but emotional intelligence has its place.<br /><br />
-<input name="q66" value="3" type="radio" /> I value both equally.<br /><br />
-<input name="q66" value="4" type="radio" /> In my life, emotional intelligence is more useful, more often.<br /><br />
-<input name="q66" value="5" type="radio" /> I disagree completely.<br /><br />
+<a class="question">26. The rules...</a> <br /><br />
+<input name="q66" value="1" type="radio" /> Aren't stand-ins for morality or common sense.<br /><br />
+<input name="q66" value="2" type="radio" /> Are there to protect us.<br /><br />
+<input name="q66" value="3" type="radio" /> Are subjective based on culture and values.<br /><br />
+<input name="q66" value="4" type="radio" /> Should be followed when possible, and revised when necessary.<br /><br />
 </p><hr />
+
+<p>
+<a class="question">27. As a child, what did talent did you value most?</a> <br /><br />
+<input name="q67" value="1" type="radio" /> My ability to know who was using the stairs by their footsteps.<br /><br />
+<input name="q67" value="2" type="radio" /> My ability to remember obscure facts.<br /><br />
+<input name="q67" value="3" type="radio" /> My ability to focus on anything for as long as I wanted.<br /><br />
+<input name="q67" value="4" type="radio" /> My ability to tell what others wanted or needed without being told.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">28. When it comes to handling assignments...</a> <br /><br />
+<input name="q68" value="1" type="radio" /> It's better to focus entirely on one task until it's done, and finish without being overwhelmed.<br /><br />
+<input name="q68" value="2" type="radio" /> It's better to work a little on everything, and finish without running behind.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">29. When it comes to every day routines...</a> <br /><br />
+<input name="q69" value="1" type="radio" /> Taking a fresh approach to everything is best. It helps you not take things for granted.<br /><br />
+<input name="q69" value="2" type="radio" /> Automating repetitive tasks is best. Having more time for what matters is invaluable.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">30. The most valuable tool when it comes to problem solving has to be...</a> <br /><br />
+<input name="q70" value="1" type="radio" /> Being able to entertain multiple solutions or perspectives.<br /><br />
+<input name="q70" value="2" type="radio" /> Preparing for as many eventualities as possible..<br /><br />
+<input name="q70" value="3" type="radio" /> Showing intiative by resolving the problem quickly and taking the most direct path.<br /><br />
+</p><hr />
+
 
 </div>
 
