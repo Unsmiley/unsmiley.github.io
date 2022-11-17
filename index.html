@@ -354,6 +354,15 @@ value = "-1";
                 case "3": vanguard+=2; }
 
 value = "-1";
+
+	for (i = 0; i < survey.q71.length; i++) if (survey.q71[i].checked) value = survey.q71[i].value;
+	switch (value) {
+                case "1": human,quarian+=2; break;
+                case "2": volus,asari+=2; break;
+                case "3": batarian,turian+=2; break;
+                case "4": geth,rachni+=2; }
+
+value = "-1";
 	for (ll = 0; ll < survey.q237.length; ll++) if (survey.q237[ll].checked) value = survey.q237[ll].value;
 	switch (value) {
                 case "1": level-=1; break;
@@ -1545,6 +1554,14 @@ if (secclass !== "none") {
 <input name="q70" value="1" type="radio" /> Being able to entertain multiple solutions or perspectives.<br /><br />
 <input name="q70" value="2" type="radio" /> Preparing for as many eventualities as possible..<br /><br />
 <input name="q70" value="3" type="radio" /> Showing intiative by resolving the problem quickly and taking the most direct path.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">31. The Reaper War is over, and the galaxy is rebuilding at a steady pace. You and your crew realize that this is the ideal time to help reshape galactic politics for the better. What campaign do you embark on?</a> <br /><br />
+<input name="q71" value="1" type="radio" /> With the Batarian Hegemony all but extinct, a major power player for the slave trade is out of commission. I'm going to spearhead the effort to eliminate slavery from the Milky Way Galaxy.<br /><br />
+<input name="q71" value="2" type="radio" /> The Reapers scoured countless worlds, leaving vast areas devoid of influence and management. With this power vacuum, the real estate market will be lucrative...with my help in balancing the scales.<br /><br />
+<input name="q71" value="3" type="radio" /> The war was devasting for the mercenary scene, but it did wonders for unifying the races. With the hierarchy of the Blue Suns, Eclipse, and Blood Pack in shambles, now is the time to forge a new organization from the remnants. With veteran members from each of the surviving races, we will be a political and military force to be reckoned with.<br /><br />
+<input name="q71" value="4" type="radio" /> Relative harmony among the races has been established due to a common enemy in the Reapers, but we have to work to secure them to keep from repeating the same mistakes. The Genophage, batarian and human conflicts, drell underpopulation, working with old enemies in the Geth and Rachni...there's a lot of work to be done before peace is a mainstay.<br /><br />
 </p><hr />
 
 
