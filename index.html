@@ -310,17 +310,7 @@ value = "-1";
                 case "1": geth,volus+=8; break;
                 case "2": turian,salarian+=4; break;
                 case "3": asari,human+=2; break;
-                case "4": quarian,batarian+=4; break;
-                case "5": krogan,rachni+=8; }
-
-value = "-1";
-
-	for (i = 0; i < survey.q66.length; i++) if (survey.q66[i].checked) value = survey.q66[i].value;
-	switch (value) {
-                case "1": human,volus+=4; break;
-                case "2": turian,asari+=4; break;
-                case "3": rachni,batarian+=4; break;
-                case "4": salarian,quarian+=4; }
+                case "4": quarian,batarian+=4; }
 
 value = "-1";
 
@@ -330,7 +320,6 @@ value = "-1";
                 case "2": engineer+=2; break;
                 case "3": adept+=2; break;
                 case "4": sentinel+=2; }
-
 value = "-1";
 
 	for (i = 0; i < survey.q68.length; i++) if (survey.q68[i].checked) value = survey.q68[i].value;
@@ -343,7 +332,7 @@ value = "-1";
 	for (i = 0; i < survey.q69.length; i++) if (survey.q69[i].checked) value = survey.q69[i].value;
 	switch (value) {
                 case "1": adept+=2; break;
-                case "2": engineer+=2; }
+                case "2": engineer+=2; }  
 
 value = "-1";
 
@@ -357,10 +346,41 @@ value = "-1";
 
 	for (i = 0; i < survey.q71.length; i++) if (survey.q71[i].checked) value = survey.q71[i].value;
 	switch (value) {
-                case "1": human,quarian+=2; break;
+              	case "1": human,quarian+=2; break;
                 case "2": volus,asari+=2; break;
                 case "3": batarian,turian+=2; break;
                 case "4": geth,rachni+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q72.length; i++) if (survey.q72[i].checked) value = survey.q72[i].value;
+	switch (value) {
+                case "1": krogan+=2; break;
+                case "2": asari+=2; break;
+                case "3": turian+=2; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q73.length; i++) if (survey.q73[i].checked) value = survey.q73[i].value;
+	switch (value) {
+                case "1": sentinel+=4; break;
+                case "2": adept+=4; break;
+                case "3": engineer+=4; }
+
+value = "-1";
+
+	for (i = 0; i < survey.q74.length; i++) if (survey.q74[i].checked) value = survey.q74[i].value;
+	switch (value) {
+                case "1": soldier+=4; break;
+                case "2": infiltrator+=4; break;
+                case "3": vanguard+=4; }                	                	
+
+value = "-1";
+
+	for (i = 0; i < survey.q75.length; i++) if (survey.q75[i].checked) value = survey.q74[i].value;
+	switch (value) {
+                case "1": adept+=2; break;
+                case "2": infiltrator+=2; }   
 
 value = "-1";
 	for (ll = 0; ll < survey.q237.length; ll++) if (survey.q237[ll].checked) value = survey.q237[ll].value;
@@ -1501,10 +1521,34 @@ if (secclass !== "none") {
 </p><hr />
 
 <p>
-<a class="question">32. </a> <br /><br />
-<input name="q72" value="1" type="radio" /> <br /><br />
-<input name="q72" value="2" type="radio" /> <br /><br />
-<input name="q72" value="3" type="radio" /> <br /><br />
+<a class="question">32. Your gun is jammed, and you're forced to hold a vital position against an onslaught of enemies. Luckily, you came prepared. Which melee weapon did you select for just such an occasion.</a> <br /><br />
+<input name="q72" value="1" type="radio" /> A massive hammer. With my might, both crowds of fodder as well as mighty foes will fall to me.<br /><br />
+<input name="q72" value="2" type="radio" /> A sword with a peerless edge. By staying flexible and quick on my feet, I can kill with impunity while staying safe.<br /><br />
+<input name="q72" value="3" type="radio" /> A mighty halberd. By positioning myself correctly, I can funnel my enemies into a manageable line. The work may be rote and monotonous, but by digging in I will be safe.<br /><br />
+</p><hr />
+
+<p>
+<a class="question">33. Your platoon is under a surprise attack! Luckily you thought to rest in your armor, but you have only a few seconds to find something to defend yourself with before you are overwhelmed by enemies; what do you grab?</a> <br /><br />
+<input name="q73" value="1" type="radio" /> My shield boosters. I can outlast my opponents in almost any situation with them.<br /><br />
+<input name="q73" value="2" type="radio" /> My biotic amp. It may give me some fierce migraines, but this handy piece of wetware will let me rip my enemies apart with nothing but my mind.<br /><br />
+<input name="q73" value="3" type="radio" /> My omni-tool kit. Something tells me I'm going to overclocking it for the foreseeable future, and I don't want my best resource to break down on me.<br /><br />
+
+</p><hr />
+
+<p>
+<a class="question">34. The best way to start a fight has to be...</a> <br /><br />
+<input name="q74" value="1" type="radio" /> Up front and personal.<br /><br />
+<input name="q74" value="2" type="radio" /> A vicious sneak attack.<br /><br />
+<input name="q74" value="3" type="radio" /> A brutal sucker punch.<br /><br />
+
+</p><hr />
+
+<p>
+<a class="question">35. When it comes to reputations, you would rather be...</a> <br /><br />
+<input name="q75" value="1" type="radio" /> An enigmatic force wrapped in mystery, wealth and influence.<br /><br />
+<input name="q75" value="2" type="radio" /> A public individual renowned for having unrivaled supernatural power and insight.<br /><br />
+
+
 </p><hr />
 
 </div>
