@@ -381,6 +381,15 @@ value = "-1";
 	switch (value) {
                 case "1": adept+=2; break;
                 case "2": infiltrator+=2; }   
+	
+value = "-1";
+
+	for (i = 0; i < survey.q76.length; i++) if (survey.q76[i].checked) value = survey.q76[i].value;
+	switch (value) {
+                case "1": volus+=4; break;
+                case "2": krogan,rachni+=2; break;
+                case "3": human,asari+=2; break;
+                case "4": quarian,batarian+=2; }   	
 
 value = "-1";
 	for (ll = 0; ll < survey.q237.length; ll++) if (survey.q237[ll].checked) value = survey.q237[ll].value;
@@ -1551,6 +1560,15 @@ if (secclass !== "none") {
 
 </p><hr />
 
+<p>
+<a class="question">35. It's the courtroom scandal of the century, and you're the defendant! You're being brought before the Citadel's grand jury on account of:</a> <br /><br />
+<input name="q76" value="1" type="radio" /> Insider trading. Either someone blabbed, or one of my peers has it out for me.<br /><br />
+<input name="q76" value="2" type="radio" /> Accusations of war crimes! I'm so angry, I could glass a colony!<br /><br />
+<input name="q76" value="3" type="radio" /> I may have started a cult or two!<br /><br />
+<input name="q76" value="4" type="radio" /> What do you mean it's called slavery?!<br /><br />
+
+</p><hr />	
+	
 </div>
 
 
@@ -1585,11 +1603,7 @@ if (secclass !== "none") {
 <br><br>
 <i>Before clicking, make sure JavaScript is enabled, and that all pop-up window-managers are disabled!</i>
 <br><br>
-<!--
-<a href="http://us.1.p9.webhosting.yahoo.com/gb/view?member=easydamus">View Waiting Room for Hall of Heroes</a>
-<br />
-<a href="http://www.easydamus.com/hallofheroes.html">View Hall of Heroes</a>
--->
+
 
 
 </div><!--end of 'totalsurvey' division -->
