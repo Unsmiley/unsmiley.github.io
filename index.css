@@ -1,3 +1,7 @@
+.hidden {
+	display: none;
+}
+
 @font-face {
     font-family: massEffect;
     src: url('me123.woff');
@@ -55,6 +59,7 @@ li a, .dropbtn {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  background: linear-gradient(to bottom right, #000000 0%, #666699 100%);
 }
 
 li a:hover, .dropdown:hover .dropbtn {
@@ -70,7 +75,7 @@ li.dropdown {
   position: absolute;
   background-color: #000080;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(122, 127, 128, 1.0);
   z-index: 1;
 }
 
@@ -336,4 +341,8 @@ a:hover, a:focus {
 #button {
 				background-image: url("images/masseffectt.png");
 
+}
+
+* {
+    box-sizing: border-box;
 }
