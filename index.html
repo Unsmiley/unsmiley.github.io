@@ -391,6 +391,24 @@ value = "-1";
                 case "3": human,asari+=2; break;
                 case "4": quarian,batarian+=2; }   	
 
+
+value = "-1";
+
+	for (i = 0; i < survey.q77.length; i++) if (survey.q77[i].checked) value = survey.q77[i].value;
+	switch (value) {
+                case "1": soldier+=2; break;
+                case "2": engineer+=2; break;
+                case "3": adept+=2; }                  	
+
+
+value = "-1";
+
+	for (i = 0; i < survey.q78.length; i++) if (survey.q78[i].checked) value = survey.q78[i].value;
+	switch (value) {
+                case "1": infiltrator+=2; break;
+                case "2": sentinel+=2; break;
+                case "3": vanguard+=2; }     	
+	
 value = "-1";
 	for (ll = 0; ll < survey.q237.length; ll++) if (survey.q237[ll].checked) value = survey.q237[ll].value;
 	switch (value) {
@@ -1557,17 +1575,36 @@ if (secclass !== "none") {
 <input name="q75" value="1" type="radio" /> An enigmatic force wrapped in mystery, wealth and influence.<br /><br />
 <input name="q75" value="2" type="radio" /> A public individual renowned for having unrivaled supernatural power and insight.<br /><br />
 
-
 </p><hr />
-
+	
 <p>
-<a class="question">35. It's the courtroom scandal of the century, and you're the defendant! You're being brought before the Citadel's grand jury on account of:</a> <br /><br />
+<a class="question">36. It's the courtroom scandal of the century, and you're the defendant! You're being brought before the Citadel's grand jury on account of:</a> <br /><br />
 <input name="q76" value="1" type="radio" /> Insider trading. Either someone blabbed, or one of my peers has it out for me.<br /><br />
 <input name="q76" value="2" type="radio" /> Accusations of war crimes! I'm so angry, I could glass a colony!<br /><br />
 <input name="q76" value="3" type="radio" /> I may have started a cult or two!<br /><br />
 <input name="q76" value="4" type="radio" /> What do you mean it's called slavery?!<br /><br />
 
 </p><hr />	
+
+
+<p>
+<a class="question">37. You've got a bit of free time in-between appointments. How do you spend it?</a> <br /><br />
+<input name="q77" value="1" type="radio" /> Might as well get a quick workout in...<br /><br />
+<input name="q77" value="2" type="radio" /> Time to download those omni-tool drivers that I've been putting off. <br /> <br />
+<input name="q77" value="3" type="radio" /> I'm feeling scattered; I'll meditate and try to center myself before my next encounter.<br /> <br />
+
+</p><hr />	
+
+<p>
+<a class="question">38. When it comes to your fighting an enemy, you would rather...</a> <br /><br />
+<input name="q78" value="1" type="radio" /> Demolish them with a single efficient strike.<br /> <br />
+<input name="q78" value="2" type="radio" /> Wear them down with defense while waiting for an opening.<br /> <br />
+<input name="q78" value="3" type="radio" /> Crush them with immediate, overwhelming force.<br /> <br />
+
+</p><hr />	
+
+	
+	
 	
 </div>
 
@@ -1618,7 +1655,27 @@ if (secclass !== "none") {
 </tr>
 </table>
 				
-			
+</script>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-oljoph-github-io-joseph.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//https-oljoph-github-io-joseph.disqus.com/count.js" async></script>			
 
 </body>
 
