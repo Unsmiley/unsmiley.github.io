@@ -17,20 +17,13 @@ function process()
 	var survey = document.survey;
 	var i = 0;
 	var j = 0;
-   	var ll = 0;
+    var ll = 0;
 	var value = "-1";
 	var race = "";
 	var align = "";
 	var primclass = "";
 	var secclass = "";
 	var level=0;
-
-	var strength = 0;
-	var dexterity = 0;
-	var vigor = 0;
-	var intelligence = 0;
-	var wisdom = 0;
-	var charisma = 0;
 
 	var krogan = 0;
 	var asari = 0;
@@ -43,24 +36,6 @@ function process()
 	var rachni = 0;
 	var quarian = 0;
 
-	var lg = 0;
-	var ln = 0;
-	var le = 0;
-	var ng = 0;
-	var nn = 0;
-	var ne = 0;
-	var cg = 0;
-	var cn = 0;
-	var ce = 0;
-	var tie = -1;
-
-	var lx = 0;
-	var nx = 0;
-	var cx = 0;
-	var xg = 0;
-	var xn = 0;
-	var xe = 0;
-
 	var soldier = 0;
 	var infiltrator = 0;
 	var engineer = 0;
@@ -68,10 +43,10 @@ function process()
 	var sentinel = 0;
 	var vanguard = 0;
 
-	var deitychk = 0;
+	/* var deitychk = 0;
 
 	var deity = "";
-
+*/
 	for (i = 0; i < survey.q41.length; i++) if (survey.q41[i].checked) value = survey.q41[i].value;
 	switch (value) {
                 case "1": turian+=2; break;
@@ -392,6 +367,23 @@ value = "-1";
                 case "4": quarian,batarian+=2; }   	
 
 value = "-1";
+
+	for (i = 0; i < survey.q77.length; i++) if (survey.q77[i].checked) value = survey.q77[i].value;
+	switch (value) {
+                case "1": soldier+=2; break;
+                case "2": engineer+=2; break;
+                case "3": adept+=2; }                  	
+
+
+value = "-1";
+
+	for (i = 0; i < survey.q78.length; i++) if (survey.q78[i].checked) value = survey.q78[i].value;
+	switch (value) {
+                case "1": infiltrator+=2; break;
+                case "2": sentinel+=2; break;
+                case "3": vanguard+=2; }                  	
+
+value = "-1";
 	for (ll = 0; ll < survey.q237.length; ll++) if (survey.q237[ll].checked) value = survey.q237[ll].value;
 	switch (value) {
                 case "1": level-=1; break;
@@ -426,53 +418,6 @@ value = "-1";
 	if (turian > i) { race = "turian"; i = turian;}
 	if (rachni > i) { race = "rachni"; i = rachni;}
 
-	lg = lx + xg;
-	ng = nx + xg;
-	cg = cx + xg;
-
-	ln = lx + xn;
-	nn = nx + xn;
-	cn = cx + xn;
-
-	le = lx + xe;
-	ne = nx + xe;
-	ce = cx + xe;
-
-	i = nn;
-	align = "nn";
-	if (lg > i) { align = "lg"; i = lg; }
-	if (ng > i) { align = "ng"; i = ng; }
-	if (cg > i) { align = "cg"; i = cg; }
-	if (ln > i) { align = "ln"; i = ln; }
-	if (cn > i) { align = "cn"; i = cn; }
-	if (le > i) { align = "le"; i = le; }
-	if (ne > i) { align = "ne"; i = ne; }
-	if (ce > i) { align = "ce"; i = ce; }
-
-	if (lg==i) tie++;
-	if (ng==i) tie++;
-	if (cg==i) tie++;
-	if (ln==i) tie++;
-	if (nn==i) tie++;
-	if (cn==i) tie++;
-	if (le==i) tie++;
-	if (ne==i) tie++;
-	if (ce==i) tie++;
-
-	if (tie != 0) {
-		if (lx>nx&&lx>cx) align = "l";
-		else if (cx>nx&&cx>lx) align = "c";
-		else align ="n";
-
-		if (xg>xe&&xg>xn) align += "g";
-		else if (xe>xn&&xe>xg) align += "e";
-		else align +="n"; }
-
-	
-
-
-        if (level < 1) {var level = 1;}
-
 	i = soldier;
 	primclass = "soldier";
 	if (engineer > i) { primclass = "engineer"; i = engineer; }
@@ -494,110 +439,6 @@ value = "-1";
 	if (primclass=="infiltrator"||primclass=="adept"||primclass=="engineer"||primclass=="sentinel") deitychk = 0;
 	if (secclass=="infiltrator"||secclass=="adept"||secclass=="engineer"||secclass=="sentinel") deitychk = 0;
 
-	if (deitychk == 1) {
-
-		switch (align) {
-			case "lg": 
-				if (primclass=="wizard") {deity="mystra";}
-				else if (primclass=="sorcerer") {deity="mystra";}
-				else if ((primclass=="infiltrator"||primclass=="sentinel")&&race=="batarian") 
-
-{deity="baervan_wildwanderer";}
-				else if (race=="batarian"&&(primclass=="soldier"||primclass=="engineer")) 
-
-{deity="gaerdal_ironhand";}
-				else if (race=="batarian") {deity="garl_glittergold";}
-				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="mielikki";}
-				else if (race=="krogan") {deity="moradin";}
-				else if (race=="volus") {deity="arvoreen";}
-				else if (primclass=="vanguard") {deity="oghma";}
-				else {deity="tyr";}
-				break;
-			case "ng":
-				if (primclass=="wizard") {deity="mystra";}
-				else if (primclass=="sorcerer") {deity="mystra";}
-				else if (primclass=="vanguard") {deity="oghma";}
-				else if ((primclass=="infiltrator"||primclass=="sentinel")&&race=="batarian") 
-
-{deity="baervan_wildwanderer";}
-				else if (race=="batarian") {deity="flandal_steelskin";}
-				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="mielikki";}
-				else if (race=="krogan") {deity="marthammor_duin";}
-				else {deity="lathander";}
-				break;
-			case "cg":
-				if (primclass=="wizard"&&(race=="salarian"||race=="asari")) {deity="sehanine_moonbow";}
-				else if (primclass=="wizard") {deity="mystra";}
-				else if (primclass=="sorcerer") {deity="mystra";}
-				else if ((primclass=="infiltrator"||primclass=="sentinel")&&race=="batarian") 
-
-{deity="baervan_wildwanderer";}
-				else if (primclass=="infiltrator"&&(race=="salarian"||race=="asari")) {deity="solonor_thelandira";}
-				else if (primclass=="sentinel"&&(race=="salarian"||race=="asari")) {deity="rillifane_rallathil";}
-				else if (primclass=="vanguard"&&(race=="salarian"||race=="asari")) {deity="hanali_celanil";}
-				else if (primclass=="vanguard") {deity="finder_wyvernspur";}
-				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="shaundakul";}
-				else if (race=="krogan") {deity="dugmaren_brightmantle";}
-				else {deity="tymora";}
-				break;
-			case "ln":
-				if (primclass=="rogue"&&race=="volus") {deity="brandobaris";}
-				else if (race=="volus") {deity="urogalan";}
-				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="silvanus";}
-				else if (primclass=="wizard") {deity="azuth";}
-				else if (primclass=="sorcerer") {deity="azuth";}
-				else if (race=="batarian") {deity="callarduran_smoothhands";}
-				else {deity="helm";}
-				break;
-			case "nn":
-				if (race=="krogan") {deity="dumathoin";}
-				else if (primclass=="rogue"&&race=="volus") {deity="brandobaris";}
-				else if (primclass=="wizard") {deity="azuth";}
-				else if (primclass=="sorcerer") {deity="azuth";}
-				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="silvanus";}
-				else if (race=="batarian") {deity="callarduran_smoothhands";}
-				else if (race=="volus") {deity="sheela_peryroyl";}
-				else {deity="gond";}
-				break;
-			case "cn":
-				if (race=="asari"&&(primclass=="rogue"||primclass=="vanguard")) {deity="erevan_ilesere";}
-				else if (primclass=="wizard") {deity="azuth";}
-				else if (primclass=="sorcerer") {deity="azuth";}
-				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="silvanus";}
-				else if (race=="asari") {deity="fenmarel_mestarine";}
-				else if (primclass=="vanguard") {deity="finder_wyvernspur";}
-				else if (primclass=="rogue"&&race=="volus") {deity="brandobaris";}
-				else if (race=="volus") {deity="sheela_peryroyl";}
-				else if (race=="batarian") {deity="callarduran_smoothhands";}
-				else if (primclass=="engineer"||primclass=="soldier") {deity="tempus";}
-				else {deity="beshaba";}
-				break;
-			case "le":
-				if (primclass=="wizard") {deity="velsharoon";}
-				else if (primclass=="sorcerer") {deity="velsharoon";}
-				else if (primclass=="rogue") {deity="mask";}
-				else if (race=="krogan") {deity="abbathor";}
-				else if (race=="batarian") {deity="urdlen";}
-				else {deity="iyachtu_xvim";}
-				break;
-			case "ne":
-				if (primclass=="wizard") {deity="velsharoon";}
-				else if (primclass=="sorcerer") {deity="velsharoon";}
-				else if (primclass=="rogue") {deity="mask";}
-				else if (race=="krogan") {deity="abbathor";}
-				else if (race=="batarian") {deity="urdlen";}
-				else {deity="cyric";}
-				break;
-			case "ce":
-				if (primclass=="wizard") {deity="velsharoon";}
-				else if (primclass=="sorcerer") {deity="velsharoon";}
-				else if (primclass=="rogue") {deity="mask";}
-				else if (primclass=="vanguard") {deity="beshaba";}
-				else if (race=="krogan") {deity="abbathor";}
-				else if (race=="batarian") {deity="urdlen";}
-				else {deity="talos";}
-		}
-	}
 
 	var win = window.open("", "win","width=900,height=550,top=25,left=50,toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes,location=yes");
 
@@ -665,100 +506,7 @@ if (secclass !== "none") {
                 if (level == 9){write(" Admiral");}
                 if (level == 10){write(" Fleet Admiral");}
                          }
-/*
-		write("\<\/h1>");
 
-		if (deitychk==1) {
-
-			write("<h2>Follower Of ");
-			switch (deity) {
-				case "tyr": write("Tyr"); break;
-				case "arvoreen": write("Arvoreen"); break;
-				case "moradin": write("Moradin"); break;
-				case "lathander": write("Lathander"); break;
-				case "mystra": write("Mystra"); break;
-				case "oghma": write("Oghma"); break;
-				case "mielikki": write("Mielikki"); break;
-				case "marthammor_duin": write("Marthammor Duin"); break;
-				case "tymora": write("Tymora"); break;
-				case "finder_wyvernspur": write("Finder Wyvernspur"); break;
-				case "shaundakul": write("Shaundakul"); break;
-				case "hanali_celanil": write("Hanali Celanil"); break;
-				case "solonor_thelandira": write("Solonor Thelandira"); break;
-				case "rillifane_rallathil": write("Rillifane Rallathil"); break;
-				case "helm": write("Helm"); break;
-				case "azuth": write("Azuth"); break;
-				case "urogalan": write("Urogalan"); break;
-				case "gond": write("Gond"); break;
-				case "silvanus": write("Silvanus"); break;
-				case "sheela_peryroyl": write("Sheela Peryroyl"); break;
-				case "brandobaris": write("Brandobaris"); break;
-				case "dumathoin": write("Dumathoin"); break;
-				case "beshaba": write("Beshaba"); break;
-				case "tempus": write("Tempus"); break;
-				case "fenmarel_mestarine": write("Fenmarel Mestarine"); break;
-				case "erevan_ilesere": write("Erevan Ilesere"); break;
-				case "iyachtu_xvim": write("Iyachtu Xvim"); break;
-				case "cyric": write("Cyric"); break;
-				case "mask": write("Mask"); break;
-				case "abbathor": write("Abbathor"); break;
-				case "velsharoon": write("Velsharoon"); break;
-				case "talos": write("Talos"); break;
-				case "garl_glittergold": write("Garl Glittergold"); break;
-				case "gaerdal_ironhand": write("Gaerdal Ironhand"); break;
-				case "baervan_wildwanderer": write("Baervan Wildwanderer"); break;
-				case "flandal_steelskin": write("Flandal Steelskin"); break;
-				case "callarduran_smoothhands": write("Calladuran Smoothhands"); break;
-				case "urdlen": write("Urdlen");
-			}
-			write("\<\/h2>");
-		}
-
-		write("<br><br><u>");
-
-		write("Ability Scores:\<\/u><br>");
-
-		write("Strength-   ");
-		write(strength);
-
-		write("<br>");
-
-		write("Dexterity-   ");
-		write(dexterity);
-
-		write("<br>");
-
-		write("Vigor-   ");
-		write(vigor);
-
-		write("<br>");
-
-		write("Intelligence-   ");
-		write(intelligence);
-
-		write("<br>");
-
-		write("Wisdom-   ");
-		write(wisdom);
-
-		write("<br>");
-
-		write("Charisma-   ");
-		write(charisma);
-
-		/* write("\<\/b>\<\/center><br><u>Alignment:\<\/u><br><b>");
-
-		switch (align) {
-			case "lg": write("Lawful Good-\<\/b> A lawful good character acts as a good person is expected or required to act. He combines a commitment to oppose evil with the discipline to fight relentlessly. He tells the truth, keeps his word, helps those in need, and speaks out against injustice. A lawful good character hates to see the guilty go unpunished.  Lawful good is the best alignment you can be because it combines honor and compassion.  However, lawful good can be a dangerous alignment when it restricts freedom and criminalizes sasari-interest."); break;
-			case "ng": write("Neutral Good-\<\/b> A neutral good character does the best that a good person can do. He is devoted to helping others. He works with kings and magistrates but does not feel beholden to them. Neutral good is the best alignment you can be because it means doing what is good without bias for or against order. However, neutral good can be a dangerous alignment when it advances mediocrity by limiting the actions of the truly capable."); break;
-			case "cg": write("Chaotic Good-\<\/b> A chaotic good character acts as his conscience directs him with little regard for what others expect of him. He makes his own way, but he's kind and benevolent. He believes in goodness and right but has little use for laws and regulations. He hates it when people try to intimidate others and tell them what to do. He follows his own moral compass, which, although good, may not agree with that of society. Chaotic good is the best alignment you can be because it combines a good heart with a free spirit. However, chaotic good can be a dangerous alignment when it disrupts the order of society and punishes those who do well for themselves."); break;
-			case "ln": write("Lawful Neutral-\<\/b> A lawful neutral character acts as law, tradition, or a personal code directs him. Order and organization are paramount to him. He may believe in personal order and live by a code or standard, or he may believe in order for all and favor a strong, organized government. Lawful neutral is the best alignment you can be because it means you are reliable and honorable without being a zealot. However, lawful neutral can be a dangerous alignment when it seeks to eliminate all freedom, choice, and diversity in society."); break;
-			case "nn": write("True Neutral-\<\/b> A true neutral character does what seems to be a good idea. He doesn't feel strongly one way or the other when it comes to good vs. evil or law vs. chaos. Most true neutral characters exhibit a lack of conviction or bias rather than a commitment to neutrality. Such a character thinks of good as better than evil after all, he would rather have good neighbors and rulers than evil ones. Still, he's not personally committed to upholding good in any abstract or universal way. Some true neutral characters, on the other hand, commit themselves philosophically to neutrality. They see good, evil, law, and chaos as prejudices and dangerous extremes. They advocate the middle way of neutrality as the best, most balanced road in the long run. True neutral is the best alignment you can be because it means you act naturally, without prejudice or compulsion. However, true neutral can be a dangerous alignment when it represents apathy, indifference, and a lack of conviction."); break;
-			case "cn": write("Chaotic Neutral-\<\/b> A chaotic neutral character follows his whims. He is an individualist first and last. He values his own liberty but doesn't strive to protect others' freedom. He avoids authority, resents restrictions, and challenges traditions. A chaotic neutral character does not intentionally disrupt organizations as part of a campaign of anarchy. To do so, he would have to be motivated either by good (and a desire to liberate others) or evil (and a desire to make those different from himsasari suffer). A chaotic neutral character may be unpredictable, but his behavior is not totally random. He is not as likely to jump off a bridge as to cross it. Chaotic neutral is the best alignment you can be because it represents true freedom from both society's restrictions and a do-gooder's zeal. However, chaotic neutral can be a dangerous alignment when it seeks to eliminate all authority, harmony, and order in society."); break;
-			case "le": write("Lawful Evil-\<\/b> A lawful evil villain methodically takes what he wants within the limits of his code of conduct without regard for whom it hurts. He cares about tradition, loyalty, and order but not about freedom, dignity, or life. He plays by the rules but without mercy or compassion. He is comfortable in a hierarchy and would like to rule, but is willing to serve. He condemns others not according to their actions but according to race, religion, homeland, or social rank. He is loath to break laws or promises.  This reluctance comes partly from his nature and partly because he depends on order to protect himsasari from those who oppose him on moral grounds. Some lawful evil villains have particular taboos, such as not killing in cold blood (but having underlings do it) or not letting children come to harm (if it can be helped). They imagine that these compunctions put them above unprincipled villains.  Some lawful evil people and creatures commit themselves to evil with a zeal like that of a crusader committed to good. Beyond being willing to hurt others for their own ends, they take pleasure in spreading evil as an end unto itsasari. They may also see doing evil as part of a duty to an evil deity or master. Lawful evil is sometimes called diabolical, because devils are the epitome of lawful evil. Lawful evil is the best alignment you can be because it combines honor and dedicated sasari-interest. However, lawful evil can be a dangerous alignment because it represents methodical, intentional, and frequently successful evil."); break;
-			case "ne": write("Neutral Evil-\<\/b> A neutral evil villain does whatever he can get away with. He is out for himsasari, pure and simple. He sheds no tears for those he kills, whether for profit, sport, or convenience. He has no love of order and holds no illusion that following laws, traditions, or codes would make him any better or more noble. On the other hand, he doesn't have the restless nature or love of conflict that a chaotic evil villain has.  Some neutral evil villains hold up evil as an ideal, committing evil for its own sake. Most often, such villains are devoted to evil deities or secret societies. Neutral evil is the best alignment you can be because you can advance yoursasari without regard for others. However, neutral evil can be a dangerous alignment because it represents pure evil without honor and without variation."); break;
-			case "ce": write("Chaotic Evil-\<\/b> A chaotic evil character does whatever his greed, hatred, and lust for destruction drive him to do. He is hot-tempered, vicious, arbitrarily violent, and unpredictable. If he is simply out for whatever he can get, he is ruthless and brutal. If he is committed to the spread of evil and chaos, he is even worse. Thankfully, his plans are haphazard, and any groups he joins or forms are poorly organized. Typically, chaotic evil people can be made to work together only by force, and their leader lasts only as long as he can thwart attempts to topple or assassinate him. Chaotic evil is sometimes called demonic because demons are the epitome of chaotic evil. Chaotic evil is the best alignment you can be because combines sasari-interest and pure freedom. However, chaotic evil can be a dangerous alignment because it represents the destruction not only of beauty and life but also of the order on which beauty and life depend."); }
-*/
 		write("<br><h2><br>Race:<br></h2>");
 
 		switch (race) {
@@ -1562,7 +1310,7 @@ if (secclass !== "none") {
 </p><hr />
 
 <p>
-<a class="question">35. It's the courtroom scandal of the century, and you're the defendant! You're being brought before the Citadel's grand jury on account of:</a> <br /><br />
+<a class="question">36. It's the courtroom scandal of the century, and you're the defendant! You're being brought before the Citadel's grand jury on account of:</a> <br /><br />
 <input name="q76" value="1" type="radio" /> Insider trading. Either someone blabbed, or one of my peers has it out for me.<br /><br />
 <input name="q76" value="2" type="radio" /> Accusations of war crimes! I'm so angry, I could glass a colony!<br /><br />
 <input name="q76" value="3" type="radio" /> I may have started a cult or two!<br /><br />
@@ -1570,6 +1318,21 @@ if (secclass !== "none") {
 
 </p><hr />	
 	
+
+<p>
+<a class="question">37. You've got a bit of free time in-between appointments. How do you spend it?</a> <br /><br />
+<input name="q77" value="1" type="radio" /> Might as well get a quick workout in...<br /><br />
+<input name="q77" value="2" type="radio" /> Time to download those omni-tool drivers that I've been putting off. <br /> <br />
+<input name="q77" value="3" type="radio" /> I'm feeling scattered; I'll meditate and try to center myself before my next encounter.<br /> <br />
+
+
+<p>
+<a class="question">38. When it comes to your fighting an enemy, you would rather...</a> <br /><br />
+<input name="q78" value="1" type="radio" /> Demolish them with a single efficient strike.<br /> <br />
+<input name="q78" value="2" type="radio" /> Wear them down with defense while waiting for an opening.<br /> <br />
+<input name="q78" value="3" type="radio" /> Crush them with immediate, overwhelming force.<br /> <br />
+
+</p><hr />	
 </div>
 
 
