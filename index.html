@@ -25,14 +25,7 @@ function process()
 	var secclass = "";
 	var level=0;
 
-	var strength = 0;
-	var dexterity = 0;
-	var vigor = 0;
-	var intelligence = 0;
-	var wisdom = 0;
-	var charisma = 0;
-
-	var krogan = 0;
+		var krogan = 0;
 	var asari = 0;
 	var salarian = 0;
 	var volus = 0;
@@ -43,24 +36,7 @@ function process()
 	var rachni = 0;
 	var quarian = 0;
 
-	var lg = 0;
-	var ln = 0;
-	var le = 0;
-	var ng = 0;
-	var nn = 0;
-	var ne = 0;
-	var cg = 0;
-	var cn = 0;
-	var ce = 0;
-	var tie = -1;
-
-	var lx = 0;
-	var nx = 0;
-	var cx = 0;
-	var xg = 0;
-	var xn = 0;
-	var xe = 0;
-
+	
 	var soldier = 0;
 	var infiltrator = 0;
 	var engineer = 0;
@@ -68,10 +44,7 @@ function process()
 	var sentinel = 0;
 	var vanguard = 0;
 
-	var deitychk = 0;
-
-	var deity = "";
-
+	
 	for (i = 0; i < survey.q41.length; i++) if (survey.q41[i].checked) value = survey.q41[i].value;
 	switch (value) {
                 case "1": turian+=2; break;
@@ -510,111 +483,7 @@ value = "-1";
 	if (primclass=="infiltrator"||primclass=="adept"||primclass=="engineer"||primclass=="sentinel") deitychk = 0;
 	if (secclass=="infiltrator"||secclass=="adept"||secclass=="engineer"||secclass=="sentinel") deitychk = 0;
 
-	if (deitychk == 1) {
-
-		switch (align) {
-			case "lg": 
-				if (primclass=="wizard") {deity="mystra";}
-				else if (primclass=="sorcerer") {deity="mystra";}
-				else if ((primclass=="infiltrator"||primclass=="sentinel")&&race=="batarian") 
-
-{deity="baervan_wildwanderer";}
-				else if (race=="batarian"&&(primclass=="soldier"||primclass=="engineer")) 
-
-{deity="gaerdal_ironhand";}
-				else if (race=="batarian") {deity="garl_glittergold";}
-				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="mielikki";}
-				else if (race=="krogan") {deity="moradin";}
-				else if (race=="volus") {deity="arvoreen";}
-				else if (primclass=="vanguard") {deity="oghma";}
-				else {deity="tyr";}
-				break;
-			case "ng":
-				if (primclass=="wizard") {deity="mystra";}
-				else if (primclass=="sorcerer") {deity="mystra";}
-				else if (primclass=="vanguard") {deity="oghma";}
-				else if ((primclass=="infiltrator"||primclass=="sentinel")&&race=="batarian") 
-
-{deity="baervan_wildwanderer";}
-				else if (race=="batarian") {deity="flandal_steelskin";}
-				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="mielikki";}
-				else if (race=="krogan") {deity="marthammor_duin";}
-				else {deity="lathander";}
-				break;
-			case "cg":
-				if (primclass=="wizard"&&(race=="salarian"||race=="asari")) {deity="sehanine_moonbow";}
-				else if (primclass=="wizard") {deity="mystra";}
-				else if (primclass=="sorcerer") {deity="mystra";}
-				else if ((primclass=="infiltrator"||primclass=="sentinel")&&race=="batarian") 
-
-{deity="baervan_wildwanderer";}
-				else if (primclass=="infiltrator"&&(race=="salarian"||race=="asari")) {deity="solonor_thelandira";}
-				else if (primclass=="sentinel"&&(race=="salarian"||race=="asari")) {deity="rillifane_rallathil";}
-				else if (primclass=="vanguard"&&(race=="salarian"||race=="asari")) {deity="hanali_celanil";}
-				else if (primclass=="vanguard") {deity="finder_wyvernspur";}
-				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="shaundakul";}
-				else if (race=="krogan") {deity="dugmaren_brightmantle";}
-				else {deity="tymora";}
-				break;
-			case "ln":
-				if (primclass=="rogue"&&race=="volus") {deity="brandobaris";}
-				else if (race=="volus") {deity="urogalan";}
-				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="silvanus";}
-				else if (primclass=="wizard") {deity="azuth";}
-				else if (primclass=="sorcerer") {deity="azuth";}
-				else if (race=="batarian") {deity="callarduran_smoothhands";}
-				else {deity="helm";}
-				break;
-			case "nn":
-				if (race=="krogan") {deity="dumathoin";}
-				else if (primclass=="rogue"&&race=="volus") {deity="brandobaris";}
-				else if (primclass=="wizard") {deity="azuth";}
-				else if (primclass=="sorcerer") {deity="azuth";}
-				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="silvanus";}
-				else if (race=="batarian") {deity="callarduran_smoothhands";}
-				else if (race=="volus") {deity="sheela_peryroyl";}
-				else {deity="gond";}
-				break;
-			case "cn":
-				if (race=="asari"&&(primclass=="rogue"||primclass=="vanguard")) {deity="erevan_ilesere";}
-				else if (primclass=="wizard") {deity="azuth";}
-				else if (primclass=="sorcerer") {deity="azuth";}
-				else if (primclass=="infiltrator"||primclass=="sentinel") {deity="silvanus";}
-				else if (race=="asari") {deity="fenmarel_mestarine";}
-				else if (primclass=="vanguard") {deity="finder_wyvernspur";}
-				else if (primclass=="rogue"&&race=="volus") {deity="brandobaris";}
-				else if (race=="volus") {deity="sheela_peryroyl";}
-				else if (race=="batarian") {deity="callarduran_smoothhands";}
-				else if (primclass=="engineer"||primclass=="soldier") {deity="tempus";}
-				else {deity="beshaba";}
-				break;
-			case "le":
-				if (primclass=="wizard") {deity="velsharoon";}
-				else if (primclass=="sorcerer") {deity="velsharoon";}
-				else if (primclass=="rogue") {deity="mask";}
-				else if (race=="krogan") {deity="abbathor";}
-				else if (race=="batarian") {deity="urdlen";}
-				else {deity="iyachtu_xvim";}
-				break;
-			case "ne":
-				if (primclass=="wizard") {deity="velsharoon";}
-				else if (primclass=="sorcerer") {deity="velsharoon";}
-				else if (primclass=="rogue") {deity="mask";}
-				else if (race=="krogan") {deity="abbathor";}
-				else if (race=="batarian") {deity="urdlen";}
-				else {deity="cyric";}
-				break;
-			case "ce":
-				if (primclass=="wizard") {deity="velsharoon";}
-				else if (primclass=="sorcerer") {deity="velsharoon";}
-				else if (primclass=="rogue") {deity="mask";}
-				else if (primclass=="vanguard") {deity="beshaba";}
-				else if (race=="krogan") {deity="abbathor";}
-				else if (race=="batarian") {deity="urdlen";}
-				else {deity="talos";}
-		}
-	}
-
+	
 	var win = window.open("", "win","width=900,height=550,top=25,left=50,toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes,location=yes");
 
 	with (win.document) {
@@ -686,7 +555,7 @@ if (secclass !== "none") {
 	
 		switch (race) {
 		case "human": 
-			write("<p style = 'font-size:12px'>Humans\<\//b> are the newest addition to the Milky Way Galaxy's many races. Ambitious, sometimes to the point of worry on the part of the other races, humanity consists of talented and diverse individuals. Some are militaristic and dutiful like the turians, lithe and charismatic like the asari, while others still are quick-witted and energetic like the salarians. <br><br>While humanity enjoys a tentative peace with its newfound neighbors, the fallout from the conflict known as the First Contact War still lingers in the minds of those involved some decades later. As a result of the Human Systems Alliance's success in the aforementioned conflict, the military superpower was elected to represent and govern humanity as a whole in Council Space. Though humanity was integral to the galaxy's survival in the wake of the war against Sovereign and its geth, there are still those who hold reservations against humanity and their longstanding ambition for power...</p>"); break;
+			write("<p style = 'font-size:12px'>Humans\<\//b> are the newest addition to the Milky Way Galaxy's many races. Ambitious, sometimes to the point of worry on the part of the other races, humanity consists of talented and diverse individuals. Some are militaristic and dutiful like the turians, lithe and charismatic like the asari, while others still are quick-witted and energetic like the salarians. Many would view this potential diversity as promising...and others still would call it unpredictable.<br><br>While humanity enjoys a tentative peace with its newfound neighbors, the fallout from the conflict known as the First Contact War still lingers in the minds of those involved some decades later. As a result of the Human Systems Alliance's success in the aforementioned conflict, the military superpower was elected to represent and govern humanity as a whole in Council Space. Though humanity was integral to the galaxy's survival in the wake of the war against Sovereign and its geth, there are still those who hold reservations against humanity and their longstanding ambition for power...</p>"); break;
 			case "volus": write("<p style = 'font-size:12px'>Volus\<\/b> </p>"); break;
 			case "asari": 
 				write("<p style = 'font-size:12px'>Asari\<\/b> are among the most ancient and regal of the sentient races, and easily the most beautiful. The first of the Council races to become spacefarers and discover the Mass Relays. Upon locating the Citadel in 580 B.C., the asari would settle on the space colony with the assistance of the Keepers, eventually forming the Citadel Council when encountering the Salarians some decades later in 500 BC. Though lauded for their beautiful culture and exemplary diplomatic skills, the quick advancement of Asari technology is no accident: a Prothean beacon, which was concealed for centuries in the asari homeworld's Temple of Athame, was integral to the research and development of the asari's technology—a treasure that predates the Citadel Council law that it would eventually—secretly—violate. Thessia itself is home to vast reserves of the invaluable element zero, resulting in the asari evolving to be some of the most potent biotics throughout the galaxy.<br><br>The asari are unique among the Milky Way races for a number of reasons. First, and most notably, the asari are monogendered: though female-presenting to other races, the asari lack the sexual binary that is intrinsic to most races, and as a result, gendered language has little meaning to them. Secondly, the asari are able to reproduce with any race via parthenogenesis, which, in this case means that an asari is able to 'map' a partner's genetic makeup, which in turn is used to randomize the asari's own DNA to be passed on to their offspring. Though traits from the 'father' are often noticeable in terms of personality, the offspring will always be 100% asari. Lastly, the asari, aside from the krogan, are the longest-lived race both by lifespan as well as their race's endurance as a whole; the asari were the initial choice of the long-dead Protheans to lead the galaxy, while the race was still in its infancy. It helps that a single asari lifetime lasts an entire millennium as well.</p>"); break;
@@ -785,7 +654,7 @@ if (secclass !== "none") {
 
 		switch (race) {
 			case "human": 
-				write("<p style = 'font-size:12px'>Humans&lt;/b> are the newest addition to the Milky Way Galaxy's many races. Ambitious, sometimes to the point of worry on the part of the other races, humanity consists of talented and diverse individuals. Some are militaristic and dutiful like the turians, lithe and charismatic like the asari, while others still are quick-witted and energetic like the salarians. <br><br>While humanity enjoys a tentative peace with its newfound neighbors, the fallout from the conflict known as the First Contact War still lingers in the minds of those involved some decades later. As a result of the Human Systems Alliance's success in the aforementioned conflict, the military superpower was elected to represent and govern humanity as a whole in Council Space. Though they were integral to the galaxy's survival in the wake of the war against Sovereign and its geth, there are still those who hold reservations against humanity and their longstanding ambition for power...</p>"); break;
+				write("<p style = 'font-size:12px'>Humans&lt;/b> are the newest addition to the Milky Way Galaxy's many races. Ambitious, sometimes to the point of worry on the part of the other races, humanity consists of talented and diverse individuals. Some are militaristic and dutiful like the turians, lithe and charismatic like the asari, while others still are quick-witted and energetic like the salarians. Many would view this potential diversity as promising...and others still would call it unpredictable. <br><br>While humanity enjoys a tentative peace with its newfound neighbors, the fallout from the conflict known as the First Contact War still lingers in the minds of those involved some decades later. As a result of the Human Systems Alliance's success in the aforementioned conflict, the military superpower was elected to represent and govern humanity as a whole in Council Space. Though they were integral to the galaxy's survival in the wake of the war against Sovereign and its geth, there are still those who hold reservations against humanity and their longstanding ambition for power...</p>"); break;
 			case "volus": write("<p style = 'font-size:12px'>Volus&lt;/b> </p>"); break;
 			case "asari": write("<p style = 'font-size:12px'>Asari&lt;/b> are among the most ancient and regal of the sentient races, and easily the most beautiful. The first of the Council races to become spacefarers and discover the Mass Relays. Upon locating the Citadel in 580 B.C., the asari would settle on the space colony with the assistance of the Keepers, eventually forming the Citadel Council when encountering the Salarians some decades later in 500 BC. Though lauded for their beautiful culture and exemplary diplomatic skills, the quick advancement of Asari technology is no accident: a Prothean beacon, which was concealed for centuries in the asari homeworld's Temple of Athame, was integral to the research and development of the asari's technology—a treasure that predates the Citadel Council law that it would eventually—secretly—violate. Thessia itself is home to vast reserves of the invaluable element zero, resulting in the asari evolving to be some of the most potent biotics throughout the galaxy.<br><br>The asari are unique among the Milky Way races for a number of reasons. First, and most notably, the asari are monogendered: though female-presenting to other races, the asari lack the sexual binary that is intrinsic to most races, and as a result, gendered language has little meaning to them. Secondly, the asari are able to reproduce with any race via parthenogenesis, which, in this case means that an asari is able to 'map' a partner's genetic makeup, which in turn is used to randomize the asari's own DNA to be passed on to their offspring. Though traits from the 'father' are often noticeable in terms of personality, the offspring will always be 100% asari. Lastly, the asari, aside from the krogan, are the longest-lived race both by lifespan as well as their race's endurance as a whole; the asari were the initial choice of the long-dead Protheans to lead the galaxy, while the race was still in its infancy. It helps that a single asari lifetime lasts an entire millennium as well.</p>"); break;
 			case "salarian": write("<p style = 'font-size:12px'>Salarians&lt;/b> </p>"); break;
@@ -973,51 +842,7 @@ if (secclass !== "none") {
                          }
 
  write("\">");
-/*
- write("<input type=hidden name=5 value=\"");
-		if (deitychk==1) {
-			switch (deity) {
-				case "tyr": write("Tyr"); break;
-				case "arvoreen": write("Arvoreen"); break;
-				case "moradin": write("Moradin"); break;
-				case "lathander": write("Lathander"); break;
-				case "mystra": write("Mystra"); break;
-				case "oghma": write("Oghma"); break;
-				case "mielikki": write("Mielikki"); break;
-				case "marthammor_duin": write("Marthammor Duin"); break;
-				case "tymora": write("Tymora"); break;
-				case "finder_wyvernspur": write("Finder Wyvernspur"); break;
-				case "shaundakul": write("Shaundakul"); break;
-				case "hanali_celanil": write("Hanali Celanil"); break;
-				case "solonor_thelandira": write("Solonor Thelandira"); break;
-				case "rillifane_rallathil": write("Rillifane Rallathil"); break;
-				case "helm": write("Helm"); break;
-				case "azuth": write("Azuth"); break;
-				case "urogalan": write("Urogalan"); break;
-				case "gond": write("Gond"); break;
-				case "silvanus": write("Silvanus"); break;
-				case "sheela_peryroyl": write("Sheela Peryroyl"); break;
-				case "brandobaris": write("Brandobaris"); break;
-				case "dumathoin": write("Dumathoin"); break;
-				case "beshaba": write("Beshaba"); break;
-				case "tempus": write("Tempus"); break;
-				case "fenmarel_mestarine": write("Fenmarel Mestarine"); break;
-				case "erevan_ilesere": write("Erevan Ilesere"); break;
-				case "iyachtu_xvim": write("Iyachtu Xvim"); break;
-				case "cyric": write("Cyric"); break;
-				case "mask": write("Mask"); break;
-				case "abbathor": write("Abbathor"); break;
-				case "velsharoon": write("Velsharoon"); break;
-				case "talos": write("Talos"); break;
-				case "garl_glittergold": write("Garl Glittergold"); break;
-				case "gaerdal_ironhand": write("Gaerdal Ironhand"); break;
-				case "baervan_wildwanderer": write("Baervan Wildwanderer"); break;
-				case "flandal_steelskin": write("Flandal Steelskin"); break;
-				case "callarduran_smoothhands": write("Calladuran Smoothhands"); break;
-				case "urdlen": write("Urdlen");
-			}
-               }
-*/
+
  write("\">");
  write("<br>");
  write("<input type=hidden name=6 value=\"STR ");
@@ -1063,20 +888,6 @@ if (secclass !== "none") {
  write(charisma);
  write(",");
 
-/*
- write(lx);
- write(",");
- write(nx);
- write(",");
- write(cx);
- write(",");
- write(xg);
- write(",");
- write(xn);
- write(",");
- write(xe);
- write(",");
-*/
 
  write(human);
  write(",");
@@ -1195,12 +1006,11 @@ if (secclass !== "none") {
 
 <div id="directions" title="Directions">
 <p>Interested in a new multiplayer build? Running a campaign and you're looking for roleplaying inspiration? Then look no further! This quiz will help you determine what race and class from the sci-fi franchise Mass Effect you most resemble! </p>
-<p>
- Please note that this quiz is constantly changing! Though its current incarnation may take no longer than five minutes, I plan to add additional races and questions at a later date!
-<br><br>
- Lastly, this wouldn't have been possible without the creator of the D&D Character Quiz, who gave me permission to adapt his code for this project. Please go show them some support over at EasyDamus.com if you have a chance!. </p>
 
-<p><b style="color:red;">PLEASE NOTE:</b> This test requires support for both JavaScript and pop-up windows.  If your browser doesn't support both of them, you're out of luck.  If you are not sure if your browser will work, scroll to the bottom and click on the "What Mass Effect Character Am I?" button to test before filling out all of the questions.</p>
+<br><br>
+<p>Lastly, this wouldn't have been possible without the creator of the D&D Character Quiz, who gave me permission to adapt his code for this project. Please go show them some support over at EasyDamus.com if you have a chance!. </p>
+
+<p><b style="color:red;">PLEASE NOTE:</b> This test requires support for both JavaScript and pop-up windows.  If you are not sure if your browser will work, scroll to the bottom and click on the "What Mass Effect Character Am I?" button to test before filling out all of the questions.</p>
 <p>
 <b>Now, on to the survey!</b>
 </p>
