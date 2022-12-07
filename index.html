@@ -350,7 +350,7 @@ value = "-1";
 
 value = "-1";
 
-	for (i = 0; i < survey.q75.length; i++) if (survey.q75[i].checked) value = survey.q74[i].value;
+	for (i = 0; i < survey.q75.length; i++) if (survey.q75[i].checked) value = survey.q75[i].value;
 	switch (value) {
                 case "1": adept+=2; break;
                 case "2": infiltrator+=2; }   
@@ -383,16 +383,97 @@ value = "-1";
 
 	for (i = 0; i < survey.q79.length; i++) if (survey.q79[i].checked) value = survey.q79[i].value;
 	switch (value) {
-                case "1": +=2; break;
-                case "2": +=2; break;
-                case "3": +=2; }     	
+                case "1": salarian+=2; break;
+                case "2": volus+=2; break;
+		case "3": batarian+=2; break;
+		case "4": krogan+=2; break;
+                case "5": turian+=2; }     	
 value = "-1";
 
 	for (i = 0; i < survey.q80.length; i++) if (survey.q80[i].checked) value = survey.q80[i].value;
 	switch (value) {
+                case "1": rachni+=3; break;
+                case "2": volus+=3; }     
+	
+value = "-1";
+
+	for (i = 0; i < survey.q81.length; i++) if (survey.q81[i].checked) value = survey.q81[i].value;
+	switch (value) {
+                case "1": vanguard+=2; break;
+                case "2": soldier+=2; }     
+
+value = "-1";
+
+	for (i = 0; i < survey.q82.length; i++) if (survey.q82[i].checked) value = survey.q82[i].value;
+	switch (value) {
+                case "1": geth,salarian+=3; break;
+                case "2": quarian,rachni+=3; break;
+                case "3": asari,human+=3; }     
+	
+value = "-1";
+
+	for (i = 0; i < survey.q83.length; i++) if (survey.q83[i].checked) value = survey.q83[i].value;
+	switch (value) {
                 case "1": +=2; break;
                 case "2": +=2; break;
                 case "3": +=2; }     
+	
+value = "-1";
+
+	for (i = 0; i < survey.q84.length; i++) if (survey.q84[i].checked) value = survey.q84[i].value;
+	switch (value) {
+                case "1": +=2; break;
+                case "2": +=2; break;
+                case "3": +=2; }     
+	
+value = "-1";
+
+	for (i = 0; i < survey.q85.length; i++) if (survey.q85[i].checked) value = survey.q85[i].value;
+	switch (value) {
+                case "1": +=2; break;
+                case "2": +=2; break;
+                case "3": +=2; }     
+	
+value = "-1";
+
+	for (i = 0; i < survey.q86.length; i++) if (survey.q86[i].checked) value = survey.q86[i].value;
+	switch (value) {
+                case "1": +=2; break;
+                case "2": +=2; break;
+                case "3": +=2; }     
+	
+value = "-1";
+
+	for (i = 0; i < survey.q87.length; i++) if (survey.q87[i].checked) value = survey.q87[i].value;
+	switch (value) {
+                case "1": +=2; break;
+                case "2": +=2; break;
+                case "3": +=2; }     
+		
+value = "-1";
+
+	for (i = 0; i < survey.q88.length; i++) if (survey.q88[i].checked) value = survey.q88[i].value;
+	switch (value) {
+                case "1": +=2; break;
+                case "2": +=2; break;
+                case "3": +=2; }     
+	
+value = "-1";
+
+	for (i = 0; i < survey.q89.length; i++) if (survey.q89[i].checked) value = survey.q89[i].value;
+	switch (value) {
+                case "1": +=2; break;
+                case "2": +=2; break;
+                case "3": +=2; }     
+		
+value = "-1";
+
+	for (i = 0; i < survey.q90.length; i++) if (survey.q90[i].checked) value = survey.q90[i].value;
+	switch (value) {
+                case "1": +=2; break;
+                case "2": +=2; break;
+                case "3": +=2; }     
+		
 	
 value = "-1";
 	for (ll = 0; ll < survey.q237.length; ll++) if (survey.q237[ll].checked) value = survey.q237[ll].value;
@@ -1307,34 +1388,36 @@ if (secclass !== "none") {
 </p><hr />	
 	
 <p>
-<a class="question">39.</a> <br /><br />
-<input name="q79" value="1" type="radio" /> <br /> <br />
-<input name="q79" value="2" type="radio" /> <br /> <br />
-<input name="q79" value="3" type="radio" /> <br /> <br />
+<a class="question">39. It's game night! Your crew gathers around for a fun night of competition and intrigue. As the host, what game do you decide on?</a> <br /><br />
+<input name="q79" value="1" type="radio" /> A murder mystery! Time to flex my observational skills...<br /> <br />
+<input name="q79" value="2" type="radio" /> A real-estate board game! I can make out like a bandit AND ruin friendships!<br /> <br />
+<input name="q79" value="3" type="radio" /> A card game with real stakes! I plan to walk away from tonight a little richer.<br /> <br />
+<input name="q79" value="4" type="radio" /> I'll opt on a good ol' arm wrestling competition. Time to remind these milkdrinkers who's on top!<br /> <br />
+<input name="q79" value="5" type="radio" /> Grab the booze, the ping pong balls and the plastic cups! I'll drink every one of these lightweights under the table.<br /> <br />
 
 </p><hr />	
 	
 <p>
-<a class="question">40. </a> <br /><br />
-<input name="q80" value="1" type="radio" /> <br /> <br />
-<input name="q80" value="2" type="radio" /> <br /> <br />
-<input name="q80" value="3" type="radio" /> <br /> <br />
+<a class="question">40. As member of your colony's city council, you have the deciding vote on a new establishment. The colony would be best served by:</a> <br /><br />
+<input name="q80" value="1" type="radio" /> A world-class performing arts center, with the best musicians and teachers this side of the Traverse—at the cost of possibly pricing out current residents.<br /> <br />
+<input name="q80" value="2" type="radio" /> A revolutionary finance center, one that allows for a better labor force and will bring enormous commerce—and possibly making you the target of unwanted attention.<br /> <br />
+
 
 </p><hr />		
 
 <p>
-<a class="question">41. </a> <br /><br />
-<input name="q81" value="1" type="radio" /> <br /> <br />
-<input name="q81" value="2" type="radio" /> <br /> <br />
-<input name="q81" value="3" type="radio" /> <br /> <br />
+<a class="question">41. You missed your transport! What's your next course of option to avoid being even more late?</a> <br /><br />
+<input name="q81" value="1" type="radio" /> I can make a dead sprint to the next stop if I cut through the neighborhood!<br /> <br />
+<input name="q81" value="2" type="radio" /> My destination isn't that far... I should make it if I pace myself for a distant jog.<br /> <br />
+
 
 </p><hr />	
 
 <p>
-<a class="question">42. </a> <br /><br />
-<input name="q82" value="1" type="radio" /> <br /> <br />
-<input name="q82" value="2" type="radio" /> <br /> <br />
-<input name="q82" value="3" type="radio" /> <br /> <br />
+<a class="question">42. It is better to be...</a> <br /><br />
+<input name="q82" value="1" type="radio" /> A savant in the things that interest you, even if you seem weird to others.<br /> <br />
+<input name="q82" value="2" type="radio" /> A prodigy in the things that interest you, even if you are a little awkward sometimes.<br /> <br />
+<input name="q82" value="3" type="radio" /> Roughly equal all around, as long as you get along with others.<br /> <br />
 
 </p><hr />	
 	
