@@ -415,50 +415,7 @@ value = "-1";
 	if (turian > i) { race = "turian"; i = turian;}
 	if (rachni > i) { race = "rachni"; i = rachni;}
 
-	lg = lx + xg;
-	ng = nx + xg;
-	cg = cx + xg;
-
-	ln = lx + xn;
-	nn = nx + xn;
-	cn = cx + xn;
-
-	le = lx + xe;
-	ne = nx + xe;
-	ce = cx + xe;
-
-	i = nn;
-	align = "nn";
-	if (lg > i) { align = "lg"; i = lg; }
-	if (ng > i) { align = "ng"; i = ng; }
-	if (cg > i) { align = "cg"; i = cg; }
-	if (ln > i) { align = "ln"; i = ln; }
-	if (cn > i) { align = "cn"; i = cn; }
-	if (le > i) { align = "le"; i = le; }
-	if (ne > i) { align = "ne"; i = ne; }
-	if (ce > i) { align = "ce"; i = ce; }
-
-	if (lg==i) tie++;
-	if (ng==i) tie++;
-	if (cg==i) tie++;
-	if (ln==i) tie++;
-	if (nn==i) tie++;
-	if (cn==i) tie++;
-	if (le==i) tie++;
-	if (ne==i) tie++;
-	if (ce==i) tie++;
-
-	if (tie != 0) {
-		if (lx>nx&&lx>cx) align = "l";
-		else if (cx>nx&&cx>lx) align = "c";
-		else align ="n";
-
-		if (xg>xe&&xg>xn) align += "g";
-		else if (xe>xn&&xe>xg) align += "e";
-		else align +="n"; }
-
 	
-
 
         if (level < 1) {var level = 1;}
 
@@ -1007,8 +964,7 @@ if (secclass !== "none") {
 <div id="directions" title="Directions">
 <p>Interested in a new multiplayer build? Running a campaign and you're looking for roleplaying inspiration? Then look no further! This quiz will help you determine what race and class from the sci-fi franchise Mass Effect you most resemble! </p>
 
-<br><br>
-<p>Lastly, this wouldn't have been possible without the creator of the D&D Character Quiz, who gave me permission to adapt his code for this project. Please go show them some support over at EasyDamus.com if you have a chance!. </p>
+<p>This wouldn't have been possible without the creator of the D&D Character Quiz, who gave me permission to adapt his code for this project. Please go show them some support over at EasyDamus.com if you have a chance!</p>
 
 <p><b style="color:red;">PLEASE NOTE:</b> This test requires support for both JavaScript and pop-up windows.  If you are not sure if your browser will work, scroll to the bottom and click on the "What Mass Effect Character Am I?" button to test before filling out all of the questions.</p>
 <p>
