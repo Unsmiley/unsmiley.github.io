@@ -460,18 +460,43 @@ value = "-1";
 
 	for (i = 0; i < survey.q89.length; i++) if (survey.q89[i].checked) value = survey.q89[i].value;
 	switch (value) {
-                case "1": +=2; break;
-                case "2": +=2; break;
-                case "3": +=2; }     
+                case "1": batarian,volus,asari+=3; break;
+                case "2": krogan,rachni,turian+=3; break;
+		case "3": human,quarian+=3; break;
+                case "4": geth,salarian+=3; }     
 		
 value = "-1";
 
 	for (i = 0; i < survey.q90.length; i++) if (survey.q90[i].checked) value = survey.q90[i].value;
 	switch (value) {
-                case "1": +=2; break;
-                case "2": +=2; break;
-                case "3": +=2; }     
-		
+                case "1": human+=3; break;
+                case "2": volus+=3; }     
+
+value = "-1";
+
+	for (i = 0; i < survey.q91.length; i++) if (survey.q91[i].checked) value = survey.q91[i].value;
+	switch (value) {
+                case "1": human,turian+=3; break;
+                case "2": asari+=3; break;
+		case "3": salarian+=3; break;
+                case "4": volus,geth+=3; }
+		case "5": krogan,batarian+=3; }
+	
+value = "-1";
+
+	for (i = 0; i < survey.q92.length; i++) if (survey.q92[i].checked) value = survey.q92[i].value;
+	switch (value) {
+                case "1": turian+=2; break;
+                case "2": batarian+=2; }	
+
+value = "-1";
+
+	for (i = 0; i < survey.q93.length; i++) if (survey.q93[i].checked) value = survey.q93[i].value;
+	switch (value) {
+                case "1": rachni+=1; break;
+                case "2": quarian+=2; break;		
+		case "2": geth+=2; }		
+	
 	
 value = "-1";
 	for (ll = 0; ll < survey.q237.length; ll++) if (survey.q237[ll].checked) value = survey.q237[ll].value;
@@ -1475,12 +1500,37 @@ if (secclass !== "none") {
 </p><hr />
 	
 <p>
-<a class="question">50. </a> <br /><br />
-<input name="q90" value="1" type="radio" /> <br /> <br />
-<input name="q90" value="2" type="radio" /> <br /> <br />
-<input name="q90" value="3" type="radio" /> <br /> <br />
+<a class="question">50. When encountering potentially dangerous strangers, it's better to be...</a> <br /><br />
+<input name="q90" value="1" type="radio" /> Overestimated.<br /> <br />
+<input name="q90" value="2" type="radio" /> Underestimated.<br /> <br />
 
 </p><hr />
+	
+	
+<p>
+<a class="question">51. You're beginning a campaign of 'Galaxy of Fantasy' with some friends. Which class do you choose?</a> <br /><br />
+<input name="q91" value="1" type="radio" /> The fighter.<br /> <br />
+<input name="q91" value="2" type="radio" /> The mystic.<br /> <br />
+<input name="q91" value="3" type="radio" /> The rogue.<br /> <br />
+<input name="q91" value="4" type="radio" /> The artificer.<br /> <br />
+<input name="q91" value="5" type="radio" /> The barbarian.<br /> <br />
+
+</p><hr />		
+
+<p>
+<a class="question">52.Even in battle, it is important to conduct yourself honorably.</a> <br /><br />
+<input name="q92" value="1" type="radio" /> Yes. I don't need to sink to my opponent's level to win.<br /> <br />
+<input name="q92" value="2" type="radio" /> No. When it comes to survival, honor isn't a factor for me.<br /> <br />
+
+</p><hr />	
+
+<p>
+<a class="question">53. Shore leave is almost up. How do you spend your last hour on the Citadel?</a> <br /><br />
+<input name="q93" value="1" type="radio" /> I think I'll head over to that new jazz lounge that opened in the wards.<br /> <br />
+<input name="q93" value="2" type="radio" /> I'll take a stroll through the used car department and see if there's anything worth saving up for.<br /> <br />
+<input name="q93" value="3" type="radio" /> If I hurry, I can get the new Galaxy of Fantasy expansion before the shop on Zakera Ward closes...<br /> <br />
+
+</p><hr />	
 	
 </div>	
 	
