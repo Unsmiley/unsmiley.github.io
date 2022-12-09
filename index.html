@@ -497,9 +497,47 @@ value = "-1";
                 case "2": quarian+=2; break;		
 		case "2": geth+=2; }		
 	
+value = "-1";
+
+	for (i = 0; i < survey.q94.length; i++) if (survey.q94[i].checked) value = survey.q94[i].value;
+	switch (value) {
+                case "1": human+=3; break;
+                case "2": asari+=3; break;		
+		case "2": salarian+=3; }	
 	
 value = "-1";
-	for (ll = 0; ll < survey.q237.length; ll++) if (survey.q237[ll].checked) value = survey.q237[ll].value;
+
+	for (i = 0; i < survey.q95.length; i++) if (survey.q95[i].checked) value = survey.q95[i].value;
+	switch (value) {
+                case "1": batarian+=3; break;
+                case "2": volus+=3; }	
+	
+value = "-1";
+
+	for (i = 0; i < survey.q96.length; i++) if (survey.q96[i].checked) value = survey.q96[i].value;
+	switch (value) {
+                case "1": engineer+=2; break;
+                case "2": sentinel+=2; }		
+	
+value = "-1";
+
+	for (i = 0; i < survey.q97.length; i++) if (survey.q97[i].checked) value = survey.q97[i].value;
+	switch (value) {
+                case "1": human+=2; break;
+		case "2": salarian+=2; break;
+                case "3": volus+=2; }		
+	
+value = "-1";
+
+	for (i = 0; i < survey.q98.length; i++) if (survey.q98[i].checked) value = survey.q98[i].value;
+	switch (value) {
+                case "1": asari+=2; break;
+		case "2": turian+=2; break;
+		case "3": batarian+=2; break;
+                case "4": human+=0; }	
+	
+value = "-1";
+	for (ll = 0; ll < survey.q99.length; ll++) if (survey.q99[ll].checked) value = survey.q99[ll].value;
 	switch (value) {
                 case "1": level-=1; break;
                 case "2": level+=1; break;
@@ -514,7 +552,7 @@ value = "-1";
 
 value = "-1";
 
-	for (ll = 0; ll < survey.q238.length; ll++) if (survey.q238[ll].checked) value = survey.q238[ll].value;
+	for (ll = 0; ll < survey.q100.length; ll++) if (survey.q100[ll].checked) value = survey.q100[ll].value;
 	switch (value) {
                 case "1": level-=1; break;
                 case "2": level+=0; break;
@@ -1532,6 +1570,45 @@ if (secclass !== "none") {
 
 </p><hr />	
 	
+<p>
+<a class="question">54. When it comes to personal qualities, you would rather have...</a> <br /><br />
+<input name="q94" value="1" type="radio" /> Wisdom.<br /> <br />
+<input name="q94" value="2" type="radio" /> Courage.<br /> <br />
+<input name="q94" value="3" type="radio" /> Curiosity.<br /> <br />
+
+</p><hr />	
+	
+<p>
+<a class="question">55. Where you come from, money is...</a> <br /><br />
+<input name="q95" value="1" type="radio" /> A vehicle to a better life and social standing.<br /> <br />
+<input name="q95" value="2" type="radio" /> A tool for enabling people to achieve material satisfaction.<br /> <br />
+
+</p><hr />		
+	
+<p>
+<a class="question">56. When solving a problem, it is better to be...</a> <br /><br />
+<input name="q96" value="1" type="radio" /> Able to find—or create—a solution from the options available to you.<br /> <br />
+<input name="q96" value="2" type="radio" /> Prepared for any situation, whether that be from your own resources or the people at your side.<br /> <br />	
+
+
+</p><hr />	
+	
+<p>
+<a class="question">57. Which kind of freedom is most important to you?</a> <br /><br />
+<input name="q97" value="1" type="radio" /> Freedom from discrimination.<br /> <br />
+<input name="q97" value="2" type="radio" /> Freedom of thought.<br /> <br />	
+<input name="q97" value="3" type="radio" /> Financial freedom.<br /> <br />
+	
+
+</p><hr />	
+	
+<p>
+<a class="question">58. Which option did you choose to end the Reaper threat?</a> <br /><br />
+<input name="q98" value="1" type="radio" /> Synthesis.<br /> <br />
+<input name="q98" value="2" type="radio" /> Destroy.<br /> <br />	
+<input name="q98" value="3" type="radio" /> Control.<br /> <br />
+<input name="q98" value="3" type="radio" /> Refusal.<br /> <br />
+	
 </div>	
 	
 </div>
@@ -1540,23 +1617,23 @@ if (secclass !== "none") {
 
 <div id="playerlevel">
 <p>
-<a class="question">139.  Where are you in life?</a><br /><br />
-<input name="q237" value="1" type="radio" /> I'm just starting out. <span class="age"> (15 or less)</span><br /><br />
-<input name="q237" value="2" type="radio" /> I'm on the cusp of adulthood. <span class="age"> (16 to 17)</span><br /><br />
-<input name="q237" value="3" type="radio" /> I'm learning to rely on myself. <span class="age"> (18 to 21)</span><br /><br />
-<input name="q237" value="4" type="radio" /> Independence is an old friend. <span class="age"> (22 to 27)</span><br /><br />
-<input name="q237" value="5" type="radio" /> People are beginning to rely on me. <span class="age"> (28 to 35)</span><br /><br />
-<input name="q237" value="6" type="radio" /> I'm in the prime of my adult life. <span class="age"> (36 to 45)</span><br /><br />
-<input name="q237" value="7" type="radio" /> Still going strong, but I'm ready to wind down. <span class="age"> (46 to 57)</span><br /><br />
-<input name="q237" value="8" type="radio" /> I've been around the block a few times. <span class="age"> (58 to 71)</span><br /><br />
-<input name="q237" value="9" type="radio" /> I can look on what I've accomplished with satisfaction. <span class="age"> (72 to 87)</span><br /><br />
-<input name="q237" value="10" type="radio" /> Music just isn't what it used to be... <span class="age"> (88 or more)</span><br /><br />
+<a class="question">59.  Where are you in life?</a><br /><br />
+<input name="q99" value="1" type="radio" /> I'm just starting out. <span class="age"> (15 or less)</span><br /><br />
+<input name="q99" value="2" type="radio" /> I'm on the cusp of adulthood. <span class="age"> (16 to 17)</span><br /><br />
+<input name="q99" value="3" type="radio" /> I'm learning to rely on myself. <span class="age"> (18 to 21)</span><br /><br />
+<input name="q99" value="4" type="radio" /> Independence is an old friend. <span class="age"> (22 to 27)</span><br /><br />
+<input name="q99" value="5" type="radio" /> People are beginning to rely on me. <span class="age"> (28 to 35)</span><br /><br />
+<input name="q99" value="6" type="radio" /> I'm in the prime of my adult life. <span class="age"> (36 to 45)</span><br /><br />
+<input name="q99" value="7" type="radio" /> Still going strong, but I'm ready to wind down. <span class="age"> (46 to 57)</span><br /><br />
+<input name="q99" value="8" type="radio" /> I've been around the block a few times. <span class="age"> (58 to 71)</span><br /><br />
+<input name="q99" value="9" type="radio" /> I can look on what I've accomplished with satisfaction. <span class="age"> (72 to 87)</span><br /><br />
+<input name="q99" value="10" type="radio" /> Music just isn't what it used to be... <span class="age"> (88 or more)</span><br /><br />
 <hr>
 <p>
-<a class="question">140.  For my age, I have...:</a><br /><br />
-<input name="q238" value="1" type="radio" /> ...limited life experience. I've done significantly less than every one else.<br /><br />
-<input name="q238" value="2" type="radio" /> ...a moderate amount of life experience. I've done about as much as everyone else.<br /><br />
-<input name="q238" value="3" type="radio" /> ...a lot of life experience.  I've done significantly more than every one else.<br /><br />
+<a class="question">60.  For my age, I have...:</a><br /><br />
+<input name="q100" value="1" type="radio" /> ...limited life experience. I've done significantly less than every one else.<br /><br />
+<input name="q100" value="2" type="radio" /> ...a moderate amount of life experience. I've done about as much as everyone else.<br /><br />
+<input name="q100" value="3" type="radio" /> ...a lot of life experience.  I've done significantly more than every one else.<br /><br />
 </p><hr />
 </div>
 
