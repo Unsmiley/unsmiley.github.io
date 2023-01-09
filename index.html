@@ -593,8 +593,6 @@ value = "-1";
 	if (sentinel > j && sentinel > 0 && sentinel <= i && primclass != "sentinel") { secclass = "sentinel"; j = sentinel; }
 	if (engineer > j && engineer > 0 && engineer <= i && primclass != "engineer") { secclass = "engineer"; j = engineer; }
 	if (secclass == primclass) { secclass="none"; }
-	if (primclass=="infiltrator"||primclass=="adept"||primclass=="engineer"||primclass=="sentinel") deitychk = 0;
-	if (secclass=="infiltrator"||secclass=="adept"||secclass=="engineer"||secclass=="sentinel") deitychk = 0;
 
 	
 	var resultArray = ['../test_code/images/humans.png', '../test_code/images/turians.png']
